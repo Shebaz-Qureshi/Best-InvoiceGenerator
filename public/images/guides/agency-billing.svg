@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="agBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="100%" stop-color="#18181b" />
+    </linearGradient>
+    <linearGradient id="agGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+    <filter id="agGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#a855f7" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#agBg)" />
+
+  <!-- Multi-Node Agency Subcontractor Network Flow -->
+  <path d="M 240 225 L 400 130 L 560 225 M 400 130 L 400 320 M 240 225 L 400 320 L 560 225" stroke="#334155" stroke-width="2" stroke-dasharray="6 4" />
+
+  <g filter="url(#agGlow)">
+    <!-- Central Agency Hub Card -->
+    <rect x="270" y="80" width="260" height="290" rx="16" fill="#0f172a" stroke="#a855f7" stroke-width="1.5" />
+    
+    <!-- Agency Header Icon -->
+    <circle cx="400" cy="125" r="22" fill="url(#agGrad)" />
+    <circle cx="390" cy="120" r="5" fill="#ffffff" />
+    <circle cx="410" cy="120" r="5" fill="#ffffff" />
+    <path d="M 385 136 Q 400 144 415 136" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round" />
+
+    <!-- Subcontractor Item Breakdown -->
+    <rect x="300" y="170" width="200" height="36" rx="8" fill="#1e293b" />
+    <circle cx="320" cy="188" r="7" fill="#38bdf8" />
+    <rect x="338" y="184" width="90" height="8" rx="2" fill="#e2e8f0" />
+    <rect x="445" y="184" width="40" height="8" rx="2" fill="#a855f7" />
+
+    <rect x="300" y="215" width="200" height="36" rx="8" fill="#1e293b" />
+    <circle cx="320" cy="233" r="7" fill="#34d399" />
+    <rect x="338" y="229" width="80" height="8" rx="2" fill="#e2e8f0" />
+    <rect x="445" y="229" width="40" height="8" rx="2" fill="#a855f7" />
+
+    <rect x="300" y="260" width="200" height="36" rx="8" fill="#1e293b" />
+    <circle cx="320" cy="278" r="7" fill="#f59e0b" />
+    <rect x="338" y="274" width="70" height="8" rx="2" fill="#e2e8f0" />
+    <rect x="445" y="274" width="40" height="8" rx="2" fill="#a855f7" />
+
+    <!-- Markup & Total Section -->
+    <rect x="380" y="315" width="120" height="36" rx="8" fill="url(#agGrad)" />
+  </g>
+</svg>

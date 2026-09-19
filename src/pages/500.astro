@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import en from '../i18n/en';
+---
+
+<BaseLayout
+  title="Server Error (500) | Best Invoice Generator"
+  description="Something went wrong on our side. Please try again shortly, or head back to the free online invoice generator and invoice maker."
+  path="500"
+  lang="en"
+  t={en}
+>
+  <section class="flex flex-1 items-center justify-center border-b">
+    <div class="mx-auto max-w-xl px-4 py-20 text-center sm:px-6">
+      <p class="eyebrow">ERROR 500</p>
+      <h1 class="mt-3 text-4xl font-bold tracking-tight text-white sm:text-5xl">Something went wrong</h1>
+      <p class="mt-4 text-sm leading-7 text-zinc-400">
+        An unexpected error occurred on our side. Please try refreshing, or check back in a few minutes. Your work is safe — anything you entered stays on your device.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a href="/" class="button-primary">Back to home</a>
+        <a href="/contact" class="button-secondary">Report a problem</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

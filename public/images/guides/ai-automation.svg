@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050505" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="aiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="glow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#06b6d4" flood-opacity="0.4" />
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#aiBg)" />
+
+  <!-- Neural Net Nodes & Connections -->
+  <path d="M 200 225 L 350 140 L 500 225 L 650 140 M 350 140 L 350 310 M 500 225 L 500 310 M 200 225 L 350 310 L 500 225 L 650 310" stroke="#1e293b" stroke-width="2" stroke-dasharray="4 4" />
+
+  <!-- Document Card in Center -->
+  <g filter="url(#glow3)">
+    <rect x="260" y="100" width="280" height="250" rx="16" fill="#0f172a" stroke="#06b6d4" stroke-width="2" />
+    
+    <!-- AI Sparkle Icons -->
+    <path d="M 400 65 L 406 80 L 421 86 L 406 92 L 400 107 L 394 92 L 379 86 L 394 80 Z" fill="url(#aiGlow)" />
+    <path d="M 440 95 L 443 103 L 451 106 L 443 109 L 440 117 L 437 109 L 429 106 L 437 103 Z" fill="#06b6d4" />
+
+    <rect x="290" y="140" width="140" height="14" rx="4" fill="url(#aiGlow)" />
+    <rect x="290" y="170" width="220" height="10" rx="3" fill="#334155" />
+    <rect x="290" y="190" width="180" height="10" rx="3" fill="#1e293b" />
+
+    <rect x="290" y="220" width="220" height="50" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <rect x="305" y="235" width="20" height="20" rx="4" fill="#06b6d4" />
+    <rect x="335" y="240" width="100" height="10" rx="3" fill="#94a3b8" />
+
+    <rect x="290" y="285" width="220" height="40" rx="8" fill="url(#aiGlow)" opacity="0.9" />
+  </g>
+</svg>

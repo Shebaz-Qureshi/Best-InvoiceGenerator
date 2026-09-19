@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="numBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="50%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+    <linearGradient id="numGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#facc15" />
+    </linearGradient>
+    <filter id="numGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#eab308" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#numBg)" />
+
+  <g filter="url(#numGlow)">
+    <!-- Stacked Invoices Effect -->
+    <rect x="290" y="55" width="260" height="290" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <rect x="270" y="70" width="260" height="290" rx="14" fill="#172554" stroke="#1d4ed8" stroke-width="1.5" />
+    
+    <!-- Primary Top Document -->
+    <rect x="250" y="85" width="260" height="290" rx="14" fill="#0f172a" stroke="#eab308" stroke-width="1.5" />
+    <path d="M 250 99 Q 250 85 264 85 L 496 85 Q 510 85 510 99 L 510 135 L 250 135 Z" fill="#1e293b" />
+
+    <!-- Sequential Index Blocks (Prefix, Year, Sequence) -->
+    <rect x="275" y="100" width="45" height="22" rx="4" fill="url(#numGrad)" />
+    <rect x="330" y="100" width="55" height="22" rx="4" fill="#334155" />
+    <rect x="395" y="100" width="50" height="22" rx="4" fill="#334155" />
+    <circle cx="475" cy="111" r="10" fill="#22c55e" />
+
+    <!-- Item Rows -->
+    <rect x="275" y="160" width="130" height="8" rx="2" fill="#475569" />
+    <rect x="440" y="160" width="45" height="8" rx="2" fill="#94a3b8" />
+    <line x1="275" y1="180" x2="485" y2="180" stroke="#1e293b" stroke-width="1" />
+
+    <rect x="275" y="195" width="150" height="8" rx="2" fill="#475569" />
+    <rect x="440" y="195" width="45" height="8" rx="2" fill="#94a3b8" />
+    <line x1="275" y1="215" x2="485" y2="215" stroke="#1e293b" stroke-width="1" />
+
+    <rect x="275" y="230" width="110" height="8" rx="2" fill="#475569" />
+    <rect x="440" y="230" width="45" height="8" rx="2" fill="#94a3b8" />
+    <line x1="275" y1="250" x2="485" y2="250" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Sequential Sorting Arrow Strip -->
+    <rect x="275" y="270" width="210" height="40" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+    <circle cx="295" cy="290" r="8" fill="url(#numGrad)" />
+    <circle cx="345" cy="290" r="8" fill="url(#numGrad)" />
+    <circle cx="395" cy="290" r="8" fill="url(#numGrad)" />
+    <path d="M 430 290 L 465 290 M 455 285 L 465 290 L 455 295" stroke="#eab308" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+    <rect x="365" y="325" width="120" height="34" rx="8" fill="url(#numGrad)" />
+  </g>
+</svg>

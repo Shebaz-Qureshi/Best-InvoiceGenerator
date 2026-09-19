@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit notes and invoice corrections: how to fix a billing mistake properly | Best Invoice Generator</title>
+<meta name="description" content="What to do when an invoice goes out with the wrong amount, client, or items — and why editing or deleting the original is the wrong fix.">
+<link rel="canonical" href="https://best-invoicegenerator.com/guides/credit-notes-invoice-corrections/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#09090b">
+<meta name="apple-mobile-web-app-title" content="Invoice">
+
+<meta property="og:site_name" content="Best Invoice Generator">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://best-invoicegenerator.com/guides/credit-notes-invoice-corrections/">
+<meta property="og:title" content="Credit notes and invoice corrections: how to fix a billing mistake properly | Best Invoice Generator">
+<meta property="og:description" content="What to do when an invoice goes out with the wrong amount, client, or items — and why editing or deleting the original is the wrong fix.">
+<meta property="og:image" content="https://best-invoicegenerator.com/og-image.svg">
+<meta property="og:image:secure_url" content="https://best-invoicegenerator.com/og-image.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Credit notes and invoice corrections: how to fix a billing mistake properly | Best Invoice Generator">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@BestInvoiceGen">
+<meta name="twitter:creator" content="@BestInvoiceGen">
+<meta name="twitter:title" content="Credit notes and invoice corrections: how to fix a billing mistake properly | Best Invoice Generator">
+<meta name="twitter:description" content="What to do when an invoice goes out with the wrong amount, client, or items — and why editing or deleting the original is the wrong fix.">
+<meta name="twitter:image" content="https://best-invoicegenerator.com/og-image.svg">
+<meta name="twitter:image:alt" content="Credit notes and invoice corrections: how to fix a billing mistake properly | Best Invoice Generator">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I just delete an invoice and create a new one instead of issuing a credit note?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's best to avoid this once an invoice has been sent or paid. Deleting it breaks your own numbering sequence and leaves a mismatch if the client kept a copy. A credit note or a clearly labeled voided-and-reissued invoice keeps both records intact."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a credit note need its own numbering sequence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Keep credit notes in a separate sequence from your regular invoices — for example, CN-2026-001 alongside INV-2026-001 — so both records stay easy to track and reconcile independently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a credit note the same thing as a refund?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not exactly. A credit note is the document that records the correction and the amount involved. A refund is one possible way to resolve it — the other common option is applying the credited amount toward a future invoice instead of returning money directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do credit notes affect sales tax or VAT filings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A credit note reduces the taxable revenue reported for that transaction. If you're VAT or sales-tax registered, the credited amount and its tax portion typically need to be reflected in the same reporting period the credit note was issued, so check the specific rule for your tax authority."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the client disputes the amount even after a credit note is issued?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Keep the conversation and any agreement in writing alongside the credit note itself. If the dispute continues, that documentation — the original invoice, the credit note, and the correspondence — is what you'll rely on to resolve it or, if necessary, involve an accountant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a credit note be issued for more than the original invoice amount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A credit note should never exceed the value of the invoice it corrects. If a client is owed more than that — for a separate issue entirely — that's a different transaction and deserves its own documentation rather than being folded into one oversized credit note."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+
+:root{
+  --bg:#09090b; --bg-panel:#131316; --bg-panel-2:#17171b; --border:#26262b;
+  --text:#e4e4e7; --text-dim:#a1a1aa; --text-faint:#71717a;
+  --accent:#818cf8; --accent-solid:#6366f1; --accent-dim:#312e81;
+  --radius:10px; --maxw:760px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%; display:block;}
+.skip-link{position:absolute; left:-999px; top:0;}
+.skip-link:focus{left:8px; top:8px; background:var(--accent-solid); color:#fff; padding:8px 12px; border-radius:6px; z-index:100;}
+
+header.site{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 24px; border-bottom:1px solid var(--border);
+  max-width:1100px; margin:0 auto;
+}
+.brand{display:flex; align-items:center; gap:10px; font-weight:600; color:var(--text); font-size:15px;}
+.brand img{width:22px; height:22px;}
+nav.site-nav{display:flex; align-items:center; gap:20px; font-size:14px; color:var(--text-dim);}
+nav.site-nav > *{margin-left:20px;}
+nav.site-nav > *:first-child{margin-left:0;}
+nav.site-nav a{color:var(--text-dim);}
+nav.site-nav a:hover{color:var(--text);}
+.ai-pill{
+  background:var(--accent-dim); color:#c7d2fe; padding:6px 14px; border-radius:999px;
+  font-size:13px; font-weight:500; border:1px solid #3730a3;
+}
+
+main{max-width:var(--maxw); margin:0 auto; padding:0 24px 80px;}
+
+.crumb{font-size:14px; color:var(--text-dim); margin-top:32px; display:inline-block;}
+
+.kicker{
+  margin-top:28px; font-size:14px; color:var(--text-dim);
+}
+.kicker .dot{margin:0 8px; color:var(--text-faint);}
+
+h1{
+  font-size:2.15rem; line-height:1.22; margin:14px 0 16px; letter-spacing:-0.01em; color:#fafafa;
+}
+.dek{font-size:1.1rem; color:var(--text-dim); margin:0 0 28px; max-width:66ch;}
+
+.hero-img{
+  width:100%; border-radius:var(--radius); border:1px solid var(--border);
+  background:var(--bg-panel); margin-bottom:32px;
+}
+
+article p{font-size:1.02rem; color:#d4d4d8; margin:0 0 18px;}
+article h2{
+  font-size:1.45rem; color:#fafafa; margin:44px 0 14px; letter-spacing:-0.01em;
+}
+article h3{
+  font-size:1.12rem; color:#f4f4f5; margin:26px 0 10px;
+}
+article ul, article ol{margin:0 0 20px; padding-left:0; list-style:none;}
+article ul li, article ol li{
+  padding:9px 0 9px 28px; position:relative; color:#d4d4d8; border-bottom:1px solid var(--border);
+  font-size:0.99rem;
+}
+article ul li:last-child, article ol li:last-child{border-bottom:none;}
+article ul.plain li{padding-left:20px;}
+article ul.plain li::before{content:"–"; position:absolute; left:0; color:var(--text-faint);}
+article ul.check li::before{content:"✓"; position:absolute; left:0; color:#4ade80; font-weight:600;}
+article ol{counter-reset:step;}
+article ol li{padding-left:34px;}
+article ol li::before{
+  counter-increment:step; content:counter(step); position:absolute; left:0; top:9px;
+  width:20px; height:20px; border-radius:50%; background:var(--accent-dim); color:#c7d2fe;
+  font-size:12px; font-weight:600; display:flex; align-items:center; justify-content:center;
+}
+
+.panel{
+  background:var(--bg-panel); border:1px solid var(--border); border-radius:var(--radius);
+  padding:24px 26px; margin:28px 0;
+}
+.panel .eyebrow{font-size:13px; color:var(--accent); font-weight:600; margin-bottom:6px;}
+.panel h2{margin-top:0 !important;}
+.panel p:last-child{margin-bottom:0;}
+.kv{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:18px;}
+.kv .item{border-top:1px solid var(--border); padding-top:10px;}
+.kv .label{font-size:13px; color:var(--text-faint); margin-bottom:4px;}
+.kv .value{font-size:0.98rem; color:#e4e4e7;}
+
+.diagram{
+  background:var(--bg-panel); border:1px solid var(--border); border-radius:var(--radius);
+  padding:26px; margin:28px 0;
+}
+.diagram .eyebrow{font-size:13px; color:var(--accent); font-weight:600; margin-bottom:14px;}
+.diagram svg{width:100%; height:auto;}
+
+.cta{
+  background:linear-gradient(160deg, var(--bg-panel-2), var(--bg-panel));
+  border:1px solid var(--border); border-radius:var(--radius);
+  padding:32px 28px; margin:48px 0 40px; text-align:left;
+}
+.cta .eyebrow{font-size:13px; color:var(--accent); font-weight:600; margin-bottom:6px;}
+.cta h2{margin:0 0 8px !important; font-size:1.3rem;}
+.cta p{color:var(--text-dim); margin:0 0 18px;}
+.cta a.btn{
+  display:inline-block; background:var(--accent-solid); color:#fff; font-weight:600;
+  padding:11px 20px; border-radius:8px; font-size:0.95rem;
+}
+.cta a.btn:hover{background:#4f46e5; text-decoration:none;}
+
+.related{margin:40px 0 20px;}
+.related h2{font-size:1.1rem; color:var(--text-dim); font-weight:600; margin:0 0 14px; text-transform:none;}
+.related ul{list-style:none; padding:0; margin:0;}
+.related li{padding:12px 0; border-bottom:1px solid var(--border);}
+.related li a{color:#e4e4e7; font-size:0.99rem;}
+.related li a:hover{color:var(--accent);}
+
+.faq h2{margin-top:52px !important;}
+.faq-item{border-bottom:1px solid var(--border); padding:18px 0;}
+.faq-item h3{margin:0 0 8px; font-size:1.02rem; color:#fafafa;}
+.faq-item p{margin:0; color:#c4c4c9; font-size:0.98rem;}
+
+footer.site{
+  border-top:1px solid var(--border); margin-top:40px; padding:48px 24px 32px;
+  max-width:1100px; margin-left:auto; margin-right:auto;
+}
+footer.site .foot-top{display:flex; flex-wrap:wrap; gap:48px; justify-content:space-between; margin-bottom:32px;}
+footer.site .foot-top > *{margin-right:24px;}
+footer.site .foot-top > *:last-child{margin-right:0;}
+footer.site .brand{margin-bottom:10px;}
+footer.site .desc{color:var(--text-dim); font-size:0.92rem; max-width:340px;}
+footer.site .col h4{font-size:13px; color:var(--text-faint); margin:0 0 12px; font-weight:600;}
+footer.site .col ul{list-style:none; padding:0; margin:0;}
+footer.site .col li{margin-bottom:8px;}
+footer.site .col a{color:var(--text-dim); font-size:0.92rem;}
+footer.site .copyright{color:var(--text-faint); font-size:0.85rem; border-top:1px solid var(--border); padding-top:20px;}
+
+@media (max-width:640px){
+  h1{font-size:1.6rem;}
+  .kv{grid-template-columns:1fr;}
+  header.site{flex-direction:column; gap:12px; align-items:flex-start;}
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site">
+  <a class="brand" href="https://best-invoicegenerator.com/"><img src="https://best-invoicegenerator.com/favicon.svg" alt="">Best-InvoiceGenerator.com</a>
+  <nav class="site-nav">
+    <a href="https://best-invoicegenerator.com/saved-invoices">Saved Invoices</a>
+    <a href="https://best-invoicegenerator.com/guides/">Guides</a>
+    <span aria-hidden="true">☀️</span>
+    <a class="ai-pill" href="https://best-invoicegenerator.com/ai">✨ Invoice with AI</a>
+  </nav>
+</header>
+<main id="main-content">
+  <a class="crumb" href="https://best-invoicegenerator.com/guides/">← All guides</a>
+  <div class="kicker">Accounting & Tax<span class="dot">·</span>7 min read</div>
+  <h1>Credit notes and invoice corrections: how to fix a billing mistake properly</h1>
+  <p class="dek">Overcharged a client, billed the wrong company, or forgot a discount? The fix isn't editing the invoice you already sent — it's documenting the correction properly.</p>
+  <img class="hero-img" src="https://best-invoicegenerator.com/images/guides/credit-notes-invoice-corrections.svg" alt="Credit notes and invoice corrections: how to fix a billing mistake properly illustration">
+
+  <article>
+
+<p>A billing mistake is common enough that most people who send invoices regularly will make one eventually — an extra hour billed by accident, a discount forgotten, a returned item still on the total, or an invoice sent to the wrong contact entirely. What matters isn't the mistake itself, it's how it gets corrected. Reopening a sent invoice and changing the numbers quietly is the one option that causes real problems later.</p>
+<p>This guide covers the two proper paths: issuing a credit note, or voiding and reissuing, along with which one fits which situation.</p>
+
+<h2>Why you shouldn't just edit or delete a sent invoice</h2>
+<p>Once an invoice has been sent — and especially once it's been paid — it becomes part of both your financial records and your client's. Editing it after the fact breaks that trail in a few concrete ways:</p>
+<ul class="plain">
+<li>Your records and your client's records stop matching, which surfaces during a reconciliation or an audit</li>
+<li>Tax filings tied to the original invoice total no longer reflect what actually happened</li>
+<li>If the client already has a copy of the original PDF, two different versions of the "same" invoice now exist</li>
+<li>Sequential invoice numbering — which most accounting systems and some tax authorities expect — gets disrupted</li>
+</ul>
+<p>The correction should always be a new, separate document that references the original, not a rewrite of it. Think of it the way an accountant would: the original invoice is a historical record of what happened at the time, and the correction is a second event layered on top of it — not a replacement for the first one.</p>
+
+<h2>What a credit note is and when to use one</h2>
+<p>A credit note (sometimes called a credit memo) is a document that reduces the amount a client owes, or refunds part of what they've already paid. It's the standard tool for correcting an invoice after the fact without erasing the original from your records.</p>
+<p>Common reasons to issue one include an overcharge discovered after sending, a discount that should have applied but didn't, returned goods or canceled services, or a pricing dispute resolved in the client's favor.</p>
+
+<h2>Credit note, corrected invoice, or void: which one fits</h2>
+<p>The right response depends on whether payment has already happened and what kind of error occurred.</p>
+<ul class="plain">
+<li><strong>Overcharged, not yet paid:</strong> issue a corrected or replacement invoice that clearly references and supersedes the original, rather than a credit note.</li>
+<li><strong>Overcharged, already paid:</strong> issue a credit note for the difference, then either refund that amount or apply it as a credit toward the client's next invoice.</li>
+<li><strong>Wrong client, duplicate, or invoice that should never have been sent:</strong> void the original in your records and issue a fresh invoice under a new number, since there's no partial amount to correct.</li>
+</ul>
+
+<h2>What to include on a credit note</h2>
+<p>A credit note should be immediately recognizable as a correction, not mistaken for a new charge or a second invoice for the same work.</p>
+<ul class="check">
+<li>Its own sequential numbering (e.g., CN-2026-009), separate from your invoice sequence</li>
+<li>A clear reference to the original invoice number it corrects</li>
+<li>The reason for the credit, stated plainly — returned item, pricing error, discount applied late</li>
+<li>An itemized breakdown of what's being credited, not just a lump total</li>
+<li>The date issued, and whether the amount was refunded or applied to a future invoice</li>
+<li>The amount shown clearly as a credit, typically with a negative value or explicit "Credit" label</li>
+</ul>
+
+<div class="panel">
+  <div class="eyebrow">Worked example</div>
+  <h2>Overbilled hours, corrected after payment</h2>
+  <p>Meridian Consulting invoices a client for 32 hours on Invoice #INV-2026-077, but a scheduling error means only 28 hours of work were actually completed. The client has already paid the full amount.</p>
+  <div class="kv">
+    <div class="item"><div class="label">Original invoice</div><div class="value">INV-2026-077 — 32 hrs, $4,800.00</div></div>
+    <div class="item"><div class="label">Credit note</div><div class="value">CN-2026-011 — 4 hrs, –$600.00</div></div>
+    <div class="item"><div class="label">Reason stated</div><div class="value">Billing correction: hours adjusted to match completed work</div></div>
+    <div class="item"><div class="label">Resolution</div><div class="value">Applied as credit toward next month's invoice</div></div>
+  </div>
+</div>
+
+<h2>Applying the credit: three ways to resolve it</h2>
+<p>Once the credit note is issued, the amount has to go somewhere. Pick the option that fits the client relationship and say so explicitly on the document — don't leave it for the client to guess.</p>
+<ol>
+<li><strong>Refund the original payment method.</strong> Cleanest option for a one-off client or a final invoice on a project that's now closed.</li>
+<li><strong>Offset against the next invoice.</strong> Common with ongoing or retainer clients, where a smaller next bill is simpler than processing a separate refund.</li>
+<li><strong>Hold as a client credit balance.</strong> Useful when the client bills frequently and doesn't have a specific next invoice yet — just track the balance somewhere visible so it isn't forgotten.</li>
+</ol>
+
+<h3>Refunding by payment method</h3>
+<p>How the refund actually moves matters more than it might seem. A card payment is usually simplest to refund directly through whatever payment processor you used, since it ties the refund back to the original transaction automatically. A bank transfer has no built-in link back to the original payment, so it needs to be sent manually and referenced clearly — include the credit note number in the transfer description so the client's bookkeeper can match it without asking.</p>
+
+<h3>Recordkeeping and tax reporting</h3>
+<p>Keep both the original invoice and the credit note on file — never delete the original, even after it's corrected. Credit notes reduce the revenue and any sales tax or VAT you report for that period, so if you file taxes based on invoiced totals, make sure whatever bookkeeping or accounting software you use is picking up the credit note, not just the original invoice amount.</p>
+
+  </article>
+
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item"><h3>Can I just delete an invoice and create a new one instead of issuing a credit note?</h3><p>It's best to avoid this once an invoice has been sent or paid. Deleting it breaks your own numbering sequence and leaves a mismatch if the client kept a copy. A credit note or a clearly labeled voided-and-reissued invoice keeps both records intact.</p></div>
+    <div class="faq-item"><h3>Does a credit note need its own numbering sequence?</h3><p>Yes. Keep credit notes in a separate sequence from your regular invoices — for example, CN-2026-001 alongside INV-2026-001 — so both records stay easy to track and reconcile independently.</p></div>
+    <div class="faq-item"><h3>Is a credit note the same thing as a refund?</h3><p>Not exactly. A credit note is the document that records the correction and the amount involved. A refund is one possible way to resolve it — the other common option is applying the credited amount toward a future invoice instead of returning money directly.</p></div>
+    <div class="faq-item"><h3>How do credit notes affect sales tax or VAT filings?</h3><p>A credit note reduces the taxable revenue reported for that transaction. If you're VAT or sales-tax registered, the credited amount and its tax portion typically need to be reflected in the same reporting period the credit note was issued, so check the specific rule for your tax authority.</p></div>
+    <div class="faq-item"><h3>What if the client disputes the amount even after a credit note is issued?</h3><p>Keep the conversation and any agreement in writing alongside the credit note itself. If the dispute continues, that documentation — the original invoice, the credit note, and the correspondence — is what you'll rely on to resolve it or, if necessary, involve an accountant.</p></div>
+    <div class="faq-item"><h3>Can a credit note be issued for more than the original invoice amount?</h3><p>No. A credit note should never exceed the value of the invoice it corrects. If a client is owed more than that — for a separate issue entirely — that's a different transaction and deserves its own documentation rather than being folded into one oversized credit note.</p></div>
+  </section>
+
+  <div class="cta">
+    <div class="eyebrow">Use the tool</div>
+    <h2>Ready to make the document?</h2>
+    <p>Open the invoice generator with this guide in mind.</p>
+    <a class="btn" href="https://best-invoicegenerator.com/">Create an invoice</a>
+  </div>
+
+  <section class="related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="https://best-invoicegenerator.com/guides/invoice-numbering/">Invoice numbering: a simple system that stays organized →</a></li>
+      <li><a href="https://best-invoicegenerator.com/guides/small-business-tax-invoicing/">Small business invoicing for tax season: itemization, sales tax, and audit readiness →</a></li>
+      <li><a href="https://best-invoicegenerator.com/guides/overdue-invoice-recovery/">Handling late payments: polite follow-ups and collection protocols →</a></li>
+    </ul>
+  </section>
+</main>
+<footer class="site">
+  <div class="foot-top">
+    <div>
+      <a class="brand" href="https://best-invoicegenerator.com/"><img src="https://best-invoicegenerator.com/favicon.svg" alt="">Best Invoice Generator</a>
+      <p class="desc">A free, local-first invoice generator. Create, brand, and export professional invoices right from your browser — no account required.</p>
+    </div>
+    <div class="col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="https://best-invoicegenerator.com/guides/">Guides</a></li>
+        <li><a href="https://best-invoicegenerator.com/about">About Us</a></li>
+        <li><a href="https://best-invoicegenerator.com/contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="https://best-invoicegenerator.com/privacy-policy">Privacy Policy</a></li>
+        <li><a href="https://best-invoicegenerator.com/terms">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">© 2026 Best Invoice Generator. All rights reserved.</div>
+</footer>
+</body>
+</html>

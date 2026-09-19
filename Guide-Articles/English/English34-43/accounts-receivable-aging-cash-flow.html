@@ -1,0 +1,246 @@
+<!--
+  GUIDE 14 — /guides/accounts-receivable-aging-cash-flow/
+  Category: Accounting & Tax · 7 min read
+  Primary cluster: aged receivables, accounts receivable report, invoice cash flow, DSO
+  Cannibalisation note: /overdue-invoice-recovery/ is about chasing ONE invoice.
+  This is the portfolio view: which invoices to chase, in what order, and what the ledger tells you.
+-->
+
+<!-- ============ PASTE INTO <head> ============ -->
+<title>Aged receivables: reading your invoice ledger for cash flow | Best Invoice Generator</title>
+<meta name="description" content="How to build an aged receivables view, work out your real average payment time, and decide which unpaid invoices to chase first.">
+<link rel="canonical" href="https://best-invoicegenerator.com/guides/accounts-receivable-aging-cash-flow/">
+<link rel="alternate" hreflang="en" href="https://best-invoicegenerator.com/guides/accounts-receivable-aging-cash-flow/">
+<link rel="alternate" hreflang="x-default" href="https://best-invoicegenerator.com/guides/accounts-receivable-aging-cash-flow/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Best Invoice Generator">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://best-invoicegenerator.com/guides/accounts-receivable-aging-cash-flow/">
+<meta property="og:title" content="Aged receivables: reading your invoice ledger for cash flow">
+<meta property="og:description" content="How to build an aged receivables view, work out your real average payment time, and decide which unpaid invoices to chase first.">
+<meta property="og:image" content="https://best-invoicegenerator.com/images/og/accounts-receivable-aging-cash-flow.png">
+<meta property="og:image:secure_url" content="https://best-invoicegenerator.com/images/og/accounts-receivable-aging-cash-flow.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="An aged receivables table grouping unpaid invoices by how overdue they are">
+<meta property="article:section" content="Accounting & Tax">
+<meta property="article:published_time" content="2026-09-18T09:00:00+00:00">
+<meta property="article:modified_time" content="2026-09-18T09:00:00+00:00">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@BestInvoiceGen">
+<meta name="twitter:creator" content="@BestInvoiceGen">
+<meta name="twitter:title" content="Aged receivables: reading your invoice ledger for cash flow">
+<meta name="twitter:description" content="How to build an aged receivables view, work out your real average payment time, and decide which unpaid invoices to chase first.">
+<meta name="twitter:image" content="https://best-invoicegenerator.com/images/og/accounts-receivable-aging-cash-flow.png">
+<meta name="twitter:image:alt" content="An aged receivables table grouping unpaid invoices by how overdue they are">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Aged receivables: reading your invoice ledger for cash flow",
+  "description": "How to build an aged receivables view, work out your real average payment time, and decide which unpaid invoices to chase first.",
+  "image": "https://best-invoicegenerator.com/images/og/accounts-receivable-aging-cash-flow.png",
+  "inLanguage": "en",
+  "datePublished": "2026-09-18",
+  "dateModified": "2026-09-18",
+  "author": { "@type": "Organization", "name": "Best Invoice Generator", "url": "https://best-invoicegenerator.com/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Best Invoice Generator",
+    "logo": { "@type": "ImageObject", "url": "https://best-invoicegenerator.com/favicon.svg" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://best-invoicegenerator.com/guides/accounts-receivable-aging-cash-flow/" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://best-invoicegenerator.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Guides", "item": "https://best-invoicegenerator.com/guides/" },
+    { "@type": "ListItem", "position": 3, "name": "Aged receivables and cash flow", "item": "https://best-invoicegenerator.com/guides/accounts-receivable-aging-cash-flow/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is an aged receivables report?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<p>It is a list of every unpaid invoice grouped by how long it has been outstanding, typically in bands such as not yet due, 1 to 30 days overdue, 31 to 60, and over 60. It tells you at a glance how much money is owed, how stale it is, and which clients account for the oldest balances. For most small businesses it is the single most useful financial view they can maintain.</p>"
+    }
+  }, {
+    "@type": "Question",
+    "name": "How do I work out my average payment time?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<p>For a simple version, take every invoice paid in the last few months, calculate the days between the issue date and the payment date for each, and average them. Compare that number with your stated terms. A business on 14-day terms averaging 38 days does not have a terms problem; it has a process problem, and the gap is what you can actually work on.</p>"
+    }
+  }, {
+    "@type": "Question",
+    "name": "Which overdue invoices should I chase first?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<p>Not simply the oldest. Rank by amount at risk and by how recoverable each one looks. A large invoice that is a week overdue with a client who always pays usually needs one short message. A small invoice that is four months old with an unresponsive client may need a decision about whether to keep spending time on it. Sorting by value within each age band gets you to the right order quickly.</p>"
+    }
+  }, {
+    "@type": "Question",
+    "name": "When should I write an invoice off as bad debt?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<p>When the realistic cost of recovery, including your time, exceeds what you expect to collect. That is a commercial judgement rather than a fixed period. The accounting and tax treatment of a written-off debt varies by jurisdiction and is worth confirming with an accountant, because in some systems relief depends on specific conditions being met and documented.</p>"
+    }
+  }, {
+    "@type": "Question",
+    "name": "Do I need accounting software for this?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<p>No. A spreadsheet with invoice number, client, issue date, due date, amount and date paid gives you everything described here. Software helps once volume grows or once you want the report generated automatically, but the discipline of updating the record matters far more than the tool you keep it in.</p>"
+    }
+  }]
+}
+</script>
+<!-- ============ END <head> ============ -->
+
+
+<article class="guide">
+  <nav class="guide-back"><a href="https://best-invoicegenerator.com/guides/">← All guides</a></nav>
+  <p class="guide-eyebrow">Accounting &amp; Tax · 7 min read</p>
+
+  <h1>Aged receivables: what your unpaid invoices are telling you</h1>
+
+  <p class="guide-standfirst">Chasing invoices one at a time is reactive. Looking at all of them together tells you which to chase, which clients are quietly costing you, and how much cash you can actually expect this month.</p>
+
+  <figure>
+    <img src="https://best-invoicegenerator.com/images/guides/aged-receivables.svg" alt="Unpaid invoices grouped into age bands with totals for each" width="1200" height="630" loading="lazy">
+  </figure>
+
+  <p>Most small businesses know roughly what they are owed and have a vague sense of who is slow. That vagueness is expensive. The specific version — how much, by whom, how old — takes about twenty minutes to build and usually changes what you do next.</p>
+
+  <h2>Building the view</h2>
+
+  <p>You need six columns and nothing else:</p>
+
+  <ul>
+    <li>Invoice number</li>
+    <li>Client</li>
+    <li>Issue date</li>
+    <li>Due date</li>
+    <li>Amount</li>
+    <li>Date paid (blank if unpaid)</li>
+  </ul>
+
+  <p>Every unpaid row is a receivable. Group them by how far past the due date they are:</p>
+
+  <ul>
+    <li><strong>Not yet due</strong> — expected income, no action</li>
+    <li><strong>1–30 days overdue</strong> — usually administrative; a reminder normally resolves it</li>
+    <li><strong>31–60 days</strong> — something is actually wrong; find out what</li>
+    <li><strong>61–90 days</strong> — recovery is getting harder and needs a deliberate decision</li>
+    <li><strong>Over 90 days</strong> — assume nothing will happen without escalation</li>
+  </ul>
+
+  <p>Total each band. The shape of that distribution matters more than the headline figure: 40,000 owed with almost everything in the not-yet-due band is a healthy business, while 40,000 with half of it over 60 days is a problem that has been accumulating for months.</p>
+
+  <h2>The number worth tracking</h2>
+
+  <p>Your stated payment terms are an intention. Your average days to payment is what actually happens. Calculate it simply: for every invoice paid in the last three months, count days from issue to payment, then average.</p>
+
+  <p>The gap between that figure and your terms is the thing you can work on. Some common causes and what each points to:</p>
+
+  <ul>
+    <li><strong>A large gap across all clients</strong> — your terms are being ignored generally. Look at how quickly you invoice and whether due dates are stated as calendar dates.</li>
+    <li><strong>A large gap driven by two or three clients</strong> — this is a client problem, not a process problem. Deal with those relationships specifically.</li>
+    <li><strong>Consistent payment at a fixed interval unrelated to your terms</strong> — you are on a payment run. Find out the cut-off date and submit before it.</li>
+  </ul>
+
+  <p>Track the average monthly. The trend tells you more than any single month's value.</p>
+
+  <h2>Deciding what to chase</h2>
+
+  <p>Age alone is a poor priority order. Sort by value within each band and ask two questions about each invoice: how much is at risk, and how likely is it to be recovered with the effort available?</p>
+
+  <ul>
+    <li><strong>Large, recently overdue, good payer</strong> — one short, specific message. This is usually an administrative block.</li>
+    <li><strong>Large, long overdue, responsive client</strong> — get a person on a call. Written threads stall; conversations do not.</li>
+    <li><strong>Large, long overdue, unresponsive</strong> — the highest-value use of your time. Escalate deliberately.</li>
+    <li><strong>Small, long overdue</strong> — decide whether to pursue or close it. Leaving it open indefinitely costs attention every month for no return.</li>
+  </ul>
+
+  <p>Set a fixed slot — an hour, once a week — and work the list in that order. Receivables work done in scattered moments of frustration is both less effective and more unpleasant than the same work done on a schedule.</p>
+
+  <h2>Worked example</h2>
+
+  <p>A studio reviews its ledger at the end of September. Total owed: 62,400.</p>
+
+  <ul>
+    <li>Not yet due: 31,000 across five invoices</li>
+    <li>1–30 days: 18,200, of which 16,000 is one invoice to a long-standing client</li>
+    <li>31–60 days: 4,900 across three small invoices to one client</li>
+    <li>Over 90 days: 8,300, one invoice, client unresponsive since June</li>
+  </ul>
+
+  <p>The instinct is to focus on the 8,300, because it is the most annoying. The ledger suggests otherwise. The 16,000 is the largest amount at risk and the most recoverable — a single message asking whether it cleared their approval process is likely to resolve it, and that is where the hour goes first.</p>
+
+  <p>The 4,900 across three invoices to one client is a pattern, not three incidents, and is worth a conversation about how that client's payment process actually works.</p>
+
+  <p>The 8,300 gets a decision rather than another reminder: escalate formally, or write it off and stop spending attention on it. Either is better than a fifth email.</p>
+
+  <h2>Using the ledger to forecast</h2>
+
+  <p>A simple forecast beats no forecast. For each unpaid invoice, estimate a realistic payment date based on that client's actual history rather than the stated due date. A client who always pays at 45 days will pay at 45 days.</p>
+
+  <p>Add up expected receipts by week, set your known outgoings against them, and you have a usable picture four to six weeks ahead. The value is in seeing a shortfall while you still have options — invoicing something early, asking a client to pay ahead of schedule, or deferring a purchase — rather than discovering it on the day.</p>
+
+  <h2>What the ledger reveals about clients</h2>
+
+  <p>Reviewed over a few months, patterns become obvious: who pays on time, who always needs two reminders, who disputes something on every third invoice. That information should feed back into how you price and structure work. A client who reliably pays 40 days late is more expensive to serve than one who pays on time, and the difference can reasonably be reflected in deposits, terms or rates.</p>
+
+  <section class="guide-cta">
+    <h2>Ready to make the document?</h2>
+    <p>Create invoices with consistent numbers and stated due dates so your ledger stays easy to maintain.</p>
+    <p><a class="button" href="https://best-invoicegenerator.com/">Create an invoice</a></p>
+  </section>
+
+  <section class="guide-faq">
+    <h2>Frequently asked questions</h2>
+
+    <h3>What is an aged receivables report?</h3>
+    <p>It is a list of every unpaid invoice grouped by how long it has been outstanding, typically in bands such as not yet due, 1 to 30 days overdue, 31 to 60, and over 60. It tells you at a glance how much money is owed, how stale it is, and which clients account for the oldest balances. For most small businesses it is the single most useful financial view they can maintain.</p>
+
+    <h3>How do I work out my average payment time?</h3>
+    <p>For a simple version, take every invoice paid in the last few months, calculate the days between the issue date and the payment date for each, and average them. Compare that number with your stated terms. A business on 14-day terms averaging 38 days does not have a terms problem; it has a process problem, and the gap is what you can actually work on.</p>
+
+    <h3>Which overdue invoices should I chase first?</h3>
+    <p>Not simply the oldest. Rank by amount at risk and by how recoverable each one looks. A large invoice that is a week overdue with a client who always pays usually needs one short message. A small invoice that is four months old with an unresponsive client may need a decision about whether to keep spending time on it. Sorting by value within each age band gets you to the right order quickly.</p>
+
+    <h3>When should I write an invoice off as bad debt?</h3>
+    <p>When the realistic cost of recovery, including your time, exceeds what you expect to collect. That is a commercial judgement rather than a fixed period. The accounting and tax treatment of a written-off debt varies by jurisdiction and is worth confirming with an accountant, because in some systems relief depends on specific conditions being met and documented.</p>
+
+    <h3>Do I need accounting software for this?</h3>
+    <p>No. A spreadsheet with invoice number, client, issue date, due date, amount and date paid gives you everything described here. Software helps once volume grows or once you want the report generated automatically, but the discipline of updating the record matters far more than the tool you keep it in.</p>
+  </section>
+
+  <aside class="guide-related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="https://best-invoicegenerator.com/guides/overdue-invoice-recovery/">Handling late payments: polite follow-ups and collection protocols →</a></li>
+      <li><a href="https://best-invoicegenerator.com/guides/invoice-record-retention-audit-trail/">Invoice records, retention and audit trails →</a></li>
+      <li><a href="https://best-invoicegenerator.com/guides/early-payment-discounts-late-fees/">Early payment discounts and late fees →</a></li>
+    </ul>
+  </aside>
+
+  <p class="guide-disclaimer"><em>This guide offers general workflow information, not tax, legal, or accounting advice. Bad debt relief rules differ by country.</em></p>
+</article>

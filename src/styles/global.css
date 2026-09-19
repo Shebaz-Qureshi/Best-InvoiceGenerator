@@ -1,0 +1,737 @@
+@import "tailwindcss";
+@import "./accessibility.css";
+@import "./themes.css";
+
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --accent: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background: var(--page-bg);
+}
+
+body {
+  margin: 0;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.panel {
+  border: 1px solid #27272a;
+  background: #18181b;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgb(0 0 0 / .2);
+}
+
+/* Floating Field Label Styles */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a1a1aa;
+}
+
+/* Nav & Footer Links */
+.nav-link {
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #a1a1aa;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: #f4f4f5;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.nav-link-ai {
+  color: #a78bfa !important;
+  position: relative;
+}
+
+.nav-link-ai:hover {
+  color: #c4b5fd !important;
+  background: rgba(124, 58, 237, 0.12) !important;
+}
+
+html.theme-light .nav-link-ai {
+  color: #7c3aed !important;
+}
+
+html.theme-light .nav-link-ai:hover {
+  color: #6d28d9 !important;
+  background: rgba(124, 58, 237, 0.08) !important;
+}
+
+html.theme-light .nav-link {
+  color: #52525b;
+}
+
+html.theme-light .nav-link:hover {
+  color: #18181b;
+  background: #f4f4f5;
+}
+
+.footer-link {
+  color: #a1a1aa;
+  transition: color 0.15s ease;
+}
+
+.footer-link:hover {
+  color: #f4f4f5;
+}
+
+html.theme-light .footer-link {
+  color: #71717a;
+}
+
+html.theme-light .footer-link:hover {
+  color: #18181b;
+}
+
+/* Floating Field Label Styles */
+.floating-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #f4f4f5;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+}
+
+html.theme-light .floating-label {
+  color: #71717a;
+}
+
+/* Bloom Form Controls */
+.bloom-input, .bloom-textarea {
+  width: 100%;
+  border: 1px solid #3f3f46;
+  border-radius: 10px;
+  background: #27272a;
+  padding: 8px 12px;
+  color: #fafafa;
+  font-size: 13px;
+  font-weight: 400;
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+html.theme-light .bloom-input, 
+html.theme-light .bloom-textarea {
+  border-color: #e4e4e7;
+  background: #ffffff;
+  color: #18181b;
+}
+
+.bloom-input:focus, .bloom-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+
+.bloom-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Line Items Container & Header */
+.bloom-items-container {
+  border: 1px solid #27272a;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #18181b;
+}
+
+html.theme-light .bloom-items-container {
+  border-color: #f4f4f5;
+  background: #ffffff;
+}
+
+.bloom-items-header {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 8px;
+  background: #27272a;
+  padding: 8px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #e4e4e7;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+html.theme-light .bloom-items-header {
+  background: #f4f4f5;
+  color: #71717a;
+}
+
+.bloom-add-item-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px dashed #3f3f46;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #f4f4f5;
+  background: transparent;
+  transition: all 0.15s ease;
+}
+
+html.theme-light .bloom-add-item-btn {
+  border-color: #d4d4d8;
+  color: #18181b;
+}
+
+.bloom-add-item-btn:hover {
+  border-color: #71717a;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+html.theme-light .bloom-add-item-btn:hover {
+  background: #fafafa;
+}
+
+/* Upload Boxes */
+.bloom-upload-box {
+  display: flex;
+  flex-direction: flex-row;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1.5px dashed #3f3f46;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #d4d4d8;
+  transition: all 0.15s ease;
+}
+
+html.theme-light .bloom-upload-box {
+  border-color: #d4d4d8;
+  color: #3f3f46;
+}
+
+.bloom-upload-box:hover {
+  border-color: #a1a1aa;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+html.theme-light .bloom-upload-box:hover {
+  background: #fafafa;
+}
+
+/* Preset Cards */
+.preset-card {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 2px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.preset-card:hover {
+  transform: translateY(-1px);
+}
+
+.preset-card.active {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+/* Header & Export cards */
+.button-primary, .button-secondary {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.15s;
+}
+
+.button-primary {
+  border: 1px solid #f4f4f5;
+  background: #f4f4f5;
+  color: #18181b;
+}
+
+.button-primary:hover {
+  background: #d4d4d8;
+}
+
+.button-secondary {
+  border: 1px solid #3f3f46;
+  background: #27272a;
+  color: #f4f4f5;
+}
+
+.button-secondary:hover {
+  border-color: #52525b;
+  background: #3f3f46;
+}
+
+.app-header .theme-toggle {
+  width: 34px;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.export-card {
+  display: flex;
+  min-height: 90px;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #3f3f46;
+  border-radius: 10px;
+  background: #202023;
+  padding: 12px;
+  text-align: left;
+  color: #f4f4f5;
+  transition: 0.15s;
+}
+
+.export-card:hover {
+  border-color: #71717a;
+  background: #27272a;
+  transform: translateY(-1px);
+}
+
+.export-card span {
+  color: var(--accent);
+  font-size: 18px;
+}
+
+.export-card b {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+.export-card small {
+  margin-top: 2px;
+  color: #a1a1aa;
+  font-size: 11px;
+}
+
+/* Live Dot Indicator */
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 0 3px #064e3b;
+}
+
+/* Download PDF Button */
+.btn-download-pdf {
+  display: inline-flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #16a34a;
+  border-radius: 10px;
+  background: #16a34a;
+  padding: 0 18px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-download-pdf:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.btn-download-pdf:hover {
+  background: #15803d;
+  border-color: #15803d;
+  transform: translateY(-1px);
+}
+
+.btn-download-pdf:disabled {
+  background: #16a34a;
+  border-color: #16a34a;
+  opacity: 0.7;
+  cursor: progress;
+  transform: none;
+}
+
+@media (min-width: 641px) {
+  .btn-download-pdf {
+    min-height: 52px;
+  }
+}
+
+/* Save Invoice Button */
+.btn-save-invoice {
+  display: inline-flex;
+  width: 100%;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #2563eb;
+  border-radius: 10px;
+  background: #2563eb;
+  padding: 0 18px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-save-invoice:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.btn-save-invoice:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.btn-save-invoice:disabled {
+  background: #2563eb;
+  border-color: #2563eb;
+  opacity: 0.7;
+  cursor: progress;
+  transform: none;
+}
+
+@media (min-width: 641px) {
+  .btn-save-invoice {
+    min-height: 52px;
+  }
+}
+
+/* Saved invoice card actions */
+.btn-card {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #3f3f46;
+  border-radius: 8px;
+  background: #27272a;
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #e4e4e7;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.btn-card:hover {
+  border-color: #71717a;
+  background: #3f3f46;
+  color: #ffffff;
+}
+
+.btn-card:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-card-primary {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-card-primary:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #ffffff;
+}
+
+.btn-card-danger {
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #fca5a5;
+}
+
+.btn-card-danger:not(:disabled):hover {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+  color: #fecaca;
+}
+
+html.theme-light .btn-card-danger {
+  border-color: rgba(239, 68, 68, 0.4);
+  color: #dc2626;
+}
+
+html.theme-light .btn-card-danger:not(:disabled):hover {
+  border-color: #ef4444;
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+html.theme-light .btn-card {
+  border-color: #d4d4d8;
+  background: #ffffff;
+  color: #27272a;
+}
+
+html.theme-light .btn-card:hover {
+  border-color: #a1a1aa;
+  background: #f4f4f5;
+  color: #18181b;
+}
+
+html.theme-light .btn-card-primary,
+html.theme-light .btn-card-primary:hover {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-icon {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #71717a;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-icon:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.35);
+}
+
+/* Saved invoice status badges */
+.status-paid {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-unpaid {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-draft {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+/* Saved page toast */
+.app-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 60;
+  max-width: min(92vw, 440px);
+  transform: translate(-50%, 16px);
+  border: 1px solid #3f3f46;
+  border-radius: 12px;
+  background: #18181b;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #f4f4f5;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.app-toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.app-toast.toast-error {
+  border-color: #ef4444;
+  color: #fecaca;
+}
+
+html.theme-light .app-toast {
+  border-color: #e4e4e7;
+  background: #ffffff;
+  color: #18181b;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.12);
+}
+
+/* Off-screen invoice paper used for PDF downloads on the saved page */
+.dl-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 794px;
+  background: #ffffff;
+  z-index: -1;
+}
+
+/* Print-Only Footer */
+.print-footer {
+  display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .panel {
+    padding: 16px;
+  }
+
+  .bloom-items-header {
+    display: none;
+  }
+
+  .app-header .button-primary,
+  .app-header .button-secondary {
+    min-height: 32px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+
+  .app-header .theme-toggle {
+    width: 32px;
+    padding: 0;
+  }
+
+  /* 16px input font prevents iOS Safari zooming into fields on focus */
+  .bloom-input,
+  .bloom-textarea,
+  select {
+    font-size: 16px;
+  }
+
+  .remove-item {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .export-card {
+    min-height: 76px;
+  }
+}
+
+/* Fixed Print CSS for Save as PDF / Print action */
+@media print {
+  @page {
+    margin: 0.5in;
+    size: auto;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Hide all non-printable layout elements explicitly */
+  .skip-link,
+  .app-header,
+  .app-subheader,
+  #pdf-info,
+  #export,
+  #save-actions,
+  #brand,
+  .app-footer,
+  .content-section,
+  .faq-section,
+  #optionsMenu,
+  .app-toast,
+  .dl-wrap,
+  #preview-panel > div:first-child {
+    display: none !important;
+  }
+
+  /* Reset main shell grid containers */
+  main,
+  .app-shell,
+  main > div,
+  aside,
+  #preview-panel {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  /* Format printable invoice document paper */
+  .invoice-paper {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: white !important;
+    color: #18181b !important;
+    min-height: 90vh !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Print-only brand footer at the bottom of the page */
+  .print-footer {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #71717a;
+  }
+
+  .print-footer img {
+    width: 15px;
+    height: 15px;
+  }
+}

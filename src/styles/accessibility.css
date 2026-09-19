@@ -1,0 +1,10 @@
+:root { color-scheme: dark; }
+body { -webkit-tap-highlight-color: rgb(96 165 250 / 0.22); touch-action: manipulation; }
+section[id] { scroll-margin-top: 6rem; }
+.skip-link { position: fixed; z-index: 100; top: 1rem; left: 1rem; transform: translateY(-200%); border-radius: .5rem; background: #fafafa; padding: .65rem .9rem; color: #18181b; font-size: .875rem; font-weight: 700; transition: transform .15s ease; }
+.skip-link:focus-visible { transform: translateY(0); outline: 3px solid #60a5fa; outline-offset: 2px; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.button-primary, .button-secondary, .export-card { transition: background-color .15s ease, border-color .15s ease, color .15s ease, transform .15s ease; }
+input, textarea, select { transition: border-color .15s ease, box-shadow .15s ease, background-color .15s ease; }
+.invoice-paper, .total-row, .total-due, .item-amount { font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }

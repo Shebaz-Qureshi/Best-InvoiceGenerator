@@ -1,0 +1,151 @@
+---
+import '../styles/global.css';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import { ogLocales, localePrefix, localeHref } from '../i18n';
+import type { Translation } from '../i18n/types';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+  lang: string;
+  t: Translation;
+  hideLangSwitcher?: boolean;
+  noindex?: boolean;
+  localized?: boolean;
+}
+
+const { title, description, path, lang, t, hideLangSwitcher = false, noindex = false, localized = true } = Astro.props;
+const siteUrl = 'https://best-invoicegenerator.com';
+const dir = lang === 'ar' ? 'rtl' : 'ltr';
+const isHome = lang === 'en' && !path;
+const canonical = isHome ? 'https://best-invoicegenerator.com/' : siteUrl + localePrefix(lang) + (path ? '/' + path + '/' : '/');
+const ogLocale = ogLocales[lang] ?? 'en_US';
+const allLocales = ['en', 'es', 'fr', 'de', 'it', 'nl', 'pt', 'ar', 'ja'];
+const altUrl = (code: string) => siteUrl + localePrefix(code) + (path ? '/' + path + '/' : (code === 'en' ? '/' : '/'));
+---
+
+<!doctype html>
+<html lang={lang} dir={dir}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#09090b" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EWLF9RN3TX"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EWLF9RN3TX');
+    </script>
+    <script is:inline>try{const t=localStorage.getItem('big-theme')||((matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark');document.documentElement.classList.toggle('theme-light',t==='light');document.documentElement.style.colorScheme=t;document.querySelector('meta[name="theme-color"]').setAttribute('content',t==='light'?'#fafafa':'#09090b')}catch{}</script>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Invoice" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="description" content={description} />
+    <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <link rel="canonical" href={canonical} />
+    {localized ? allLocales.map((code) => (
+      <link rel="alternate" hreflang={code} href={altUrl(code)} />
+    )) : <link rel="alternate" hreflang="en" href={canonical} />}
+    <link rel="alternate" hreflang="x-default" href={path ? `${siteUrl}/${path}/` : 'https://best-invoicegenerator.com/'} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Best Invoice Generator" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:image" content={siteUrl + '/og-image.svg'} />
+    <meta property="og:image:secure_url" content={siteUrl + '/og-image.svg'} />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={title} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@BestInvoiceGen" />
+    <meta name="twitter:creator" content="@BestInvoiceGen" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={siteUrl + '/og-image.svg'} />
+    <meta name="twitter:image:alt" content={title} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <main id="main-content" class="app-shell flex min-h-screen flex-col">
+      <header class="app-header sticky top-0 z-30 border-b backdrop-blur">
+        <div class="mx-auto flex max-w-[1440px] flex-wrap items-center justify-between gap-x-3 gap-y-2 px-3 py-2.5 sm:h-16 sm:px-6 sm:py-0">
+          <a href={localeHref(lang, '')} class="flex items-center gap-2.5 font-semibold tracking-tight" aria-label={t.header.homeAria}>
+            <img src="/favicon.svg" alt="" class="h-7 w-7" width="28" height="28" />
+            <span>{t.header.brand}</span>
+          </a>
+          <nav class="flex items-center gap-1 sm:gap-2" aria-label="Site">
+            <a href={localeHref(lang, 'saved-invoices')} class="nav-link">{t.header.quickLinks.savedInvoices}</a>
+            <a href={localeHref(lang, 'guides')} class="nav-link">Guides</a>
+            <a href={localeHref(lang, '#faq')} class="nav-link">{t.header.quickLinks.faq}</a>
+            {!hideLangSwitcher && <LanguageSwitcher lang={lang} pagePath={path} label="" />}
+            <button id="themeToggle" class="button-secondary theme-toggle" type="button" aria-label={t.header.themeToggle} title={t.header.themeToggle}>☀️</button>
+            <a href="/ai" class="button-primary text-sm font-semibold px-3 py-1.5" aria-label="Invoice with AI">✨ Invoice with AI</a>
+          </nav>
+        </div>
+      </header>
+
+      <div class="flex-1">
+        <slot />
+      </div>
+
+      <footer class="app-footer border-t">
+        <div class="mx-auto max-w-[1440px] px-4 py-10 sm:px-6">
+          <div class="grid gap-10 md:grid-cols-3">
+            <nav aria-label={t.footer.company}>
+              <p class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">{t.footer.company}</p>
+              <ul class="mt-3 space-y-2 text-sm">
+                <li><a href={localeHref(lang, 'about')} class="footer-link">{t.footer.aboutUs}</a></li>
+                <li><a href={localeHref(lang, 'contact')} class="footer-link">{t.footer.contactUs}</a></li>
+              </ul>
+            </nav>
+            <nav aria-label={t.footer.resources}>
+              <p class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">{t.footer.resources}</p>
+              <ul class="mt-3 space-y-2 text-sm">
+                <li><a href={localeHref(lang, 'guides')} class="footer-link">Guides</a></li>
+              </ul>
+            </nav>
+            <nav aria-label={t.footer.legal}>
+              <p class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">{t.footer.legal}</p>
+              <ul class="mt-3 space-y-2 text-sm">
+                <li><a href={localeHref(lang, 'privacy-policy')} class="footer-link">{t.footer.privacy}</a></li>
+                <li><a href={localeHref(lang, 'terms')} class="footer-link">{t.footer.terms}</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="mt-8 border-t border-zinc-800 pt-5 text-xs text-zinc-500 text-center">
+            <p>© {new Date().getFullYear()} Best Invoice Generator. {t.footer.rights}</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Theme switch logic -->
+    <script>
+      const themeButton = document.getElementById('themeToggle');
+      function syncThemeButton() {
+        const light = document.documentElement.classList.contains('theme-light');
+        themeButton.textContent = light ? '🌙' : '☀️';
+        themeButton.setAttribute('aria-label', `Switch to ${light ? 'dark' : 'light'} mode`);
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', light ? '#fafafa' : '#09090b');
+      }
+      themeButton.addEventListener('click', () => {
+        const light = document.documentElement.classList.toggle('theme-light');
+        const theme = light ? 'light' : 'dark';
+        document.documentElement.style.colorScheme = theme;
+        try { localStorage.setItem('big-theme', theme); } catch {}
+        syncThemeButton();
+      });
+      syncThemeButton();
+    </script>
+  </body>
+</html>

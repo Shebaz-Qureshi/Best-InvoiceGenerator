@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="50%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+    <linearGradient id="cardG1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="accG1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <linearGradient id="accG2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgG)" />
+  <circle cx="400" cy="225" r="180" fill="#38bdf8" opacity="0.04" />
+  <circle cx="600" cy="150" r="120" fill="#818cf8" opacity="0.03" />
+
+  <!-- Central Document Mockup -->
+  <g filter="url(#shadow)">
+    <rect x="220" y="65" width="360" height="320" rx="16" fill="url(#cardG1)" stroke="#334155" stroke-width="1.5" />
+    <path d="M 220 81 Q 220 65 236 65 L 564 65 Q 580 65 580 81 L 580 95 L 220 95 Z" fill="#1e293b" />
+    <rect x="245" y="77" width="14" height="14" rx="7" fill="#ef4444" opacity="0.8" />
+    <rect x="267" y="77" width="14" height="14" rx="7" fill="#f59e0b" opacity="0.8" />
+    <rect x="289" y="77" width="14" height="14" rx="7" fill="#10b981" opacity="0.8" />
+    
+    <!-- Top banner accent -->
+    <rect x="245" y="115" width="120" height="16" rx="4" fill="url(#accG1)" />
+    <rect x="475" y="115" width="80" height="12" rx="3" fill="#475569" />
+    
+    <!-- Lines & tables -->
+    <rect x="245" y="150" width="150" height="8" rx="2" fill="#334155" />
+    <rect x="245" y="166" width="100" height="8" rx="2" fill="#1e293b" />
+    <rect x="455" y="150" width="100" height="8" rx="2" fill="#334155" />
+    <rect x="475" y="166" width="80" height="8" rx="2" fill="#1e293b" />
+
+    <!-- Table header -->
+    <rect x="245" y="195" width="310" height="24" rx="4" fill="#334155" opacity="0.4" />
+    
+    <!-- Table rows -->
+    <rect x="245" y="230" width="160" height="8" rx="2" fill="#475569" />
+    <rect x="505" y="230" width="50" height="8" rx="2" fill="#38bdf8" />
+    <line x1="245" y1="248" x2="555" y2="248" stroke="#1e293b" stroke-width="1" />
+
+    <rect x="245" y="260" width="140" height="8" rx="2" fill="#475569" />
+    <rect x="505" y="260" width="50" height="8" rx="2" fill="#38bdf8" />
+    <line x1="245" y1="278" x2="555" y2="278" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Total section -->
+    <rect x="415" y="300" width="140" height="32" rx="6" fill="url(#accG2)" opacity="0.2" stroke="#10b981" stroke-width="1" />
+    <rect x="430" y="312" width="110" height="8" rx="2" fill="#34d399" />
+  </g>
+</svg>

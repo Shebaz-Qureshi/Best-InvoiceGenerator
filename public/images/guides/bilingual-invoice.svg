@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#09090b"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  
+  <g transform="translate(180, 110)">
+    <rect x="40" y="40" width="760" height="300" rx="14" fill="url(#cardGrad)" stroke="#ec4899" stroke-width="2"/>
+    
+    <!-- Header with flags/labels -->
+    <rect x="80" y="70" width="220" height="30" rx="6" fill="#500724" stroke="#ec4899"/>
+    <text x="190" y="90" fill="#fbcfe8" font-family="Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle">BILINGUAL INVOICE LAYOUT</text>
+
+    <!-- Two-column items -->
+    <g transform="translate(80, 130)">
+      <rect width="300" height="140" rx="8" fill="#18181b" stroke="#27272a"/>
+      <text x="150" y="30" fill="#f472b6" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">ENGLISH (PRIMARY)</text>
+      <text x="25" y="65" fill="#e4e4e7" font-family="Inter, sans-serif" font-size="13">Invoice / Due date</text>
+      <text x="25" y="95" fill="#e4e4e7" font-family="Inter, sans-serif" font-size="13">Description of services</text>
+      <text x="25" y="125" fill="#e4e4e7" font-family="Inter, sans-serif" font-size="13">Total amount due</text>
+    </g>
+
+    <g transform="translate(420, 130)">
+      <rect width="340" height="140" rx="8" fill="#18181b" stroke="#27272a"/>
+      <text x="170" y="30" fill="#f472b6" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">LOCALISED (CLIENT LANGUAGE)</text>
+      <text x="25" y="65" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="13">Facture / Date d'échéance</text>
+      <text x="25" y="95" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="13">Description des prestations</text>
+      <text x="25" y="125" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="13">Montant total dû</text>
+    </g>
+  </g>
+
+</svg>

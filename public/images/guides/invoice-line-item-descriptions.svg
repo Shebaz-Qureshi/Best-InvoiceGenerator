@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#09090b"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  
+  <g transform="translate(180, 110)">
+    <!-- Bad description -->
+    <rect x="40" y="40" width="340" height="280" rx="14" fill="url(#cardGrad)" stroke="#ef4444" stroke-width="2"/>
+    <rect x="70" y="65" width="160" height="28" rx="6" fill="#450a0a" stroke="#ef4444"/>
+    <text x="150" y="84" fill="#fca5a5" font-family="Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle">VAGUE (REJECTED)</text>
+    <text x="210" y="145" fill="#ef4444" font-family="Inter, sans-serif" font-size="16" font-weight="600" text-anchor="middle">"Design services — $3,500"</text>
+    <text x="210" y="185" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="13" text-anchor="middle">Approver asks: What work?</text>
+    <text x="210" y="210" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="13" text-anchor="middle">Which deliverables? Stalled.</text>
+
+    <!-- Good description -->
+    <rect x="420" y="40" width="380" height="280" rx="14" fill="url(#cardGrad)" stroke="#10b981" stroke-width="2"/>
+    <rect x="450" y="65" width="180" height="28" rx="6" fill="#064e3b" stroke="#10b981"/>
+    <text x="540" y="84" fill="#6ee7b7" font-family="Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle">SPECIFIC (APPROVED)</text>
+    <text x="610" y="135" fill="#ffffff" font-family="Inter, sans-serif" font-size="14" font-weight="600" text-anchor="middle">"Homepage & Checkout Redesign"</text>
+    <text x="610" y="165" fill="#34d399" font-family="Inter, sans-serif" font-size="13" text-anchor="middle">Qty: 25 hrs @ $140/hr — $3,500</text>
+    <text x="610" y="195" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">Delivered Aug 10–24, per PO #88214</text>
+    <rect x="520" y="235" width="180" height="32" rx="16" fill="#064e3b" stroke="#10b981"/>
+    <text x="610" y="256" fill="#34d399" font-family="Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">APPROVED FIRST PASS ✓</text>
+  </g>
+
+</svg>

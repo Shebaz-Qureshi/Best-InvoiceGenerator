@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proforma invoice vs invoice: when to send which document | Best Invoice Generator</title>
+<meta name="description" content="Learn when to send a proforma invoice instead of a standard invoice, what fields it needs, and how to convert it into a final invoice.">
+<link rel="canonical" href="https://best-invoicegenerator.com/guides/proforma-invoice-guide/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#09090b">
+<meta name="apple-mobile-web-app-title" content="Invoice">
+
+<meta property="og:site_name" content="Best Invoice Generator">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://best-invoicegenerator.com/guides/proforma-invoice-guide/">
+<meta property="og:title" content="Proforma invoice vs invoice: when to send which document | Best Invoice Generator">
+<meta property="og:description" content="Learn when to send a proforma invoice instead of a standard invoice, what fields it needs, and how to convert it into a final invoice.">
+<meta property="og:image" content="https://best-invoicegenerator.com/og-image.svg">
+<meta property="og:image:secure_url" content="https://best-invoicegenerator.com/og-image.svg">
+<meta property="og:image:type" content="image/svg+xml">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Proforma invoice vs invoice: when to send which document | Best Invoice Generator">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@BestInvoiceGen">
+<meta name="twitter:creator" content="@BestInvoiceGen">
+<meta name="twitter:title" content="Proforma invoice vs invoice: when to send which document | Best Invoice Generator">
+<meta name="twitter:description" content="Learn when to send a proforma invoice instead of a standard invoice, what fields it needs, and how to convert it into a final invoice.">
+<meta name="twitter:image" content="https://best-invoicegenerator.com/og-image.svg">
+<meta name="twitter:image:alt" content="Proforma invoice vs invoice: when to send which document | Best Invoice Generator">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a proforma invoice legally binding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A proforma invoice is a preliminary estimate, not a binding payment demand. It shows a buyer what to expect, but it doesn't create an enforceable obligation the way a final invoice or signed contract does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a proforma invoice to request payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can use it to request a deposit or advance payment when that's clearly stated, but it shouldn't be treated as the document a client pays in full. Once the transaction is complete, issue a standard invoice for the actual payment request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a separate invoice number for a proforma invoice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Keep proforma reference numbers in their own sequence, separate from your regular invoice numbering. This avoids gaps or duplicates in your official invoice records and makes it obvious at a glance which document is which."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long is a proforma invoice valid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There's no universal rule, but 14 to 30 days is common for most goods and services. Include an explicit validity date on the document itself so pricing questions don't come up later if the sale is delayed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do customs authorities accept proforma invoices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, proforma invoices are a standard part of international shipping documentation. Customs brokers use them to estimate duties and pre-clear goods before arrival, though the specific fields required can vary by country, so check with your freight forwarder or the destination country's customs authority."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a proforma invoice need to show tax or VAT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's good practice to show an estimated tax or VAT amount if you know the applicable rate, so the buyer isn't surprised later. Since the document isn't final, it's reasonable to label the tax figure as estimated, the same way the rest of the total is treated."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+
+:root{
+  --bg:#09090b; --bg-panel:#131316; --bg-panel-2:#17171b; --border:#26262b;
+  --text:#e4e4e7; --text-dim:#a1a1aa; --text-faint:#71717a;
+  --accent:#818cf8; --accent-solid:#6366f1; --accent-dim:#312e81;
+  --radius:10px; --maxw:760px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent); text-decoration:none;}
+a:hover{text-decoration:underline;}
+img{max-width:100%; display:block;}
+.skip-link{position:absolute; left:-999px; top:0;}
+.skip-link:focus{left:8px; top:8px; background:var(--accent-solid); color:#fff; padding:8px 12px; border-radius:6px; z-index:100;}
+
+header.site{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 24px; border-bottom:1px solid var(--border);
+  max-width:1100px; margin:0 auto;
+}
+.brand{display:flex; align-items:center; gap:10px; font-weight:600; color:var(--text); font-size:15px;}
+.brand img{width:22px; height:22px;}
+nav.site-nav{display:flex; align-items:center; gap:20px; font-size:14px; color:var(--text-dim);}
+nav.site-nav > *{margin-left:20px;}
+nav.site-nav > *:first-child{margin-left:0;}
+nav.site-nav a{color:var(--text-dim);}
+nav.site-nav a:hover{color:var(--text);}
+.ai-pill{
+  background:var(--accent-dim); color:#c7d2fe; padding:6px 14px; border-radius:999px;
+  font-size:13px; font-weight:500; border:1px solid #3730a3;
+}
+
+main{max-width:var(--maxw); margin:0 auto; padding:0 24px 80px;}
+
+.crumb{font-size:14px; color:var(--text-dim); margin-top:32px; display:inline-block;}
+
+.kicker{
+  margin-top:28px; font-size:14px; color:var(--text-dim);
+}
+.kicker .dot{margin:0 8px; color:var(--text-faint);}
+
+h1{
+  font-size:2.15rem; line-height:1.22; margin:14px 0 16px; letter-spacing:-0.01em; color:#fafafa;
+}
+.dek{font-size:1.1rem; color:var(--text-dim); margin:0 0 28px; max-width:66ch;}
+
+.hero-img{
+  width:100%; border-radius:var(--radius); border:1px solid var(--border);
+  background:var(--bg-panel); margin-bottom:32px;
+}
+
+article p{font-size:1.02rem; color:#d4d4d8; margin:0 0 18px;}
+article h2{
+  font-size:1.45rem; color:#fafafa; margin:44px 0 14px; letter-spacing:-0.01em;
+}
+article h3{
+  font-size:1.12rem; color:#f4f4f5; margin:26px 0 10px;
+}
+article ul, article ol{margin:0 0 20px; padding-left:0; list-style:none;}
+article ul li, article ol li{
+  padding:9px 0 9px 28px; position:relative; color:#d4d4d8; border-bottom:1px solid var(--border);
+  font-size:0.99rem;
+}
+article ul li:last-child, article ol li:last-child{border-bottom:none;}
+article ul.plain li{padding-left:20px;}
+article ul.plain li::before{content:"–"; position:absolute; left:0; color:var(--text-faint);}
+article ul.check li::before{content:"✓"; position:absolute; left:0; color:#4ade80; font-weight:600;}
+article ol{counter-reset:step;}
+article ol li{padding-left:34px;}
+article ol li::before{
+  counter-increment:step; content:counter(step); position:absolute; left:0; top:9px;
+  width:20px; height:20px; border-radius:50%; background:var(--accent-dim); color:#c7d2fe;
+  font-size:12px; font-weight:600; display:flex; align-items:center; justify-content:center;
+}
+
+.panel{
+  background:var(--bg-panel); border:1px solid var(--border); border-radius:var(--radius);
+  padding:24px 26px; margin:28px 0;
+}
+.panel .eyebrow{font-size:13px; color:var(--accent); font-weight:600; margin-bottom:6px;}
+.panel h2{margin-top:0 !important;}
+.panel p:last-child{margin-bottom:0;}
+.kv{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:18px;}
+.kv .item{border-top:1px solid var(--border); padding-top:10px;}
+.kv .label{font-size:13px; color:var(--text-faint); margin-bottom:4px;}
+.kv .value{font-size:0.98rem; color:#e4e4e7;}
+
+.diagram{
+  background:var(--bg-panel); border:1px solid var(--border); border-radius:var(--radius);
+  padding:26px; margin:28px 0;
+}
+.diagram .eyebrow{font-size:13px; color:var(--accent); font-weight:600; margin-bottom:14px;}
+.diagram svg{width:100%; height:auto;}
+
+.cta{
+  background:linear-gradient(160deg, var(--bg-panel-2), var(--bg-panel));
+  border:1px solid var(--border); border-radius:var(--radius);
+  padding:32px 28px; margin:48px 0 40px; text-align:left;
+}
+.cta .eyebrow{font-size:13px; color:var(--accent); font-weight:600; margin-bottom:6px;}
+.cta h2{margin:0 0 8px !important; font-size:1.3rem;}
+.cta p{color:var(--text-dim); margin:0 0 18px;}
+.cta a.btn{
+  display:inline-block; background:var(--accent-solid); color:#fff; font-weight:600;
+  padding:11px 20px; border-radius:8px; font-size:0.95rem;
+}
+.cta a.btn:hover{background:#4f46e5; text-decoration:none;}
+
+.related{margin:40px 0 20px;}
+.related h2{font-size:1.1rem; color:var(--text-dim); font-weight:600; margin:0 0 14px; text-transform:none;}
+.related ul{list-style:none; padding:0; margin:0;}
+.related li{padding:12px 0; border-bottom:1px solid var(--border);}
+.related li a{color:#e4e4e7; font-size:0.99rem;}
+.related li a:hover{color:var(--accent);}
+
+.faq h2{margin-top:52px !important;}
+.faq-item{border-bottom:1px solid var(--border); padding:18px 0;}
+.faq-item h3{margin:0 0 8px; font-size:1.02rem; color:#fafafa;}
+.faq-item p{margin:0; color:#c4c4c9; font-size:0.98rem;}
+
+footer.site{
+  border-top:1px solid var(--border); margin-top:40px; padding:48px 24px 32px;
+  max-width:1100px; margin-left:auto; margin-right:auto;
+}
+footer.site .foot-top{display:flex; flex-wrap:wrap; gap:48px; justify-content:space-between; margin-bottom:32px;}
+footer.site .foot-top > *{margin-right:24px;}
+footer.site .foot-top > *:last-child{margin-right:0;}
+footer.site .brand{margin-bottom:10px;}
+footer.site .desc{color:var(--text-dim); font-size:0.92rem; max-width:340px;}
+footer.site .col h4{font-size:13px; color:var(--text-faint); margin:0 0 12px; font-weight:600;}
+footer.site .col ul{list-style:none; padding:0; margin:0;}
+footer.site .col li{margin-bottom:8px;}
+footer.site .col a{color:var(--text-dim); font-size:0.92rem;}
+footer.site .copyright{color:var(--text-faint); font-size:0.85rem; border-top:1px solid var(--border); padding-top:20px;}
+
+@media (max-width:640px){
+  h1{font-size:1.6rem;}
+  .kv{grid-template-columns:1fr;}
+  header.site{flex-direction:column; gap:12px; align-items:flex-start;}
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site">
+  <a class="brand" href="https://best-invoicegenerator.com/"><img src="https://best-invoicegenerator.com/favicon.svg" alt="">Best-InvoiceGenerator.com</a>
+  <nav class="site-nav">
+    <a href="https://best-invoicegenerator.com/saved-invoices">Saved Invoices</a>
+    <a href="https://best-invoicegenerator.com/guides/">Guides</a>
+    <span aria-hidden="true">☀️</span>
+    <a class="ai-pill" href="https://best-invoicegenerator.com/ai">✨ Invoice with AI</a>
+  </nav>
+</header>
+<main id="main-content">
+  <a class="crumb" href="https://best-invoicegenerator.com/guides/">← All guides</a>
+  <div class="kicker">Global Business<span class="dot">·</span>6 min read</div>
+  <h1>Proforma invoice vs invoice: when to send which document</h1>
+  <p class="dek">A proforma invoice previews a sale before it becomes final. Send one at the wrong moment, or without the right label, and you can confuse customs, accounts payable, and your own books.</p>
+  <img class="hero-img" src="https://best-invoicegenerator.com/images/guides/proforma-invoice-guide.svg" alt="Proforma invoice vs invoice: when to send which document illustration">
+
+  <article>
+
+<p>A proforma invoice shows up at an odd point in the sales process — after a client has agreed to move forward, but before the work is finished or the goods have shipped. It looks like an invoice, uses invoice language, and lists a total due. That similarity is exactly what causes problems: clients pay documents that were never meant to be paid, and shipments get held at customs because the paperwork wasn't labeled the way an import officer expected.</p>
+<p>The fix isn't complicated once you know the difference. A proforma invoice previews the numbers. A standard invoice asks to be paid. Everything else in this guide follows from that one distinction.</p>
+
+<h2>What a proforma invoice actually is</h2>
+<p>A proforma invoice is a preliminary bill of sale sent before a transaction is complete. It shows the buyer what they can expect to pay — item descriptions, quantities, unit prices, shipping, and an estimated total — without creating a binding payment obligation or landing in your accounts receivable as an open balance.</p>
+<p>It's most common in three settings: international trade, where customs authorities require a document describing the shipment's contents and declared value before goods cross a border; large service engagements, where a client's finance team needs a firm-enough estimate to approve a purchase order internally; and deposit requests, where you want to show a client exactly what they're prepaying before the final scope is locked in.</p>
+<p>The word "proforma" itself comes from Latin, roughly "for the sake of form" — a fitting description, since the document exists to formalize numbers everyone has already agreed to in principle, without triggering the accounting and payment machinery a real invoice does.</p>
+
+<h2>Proforma invoice, quote, and final invoice: how they differ</h2>
+<p>These three documents get confused because they can look almost identical. The difference is in what each one commits you to.</p>
+<ul class="plain">
+<li>A <strong>quote</strong> is an early-stage estimate. Prices can still move, and the client hasn't formally agreed to buy.</li>
+<li>A <strong>proforma invoice</strong> comes after the client has effectively said yes. Pricing is close to final, but the goods haven't shipped or the work hasn't been delivered, so it isn't a request for payment.</li>
+<li>A <strong>final invoice</strong> is issued once the shipment has gone out or the work is complete. It carries a real invoice number, enters your books as a receivable, and states a due date.</li>
+</ul>
+
+<h2>When to send a proforma invoice</h2>
+<p>A handful of situations call for a proforma invoice specifically, rather than a quote or a final invoice:</p>
+<ul class="check">
+<li>Preparing an international shipment, so the buyer's customs broker can pre-clear the goods and calculate duties before arrival</li>
+<li>Requesting a deposit or advance payment before starting a large project, so the client sees the full projected total alongside the deposit amount</li>
+<li>Helping a client's finance or procurement team secure internal budget approval before a purchase order is issued</li>
+<li>Confirming final pricing after negotiation, before either side has committed to a shipping date or start date</li>
+<li>Opening a letter of credit with a buyer's bank, which typically requires a proforma invoice as supporting documentation</li>
+</ul>
+
+<h2>Proforma invoices and letters of credit</h2>
+<p>One use case deserves its own mention: opening a letter of credit. When a buyer's bank guarantees payment on their behalf — common in larger international deals where the two sides don't yet have a trusted trading history — the bank typically asks for a proforma invoice before issuing the letter. The bank isn't paying against it directly; it's using the document to confirm what the letter of credit needs to cover. Getting the totals and shipping terms right on this version matters more than usual, since a mismatch between the proforma and the eventual shipment can delay the release of funds.</p>
+
+<h2>What to include on a proforma invoice</h2>
+<p>Most of the fields match a standard invoice. A few details are specific to the proforma format, and skipping them is what causes the document to be misread as a real invoice or rejected by a customs official.</p>
+<ul class="check">
+<li>The words "Proforma Invoice" clearly visible in the document title — not buried in a footer</li>
+<li>A reference number, which doesn't need to follow your regular invoice sequence</li>
+<li>Full seller and buyer details, including addresses for international shipments</li>
+<li>Itemized goods or services, quantities, unit prices, and an estimated total</li>
+<li>A validity date, since prices and shipping costs can change if too much time passes</li>
+<li>Shipping terms (Incoterms) and harmonized system (HS) codes for cross-border goods</li>
+<li>A short note stating that the document is an estimate and not a demand for payment</li>
+</ul>
+
+<div class="panel">
+  <div class="eyebrow">Worked example</div>
+  <h2>An export shipment, proformed before it ships</h2>
+  <p>Harbor & Oak, a furniture maker, agrees to sell 40 dining chairs to a retailer in Germany. Before the chairs leave the warehouse, Harbor & Oak sends a proforma invoice so the buyer's customs broker can calculate import duties and the buyer's bank can process payment ahead of shipment.</p>
+  <div class="kv">
+    <div class="item"><div class="label">Document</div><div class="value">Proforma Invoice PF-2026-014</div></div>
+    <div class="item"><div class="label">Estimated total</div><div class="value">€6,200.00, valid for 14 days</div></div>
+    <div class="item"><div class="label">Shipping terms</div><div class="value">FOB Newark, HS code 9401.61</div></div>
+    <div class="item"><div class="label">Status</div><div class="value">Not a request for payment</div></div>
+  </div>
+</div>
+
+<h2>Converting a proforma invoice into a final invoice</h2>
+<p>Once the goods ship or the work is delivered, the proforma invoice gets replaced — not amended — by a standard invoice.</p>
+<ol>
+<li>Assign a real, sequential invoice number from your normal numbering system.</li>
+<li>Reference the original proforma number in a note, so the client can match the two documents.</li>
+<li>Confirm the final totals still match the proforma. If anything changed — a quantity, a shipping cost, an exchange rate — call it out explicitly rather than letting the client discover the difference on their own.</li>
+<li>Set a real due date and payment terms, since this document now represents an actual receivable.</li>
+</ol>
+
+<h3>Common mistakes to avoid</h3>
+<ul class="plain">
+<li>Leaving off the "Proforma Invoice" label, which is the single most common cause of a client paying it by mistake</li>
+<li>Treating the estimated total as fixed when currency conversion or shipping costs are still in flux</li>
+<li>Skipping a validity date, so a client tries to honor pricing from a proforma invoice sent months earlier</li>
+<li>Reusing the proforma's reference number as the final invoice number, which makes bookkeeping harder to reconcile later</li>
+</ul>
+
+  </article>
+
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <div class="faq-item"><h3>Is a proforma invoice legally binding?</h3><p>No. A proforma invoice is a preliminary estimate, not a binding payment demand. It shows a buyer what to expect, but it doesn't create an enforceable obligation the way a final invoice or signed contract does.</p></div>
+    <div class="faq-item"><h3>Can I use a proforma invoice to request payment?</h3><p>You can use it to request a deposit or advance payment when that's clearly stated, but it shouldn't be treated as the document a client pays in full. Once the transaction is complete, issue a standard invoice for the actual payment request.</p></div>
+    <div class="faq-item"><h3>Do I need a separate invoice number for a proforma invoice?</h3><p>Yes. Keep proforma reference numbers in their own sequence, separate from your regular invoice numbering. This avoids gaps or duplicates in your official invoice records and makes it obvious at a glance which document is which.</p></div>
+    <div class="faq-item"><h3>How long is a proforma invoice valid?</h3><p>There's no universal rule, but 14 to 30 days is common for most goods and services. Include an explicit validity date on the document itself so pricing questions don't come up later if the sale is delayed.</p></div>
+    <div class="faq-item"><h3>Do customs authorities accept proforma invoices?</h3><p>Yes, proforma invoices are a standard part of international shipping documentation. Customs brokers use them to estimate duties and pre-clear goods before arrival, though the specific fields required can vary by country, so check with your freight forwarder or the destination country's customs authority.</p></div>
+    <div class="faq-item"><h3>Does a proforma invoice need to show tax or VAT?</h3><p>It's good practice to show an estimated tax or VAT amount if you know the applicable rate, so the buyer isn't surprised later. Since the document isn't final, it's reasonable to label the tax figure as estimated, the same way the rest of the total is treated.</p></div>
+  </section>
+
+  <div class="cta">
+    <div class="eyebrow">Use the tool</div>
+    <h2>Ready to make the document?</h2>
+    <p>Open the invoice generator with this guide in mind.</p>
+    <a class="btn" href="https://best-invoicegenerator.com/">Create an invoice</a>
+  </div>
+
+  <section class="related">
+    <h2>Related guides</h2>
+    <ul>
+      <li><a href="https://best-invoicegenerator.com/guides/international-multi-currency-invoicing/">Cross-border billing: invoicing global clients in multi-currencies →</a></li>
+      <li><a href="https://best-invoicegenerator.com/guides/quote-vs-invoice/">Quote vs. invoice: a practical workflow from approval to payment →</a></li>
+      <li><a href="https://best-invoicegenerator.com/guides/pdf-invoice-generation/">Creating compliant PDF invoices: print standards and archival security →</a></li>
+    </ul>
+  </section>
+</main>
+<footer class="site">
+  <div class="foot-top">
+    <div>
+      <a class="brand" href="https://best-invoicegenerator.com/"><img src="https://best-invoicegenerator.com/favicon.svg" alt="">Best Invoice Generator</a>
+      <p class="desc">A free, local-first invoice generator. Create, brand, and export professional invoices right from your browser — no account required.</p>
+    </div>
+    <div class="col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="https://best-invoicegenerator.com/guides/">Guides</a></li>
+        <li><a href="https://best-invoicegenerator.com/about">About Us</a></li>
+        <li><a href="https://best-invoicegenerator.com/contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="https://best-invoicegenerator.com/privacy-policy">Privacy Policy</a></li>
+        <li><a href="https://best-invoicegenerator.com/terms">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">© 2026 Best Invoice Generator. All rights reserved.</div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgG2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="100%" stop-color="#18181b" />
+    </linearGradient>
+    <linearGradient id="softG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <filter id="glow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#6366f1" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#bgG2)" />
+  
+  <!-- Left Screen Mockup -->
+  <g filter="url(#glow2)">
+    <rect x="160" y="90" width="280" height="260" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5" />
+    <path d="M 160 102 Q 160 90 172 90 L 428 90 Q 440 90 440 102 L 440 120 L 160 120 Z" fill="#1e293b" />
+    <circle cx="180" cy="105" r="4" fill="#ef4444" />
+    <circle cx="195" cy="105" r="4" fill="#f59e0b" />
+    <circle cx="210" cy="105" r="4" fill="#10b981" />
+    <rect x="180" y="140" width="120" height="12" rx="3" fill="#334155" />
+    <rect x="180" y="165" width="220" height="40" rx="6" fill="#1e293b" />
+    <rect x="180" y="215" width="220" height="40" rx="6" fill="#1e293b" />
+    <rect x="180" y="265" width="220" height="40" rx="6" fill="#1e293b" />
+  </g>
+
+  <!-- Right Screen Mockup Overlay -->
+  <g filter="url(#glow2)">
+    <rect x="360" y="130" width="280" height="250" rx="12" fill="#18181b" stroke="#6366f1" stroke-width="2" />
+    <path d="M 360 142 Q 360 130 372 130 L 628 130 Q 640 130 640 142 L 640 160 L 360 160 Z" fill="url(#softG)" />
+    <circle cx="380" cy="145" r="4" fill="#ffffff" opacity="0.8" />
+    <circle cx="395" cy="145" r="4" fill="#ffffff" opacity="0.8" />
+    <circle cx="410" cy="145" r="4" fill="#ffffff" opacity="0.8" />
+    <rect x="380" y="180" width="160" height="14" rx="4" fill="#6366f1" />
+    <rect x="380" y="210" width="240" height="80" rx="8" fill="#27272a" />
+    <circle cx="420" cy="250" r="20" fill="#a855f7" opacity="0.4" />
+    <rect x="460" y="240" width="120" height="10" rx="3" fill="#e4e4e7" />
+    <rect x="460" y="256" width="80" height="8" rx="2" fill="#a1a1aa" />
+    <rect x="380" y="310" width="100" height="30" rx="6" fill="#3f3f46" />
+    <rect x="495" y="310" width="125" height="30" rx="6" fill="url(#softG)" />
+  </g>
+</svg>

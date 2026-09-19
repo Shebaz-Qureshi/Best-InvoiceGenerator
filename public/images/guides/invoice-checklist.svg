@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="chkBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="50%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+    <linearGradient id="chkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#34d399" />
+    </linearGradient>
+    <filter id="chkGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#10b981" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#chkBg)" />
+
+  <g filter="url(#chkGlow)">
+    <!-- Checklist Document Board -->
+    <rect x="250" y="65" width="300" height="320" rx="16" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+    <path d="M 250 81 Q 250 65 266 65 L 534 65 Q 550 65 550 81 L 550 115 L 250 115 Z" fill="#1e293b" />
+
+    <!-- Top Badge & Identity Indicator -->
+    <rect x="280" y="82" width="20" height="20" rx="4" fill="url(#chkGrad)" />
+    <path d="M 284 92 L 288 96 L 296 87" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <rect x="310" y="87" width="100" height="10" rx="3" fill="#e2e8f0" />
+    <rect x="470" y="87" width="50" height="10" rx="3" fill="#334155" />
+
+    <!-- Checklist Item Rows with Checkmarks -->
+    <rect x="280" y="140" width="240" height="34" rx="6" fill="#1e293b" />
+    <circle cx="298" cy="157" r="9" fill="url(#chkGrad)" />
+    <path d="M 294 157 L 297 160 L 303 153" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <rect x="316" y="153" width="130" height="8" rx="2" fill="#e2e8f0" />
+    <rect x="470" y="153" width="35" height="8" rx="2" fill="#10b981" />
+
+    <rect x="280" y="184" width="240" height="34" rx="6" fill="#1e293b" />
+    <circle cx="298" cy="201" r="9" fill="url(#chkGrad)" />
+    <path d="M 294 201 L 297 204 L 303 197" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <rect x="316" y="197" width="110" height="8" rx="2" fill="#e2e8f0" />
+    <rect x="470" y="197" width="35" height="8" rx="2" fill="#10b981" />
+
+    <rect x="280" y="228" width="240" height="34" rx="6" fill="#1e293b" />
+    <circle cx="298" cy="245" r="9" fill="url(#chkGrad)" />
+    <path d="M 294 245 L 297 248 L 303 241" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <rect x="316" y="241" width="140" height="8" rx="2" fill="#e2e8f0" />
+    <rect x="470" y="241" width="35" height="8" rx="2" fill="#10b981" />
+
+    <rect x="280" y="272" width="240" height="34" rx="6" fill="#1e293b" />
+    <circle cx="298" cy="289" r="9" fill="url(#chkGrad)" />
+    <path d="M 294 289 L 297 292 L 303 285" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <rect x="316" y="285" width="90" height="8" rx="2" fill="#e2e8f0" />
+    <rect x="470" y="285" width="35" height="8" rx="2" fill="#10b981" />
+
+    <!-- Approved Stamp Button -->
+    <rect x="390" y="325" width="130" height="36" rx="8" fill="url(#chkGrad)" />
+  </g>
+</svg>

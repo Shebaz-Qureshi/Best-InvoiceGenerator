@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://best-invoicegenerator.com/sitemap.xml
+Sitemap: https://best-invoicegenerator.com/sitemap-index.xml

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#09090b"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  
+  <g transform="translate(150, 100)">
+    <!-- PO Document -->
+    <rect x="50" y="50" width="220" height="300" rx="12" fill="url(#cardGrad)" stroke="#3f3f46" stroke-width="2"/>
+    <text x="160" y="90" fill="#93c5fd" font-family="Inter, sans-serif" font-size="15" font-weight="700" text-anchor="middle">PO #450021</text>
+    <rect x="80" y="120" width="160" height="12" rx="6" fill="#3b82f6" opacity="0.6"/>
+    <rect x="80" y="150" width="120" height="10" rx="5" fill="#27272a"/>
+    <rect x="80" y="180" width="140" height="10" rx="5" fill="#27272a"/>
+    <rect x="80" y="240" width="160" height="36" rx="8" fill="#18181b" stroke="#3f3f46"/>
+    <text x="160" y="263" fill="#e4e4e7" font-family="Inter, sans-serif" font-size="13" text-anchor="middle">Qty: 10 × $400</text>
+
+    <!-- Three-way check badge -->
+    <circle cx="450" cy="200" r="45" fill="#09090b" stroke="#6366f1" stroke-width="3"/>
+    <path d="M435 200 L445 210 L465 190" fill="none" stroke="#818cf8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="450" y="265" fill="#818cf8" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">3-WAY MATCH</text>
+
+    <!-- Invoice Document -->
+    <rect x="630" y="50" width="220" height="300" rx="12" fill="url(#cardGrad)" stroke="#6366f1" stroke-width="2"/>
+    <text x="740" y="90" fill="#c4b5fd" font-family="Inter, sans-serif" font-size="15" font-weight="700" text-anchor="middle">INV #2026-118</text>
+    <rect x="660" y="120" width="160" height="12" rx="6" fill="#6366f1" opacity="0.6"/>
+    <rect x="660" y="150" width="120" height="10" rx="5" fill="#27272a"/>
+    <rect x="660" y="180" width="140" height="10" rx="5" fill="#27272a"/>
+    <rect x="660" y="240" width="160" height="36" rx="8" fill="#18181b" stroke="#6366f1"/>
+    <text x="740" y="263" fill="#e4e4e7" font-family="Inter, sans-serif" font-size="13" text-anchor="middle">Qty: 10 × $400</text>
+  </g>
+
+</svg>

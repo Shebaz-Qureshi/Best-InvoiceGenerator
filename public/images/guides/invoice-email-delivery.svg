@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#09090b"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  
+  <g transform="translate(180, 110)">
+    <!-- Email Envelope / Client UI -->
+    <rect x="40" y="40" width="760" height="300" rx="14" fill="url(#cardGrad)" stroke="#06b6d4" stroke-width="2"/>
+    
+    <!-- Email Header -->
+    <rect x="40" y="40" width="760" height="60" rx="14" fill="#083344"/>
+    <text x="75" y="76" fill="#67e8f9" font-family="Inter, sans-serif" font-size="14" font-weight="700">TO:</text>
+    <text x="110" y="76" fill="#e4e4e7" font-family="Inter, sans-serif" font-size="13">ap@client.com, project-lead@client.com</text>
+    <text x="75" y="115" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="14" font-weight="700">SUBJ:</text>
+    <text x="125" y="115" fill="#22d3ee" font-family="Inter, sans-serif" font-size="14" font-weight="600">Invoice INV-2026-141 — Acme Retail website redesign [PO-88214]</text>
+
+    <!-- Email Body lines -->
+    <rect x="75" y="145" width="580" height="10" rx="5" fill="#27272a"/>
+    <rect x="75" y="170" width="520" height="10" rx="5" fill="#27272a"/>
+    
+    <!-- Attachment Pill -->
+    <rect x="75" y="215" width="340" height="48" rx="10" fill="#18181b" stroke="#06b6d4" stroke-width="1.5"/>
+    <circle cx="105" cy="239" r="14" fill="#083344"/>
+    <text x="105" y="244" fill="#22d3ee" font-family="Inter, sans-serif" font-size="11" font-weight="700" text-anchor="middle">PDF</text>
+    <text x="135" y="244" fill="#e4e4e7" font-family="Inter, sans-serif" font-size="13" font-weight="600">INV-2026-141_AcmeRetail.pdf</text>
+
+    <!-- Deliverability Check -->
+    <g transform="translate(560, 220)">
+      <rect width="180" height="40" rx="8" fill="#064e3b" stroke="#10b981"/>
+      <text x="90" y="25" fill="#34d399" font-family="Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">INBOX DELIVERED ✓</text>
+    </g>
+  </g>
+
+</svg>

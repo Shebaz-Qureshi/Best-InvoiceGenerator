@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#09090b"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  
+  <g transform="translate(180, 110)">
+    <rect x="40" y="40" width="760" height="300" rx="14" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="2"/>
+    
+    <!-- Sole trader / Freelance Invoice Header -->
+    <rect x="80" y="70" width="180" height="28" rx="6" fill="#3b0764" stroke="#a855f7"/>
+    <text x="170" y="89" fill="#d8b4fe" font-family="Inter, sans-serif" font-size="13" font-weight="700" text-anchor="middle">SOLE TRADER INVOICE</text>
+    
+    <!-- Key components -->
+    <g transform="translate(80, 130)">
+      <rect width="200" height="150" rx="10" fill="#18181b" stroke="#27272a"/>
+      <text x="100" y="35" fill="#c084fc" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Your Legal Name</text>
+      <text x="100" y="65" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">Jane Doe</text>
+      <text x="100" y="85" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">t/a Studio Horizon</text>
+      <text x="100" y="115" fill="#71717a" font-family="Inter, sans-serif" font-size="11" text-anchor="middle">Full address & contact</text>
+    </g>
+
+    <g transform="translate(320, 130)">
+      <rect width="200" height="150" rx="10" fill="#18181b" stroke="#27272a"/>
+      <text x="100" y="35" fill="#c084fc" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Tax Treatment</text>
+      <text x="100" y="65" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">Non-VAT registered</text>
+      <text x="100" y="85" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">Tax: $0.00 (not registered)</text>
+      <text x="100" y="115" fill="#71717a" font-family="Inter, sans-serif" font-size="11" text-anchor="middle">Clear explanatory note</text>
+    </g>
+
+    <g transform="translate(560, 130)">
+      <rect width="200" height="150" rx="10" fill="#18181b" stroke="#10b981"/>
+      <text x="100" y="35" fill="#34d399" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Full Legal Validity</text>
+      <text x="100" y="65" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">Unique invoice number</text>
+      <text x="100" y="85" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">Bank account details</text>
+      <text x="100" y="115" fill="#34d399" font-family="Inter, sans-serif" font-size="11" font-weight="600" text-anchor="middle">100% Legally Binding</text>
+    </g>
+  </g>
+
+</svg>

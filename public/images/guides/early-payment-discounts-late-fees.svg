@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#09090b"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  
+  <g transform="translate(150, 140)">
+    <!-- Timeline Bar -->
+    <rect x="50" y="120" width="800" height="16" rx="8" fill="#18181b"/>
+    <rect x="50" y="120" width="260" height="16" rx="8" fill="#10b981"/>
+    <rect x="310" y="120" width="400" height="16" fill="#3b82f6"/>
+    <rect x="710" y="120" width="140" height="16" rx="8" fill="#ef4444"/>
+
+    <!-- Day 0 Pin -->
+    <circle cx="50" cy="128" r="14" fill="#09090b" stroke="#10b981" stroke-width="3"/>
+    <text x="50" y="80" fill="#e4e4e7" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">DAY 0</text>
+    <text x="50" y="100" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">Invoice Sent</text>
+
+    <!-- Day 10 Pin: Early Discount -->
+    <circle cx="310" cy="128" r="14" fill="#09090b" stroke="#10b981" stroke-width="3"/>
+    <text x="310" y="60" fill="#34d399" font-family="Inter, sans-serif" font-size="16" font-weight="700" text-anchor="middle">2% DISCOUNT</text>
+    <text x="310" y="82" fill="#e4e4e7" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">DAY 10</text>
+    <text x="310" y="102" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">Early window ends</text>
+
+    <!-- Day 30 Pin: Net Due Date -->
+    <circle cx="710" cy="128" r="14" fill="#09090b" stroke="#3b82f6" stroke-width="3"/>
+    <text x="710" y="80" fill="#e4e4e7" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">DAY 30 (NET)</text>
+    <text x="710" y="100" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">Full invoice due</text>
+
+    <!-- Day 31+ Pin: Late Fees -->
+    <circle cx="850" cy="128" r="14" fill="#09090b" stroke="#ef4444" stroke-width="3"/>
+    <text x="850" y="60" fill="#f87171" font-family="Inter, sans-serif" font-size="16" font-weight="700" text-anchor="middle">+1.5% LATE FEE</text>
+    <text x="850" y="82" fill="#e4e4e7" font-family="Inter, sans-serif" font-size="14" font-weight="700" text-anchor="middle">DAY 31+</text>
+    <text x="850" y="102" fill="#a1a1aa" font-family="Inter, sans-serif" font-size="12" text-anchor="middle">Statutory interest</text>
+  </g>
+
+</svg>

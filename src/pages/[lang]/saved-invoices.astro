@@ -1,0 +1,734 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslation, DEFAULT_LOCALE } from '../../i18n';
+
+export async function getStaticPaths() {
+  const locales = ['en', 'es', 'fr', 'de', 'it', 'nl', 'pt', 'ar', 'ja'];
+  return locales.map((l) => ({ params: { lang: l } }));
+}
+
+const { lang = DEFAULT_LOCALE } = Astro.params;
+const t = getTranslation(lang);
+const si = t.savedInvoices!;
+const tool = t.tool;
+
+const savedJs = {
+  ...si,
+  tool: {
+    invoice: tool.invoice,
+    issued: tool.issued,
+    due: tool.due,
+    discount: tool.discount,
+    tax: tool.tax,
+    shipping: tool.shipping,
+    subtotal: tool.subtotal,
+    total: tool.total,
+    fromLabel: tool.fromLabel,
+    toLabel: tool.toLabel,
+    itemHeader: tool.itemHeader,
+    qty: tool.qty,
+    rate: tool.rate,
+    amountHeader: tool.amountHeader,
+    memoLabel: tool.memoLabel,
+    fromDefault: tool.messages.fromAddress,
+    toDefault: tool.messages.billToAddress,
+    itemDefault: tool.messages.serviceOrProduct,
+    memoDefault: tool.messages.thankYou,
+  },
+};
+const savedJsJson = JSON.stringify(savedJs);
+---
+
+<BaseLayout
+  title={si.metaTitle}
+  description={si.metaDescription}
+  path="saved-invoices"
+  lang={lang}
+  t={t}
+  hideLangSwitcher
+  noindex
+>
+  <div hidden id="big-saved">{savedJsJson}</div>
+
+  <section class="border-b">
+    <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 sm:py-14">
+      <p class="eyebrow">{si.eyebrow}</p>
+      <h1 class="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">{si.heading}</h1>
+      <p class="mt-4 max-w-2xl text-sm leading-7 text-zinc-400">{si.intro}</p>
+    </div>
+  </section>
+
+  <section class="border-b">
+    <div class="mx-auto max-w-5xl px-4 py-6 sm:px-6">
+      <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <div class="panel !p-4">
+          <p class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">{si.statsInvoices}</p>
+          <p id="statTotal" class="mt-1 text-xl font-bold text-white tabular-nums">0</p>
+        </div>
+        <div class="panel !p-4">
+          <p class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">{si.statsPaid}</p>
+          <p id="statPaid" class="mt-1 text-xl font-bold text-white tabular-nums">0</p>
+        </div>
+        <div class="panel !p-4">
+          <p class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">{si.statsUnpaid}</p>
+          <p id="statUnpaid" class="mt-1 text-xl font-bold text-white tabular-nums">0</p>
+        </div>
+        <div class="panel !p-4">
+          <p class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">{si.statsDraft}</p>
+          <p id="statDraft" class="mt-1 text-xl font-bold text-white tabular-nums">0</p>
+        </div>
+        <div class="panel !p-4 sm:col-span-3 lg:col-span-1">
+          <p class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">{si.statsTotal}</p>
+          <p id="statTotalValue" class="mt-1 text-base font-bold text-white tabular-nums"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+      <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+        <div class="relative flex-1">
+          <label class="sr-only" for="searchInput">{si.searchPlaceholder}</label>
+          <input id="searchInput" type="search" class="bloom-input pr-9" placeholder={si.searchPlaceholder} autocomplete="off" />
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <label class="flex items-center gap-1.5 text-xs text-zinc-400">
+            <input id="selectAll" type="checkbox" class="accent-blue-600" />
+            {si.selectAll}
+          </label>
+          <label class="sr-only" for="sortSelect">Sort</label>
+          <select id="sortSelect" class="bloom-input w-auto py-1.5 text-xs">
+            <option value="newest">{si.sortNewest}</option>
+            <option value="oldest">{si.sortOldest}</option>
+            <option value="amountHigh">{si.sortAmountHigh}</option>
+            <option value="amountLow">{si.sortAmountLow}</option>
+          </select>
+          <button type="button" id="exportAll" class="btn-card">{si.exportAll}</button>
+          <button type="button" id="deleteSelected" class="btn-card btn-card-danger" disabled>{si.deleteSelected}</button>
+        </div>
+      </div>
+
+      <div id="invoiceList" class="mt-6 grid gap-4 lg:grid-cols-2"></div>
+
+      <div id="emptyNone" class="hidden mt-6 rounded-2xl border border-dashed border-zinc-700 px-6 py-16 text-center">
+        <p class="text-3xl" aria-hidden="true">📄</p>
+        <h2 class="mt-4 text-xl font-bold tracking-tight text-white">{si.emptyTitle}</h2>
+        <p class="mx-auto mt-2 max-w-md text-sm leading-6 text-zinc-400">{si.emptyIntro}</p>
+        <a href="/" class="button-primary mt-6">{si.createFirst}</a>
+      </div>
+
+      <div id="emptyFiltered" class="hidden mt-6 rounded-2xl border border-dashed border-zinc-700 px-6 py-16 text-center">
+        <h2 class="text-xl font-bold tracking-tight text-white">{si.noMatches}</h2>
+        <p class="mx-auto mt-2 max-w-md text-sm leading-6 text-zinc-400">
+          "<span id="emptyQueryText"></span>"
+        </p>
+        <button type="button" id="clearSearch" class="button-primary mt-6">{si.clearSearch}</button>
+      </div>
+
+      <p class="mt-8 text-center">
+        <a href="/" class="footer-link text-sm font-medium">{si.backHome}</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Off-screen invoice paper used for PDF downloads -->
+  <div class="dl-wrap" aria-hidden="true">
+    <article id="dlPaper" class="invoice-paper bg-white text-zinc-900 p-6 text-xs flex flex-col justify-between">
+      <div>
+        <div id="dlCoverArt" class="w-full h-24 rounded-xl overflow-hidden mb-6 relative bg-zinc-900">
+          <img id="dlCoverImg" class="hidden w-full h-full object-cover" alt="" />
+          <div id="dlCoverPattern" class="absolute inset-0"></div>
+        </div>
+        <div class="flex items-start justify-between gap-4 mb-5">
+          <div>
+            <img id="dlLogo" alt="" class="hidden max-h-12 max-w-32 object-contain mb-3" />
+          </div>
+          <div class="text-right">
+            <h2 id="dlDocTitle" class="text-xl font-bold tracking-tight text-zinc-900">Invoice</h2>
+            <p id="dlIssueDate" class="text-[11px] text-zinc-500 mt-1"></p>
+            <p id="dlDueDate" class="text-[11px] font-medium text-zinc-700"></p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 mb-5 pb-4 border-b border-zinc-100">
+          <div>
+            <p class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1">{t.tool.fromLabel}</p>
+            <p id="dlFrom" class="whitespace-pre-line text-xs font-normal text-zinc-700 leading-relaxed"></p>
+          </div>
+          <div>
+            <p class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-1">{t.tool.toLabel}</p>
+            <p id="dlTo" class="whitespace-pre-line text-xs font-normal text-zinc-700 leading-relaxed"></p>
+          </div>
+        </div>
+        <table class="w-full text-xs mb-4">
+          <thead>
+            <tr class="border-b border-zinc-900 text-[10px] font-bold tracking-wider text-zinc-500 uppercase">
+              <th class="py-2 text-left">{t.tool.itemHeader}</th>
+              <th class="py-2 text-center w-12 sm:w-16">{t.tool.qty}</th>
+              <th class="py-2 text-right w-20 sm:w-24">{t.tool.rate}</th>
+              <th class="py-2 text-right w-20 sm:w-24">{t.tool.amountHeader}</th>
+            </tr>
+          </thead>
+          <tbody id="dlItems" class="divide-y divide-zinc-100">
+            <tr class="hidden">
+              <td class="py-2 font-medium text-zinc-800"></td>
+              <td class="py-2 text-center text-zinc-600"></td>
+              <td class="py-2 text-right text-zinc-600"></td>
+              <td class="py-2 text-right font-medium text-zinc-900"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div class="ml-auto w-full max-w-[220px] space-y-1.5 text-xs pt-3 border-t border-zinc-200">
+          <div class="flex justify-between text-zinc-500">
+            <span>{t.tool.subtotal}</span>
+            <span id="dlSubtotal" class="font-medium text-zinc-800"></span>
+          </div>
+          <div id="dlDiscountRow" class="hidden flex justify-between text-zinc-500">
+            <span id="dlDiscountLabel"></span>
+            <span id="dlDiscount" class="text-emerald-600"></span>
+          </div>
+          <div id="dlTaxRow" class="hidden flex justify-between text-zinc-500">
+            <span id="dlTaxLabel"></span>
+            <span id="dlTax" class="font-medium text-zinc-800"></span>
+          </div>
+          <div id="dlShippingRow" class="hidden flex justify-between text-zinc-500">
+            <span>{t.tool.shipping}</span>
+            <span id="dlShipping" class="font-medium text-zinc-800"></span>
+          </div>
+          <div class="flex justify-between text-sm font-bold text-zinc-900 pt-2 border-t border-zinc-900">
+            <span>{t.tool.total}</span>
+            <span id="dlTotal"></span>
+          </div>
+        </div>
+        <div id="dlMemoBlock" class="mt-5 pt-4 border-t border-zinc-100">
+          <p class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-1">{t.tool.memoLabel}</p>
+          <p id="dlMemo" class="text-xs text-zinc-600 italic"></p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div id="toast" class="app-toast" role="status" aria-live="polite"></div>
+
+  <!-- Saved invoice card template -->
+  <template id="cardTemplate">
+    <article class="saved-card rounded-xl border border-zinc-200 bg-white p-4 shadow-sm transition hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900">
+      <div class="flex items-start gap-3">
+        <input type="checkbox" class="card-select mt-1 h-4 w-4 shrink-0 accent-blue-600" aria-label="Select invoice" />
+        <div class="min-w-0 flex-1">
+          <div class="flex items-start justify-between gap-3">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="text-sm font-semibold text-zinc-900 dark:text-white">#<span class="card-number"></span></span>
+                <span class="card-status text-[10px] font-bold uppercase tracking-wider rounded-full px-2 py-0.5 status-unpaid"></span>
+              </div>
+              <p class="card-client mt-1 truncate text-sm font-medium text-zinc-700 dark:text-zinc-300"></p>
+            </div>
+            <div class="text-right">
+              <p class="card-total text-base font-bold text-zinc-900 dark:text-white tabular-nums"></p>
+              <p class="card-currency text-[10px] uppercase tracking-wider text-zinc-400"></p>
+            </div>
+          </div>
+          <div class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-zinc-500 dark:text-zinc-400">
+            <span class="card-items"></span>
+            <span class="card-due"></span>
+            <span class="card-savedat"></span>
+          </div>
+          <div class="mt-4 flex flex-wrap items-center gap-2 border-t border-zinc-100 pt-3 dark:border-zinc-800">
+            <a class="card-edit btn-card btn-card-primary" href="#">{si.edit}</a>
+            <button type="button" class="card-download btn-card">{si.download}</button>
+            <button type="button" class="card-duplicate btn-card">{si.duplicate}</button>
+            <label class="ml-auto flex items-center gap-1.5 text-[11px] text-zinc-500 dark:text-zinc-400">
+              <span class="sr-only">{si.statusLabel}</span>
+              <select class="card-status-select bloom-input w-auto py-1 text-[11px]">
+                <option value="draft">{si.statusDraft}</option>
+                <option value="unpaid">{si.statusUnpaid}</option>
+                <option value="paid">{si.statusPaid}</option>
+              </select>
+            </label>
+            <button type="button" class="card-delete btn-icon" aria-label={si.delete} title={si.delete}>✕</button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script is:inline src="/saved-invoices.js"></script>
+
+  <script>
+    const I18N = JSON.parse(document.getElementById('big-saved').textContent);
+    const $ = (id) => document.getElementById(id);
+    const list = $('invoiceList');
+    const cardTemplate = $('cardTemplate');
+    const todayIso = new Date().toISOString().slice(0, 10);
+
+    let invoices = [];
+    let selected = new Set();
+    let filter = '';
+    let sort = 'newest';
+
+    function esc(s = '') {
+      return s.replace(/[&<>'"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[c]));
+    }
+
+    function money(value, currency) {
+      try {
+        return new Intl.NumberFormat('en', {
+          style: 'currency',
+          currency: currency || 'USD',
+          maximumFractionDigits: 2
+        }).format(value || 0);
+      } catch {
+        return (value || 0).toFixed(2);
+      }
+    }
+
+    function formatDateStr(str) {
+      if (!str) return '—';
+      try {
+        const d = new Date(str.length === 10 ? str + 'T00:00:00' : str);
+        return d.toLocaleDateString('en', { month: 'short', day: 'numeric', year: 'numeric' });
+      } catch {
+        return str;
+      }
+    }
+
+    function toast(msg, type) {
+      const el = $('toast');
+      el.textContent = msg;
+      el.classList.remove('toast-error');
+      if (type === 'error') el.classList.add('toast-error');
+      requestAnimationFrame(() => el.classList.add('show'));
+      clearTimeout(el._t);
+      el._t = setTimeout(() => el.classList.remove('show'), 3200);
+    }
+
+    function cap(s = '') {
+      return s.charAt(0).toUpperCase() + s.slice(1);
+    }
+
+    function statusLabel(status) {
+      const key = 'status' + cap(status || 'unpaid');
+      return I18N[key] || I18N.statusUnpaid;
+    }
+
+    async function loadInvoices() {
+      try {
+        invoices = await SavedInvoices.getAll();
+      } catch {
+        invoices = [];
+      }
+      render();
+    }
+
+    function sortInvoices(items) {
+      const arr = [...items];
+      if (sort === 'oldest') arr.sort((a, b) => String(a.savedAt || '').localeCompare(String(b.savedAt || '')));
+      else if (sort === 'amountHigh') arr.sort((a, b) => (+b.total || 0) - (+a.total || 0));
+      else if (sort === 'amountLow') arr.sort((a, b) => (+a.total || 0) - (+b.total || 0));
+      else arr.sort((a, b) => String(b.savedAt || '').localeCompare(String(a.savedAt || '')));
+      return arr;
+    }
+
+    function updateStats() {
+      $('statTotal').textContent = String(invoices.length);
+      $('statPaid').textContent = String(invoices.filter((i) => i.status === 'paid').length);
+      $('statUnpaid').textContent = String(invoices.filter((i) => i.status === 'unpaid').length);
+      $('statDraft').textContent = String(invoices.filter((i) => !i.status || i.status === 'draft').length);
+      const byCur = {};
+      invoices.forEach((i) => {
+        const c = i.currency || 'USD';
+        byCur[c] = (byCur[c] || 0) + (+i.total || 0);
+      });
+      const parts = Object.keys(byCur).map((c) => money(byCur[c], c));
+      $('statTotalValue').textContent = parts.length ? parts.join(' · ') : money(0, 'USD');
+    }
+
+    function updateBulkBar() {
+      const btn = $('deleteSelected');
+      const n = selected.size;
+      btn.disabled = !n;
+      btn.textContent = n ? `${I18N.deleteSelected} (${n})` : I18N.deleteSelected;
+    }
+
+    function makeCard(rec) {
+      const node = cardTemplate.content.cloneNode(true);
+      const card = node.querySelector('.saved-card');
+      card.dataset.id = rec.id;
+      node.querySelector('.card-number').textContent = rec.invoiceNumber || '001';
+      node.querySelector('.card-client').textContent = rec.client || I18N.noClient;
+      node.querySelector('.card-total').textContent = money(rec.total, rec.currency);
+      node.querySelector('.card-currency').textContent = rec.currency || 'USD';
+      const count = rec.itemCount != null ? rec.itemCount : (rec.data && rec.data.items ? rec.data.items.length : 0);
+      node.querySelector('.card-items').textContent = `${count} ${I18N.itemCountLabel}`;
+      node.querySelector('.card-due').textContent = `${I18N.dueLabel}: ${formatDateStr(rec.dueDate)}`;
+      const when = rec.savedAt && rec.savedAt !== rec.updatedAt
+        ? `${I18N.updatedOn}: ${formatDateStr(rec.updatedAt)}`
+        : `${I18N.savedOn}: ${formatDateStr(rec.savedAt)}`;
+      node.querySelector('.card-savedat').textContent = when;
+
+      const badge = node.querySelector('.card-status');
+      badge.textContent = statusLabel(rec.status);
+      badge.className = `card-status text-[10px] font-bold uppercase tracking-wider rounded-full px-2 py-0.5 status-${rec.status || 'unpaid'}`;
+
+      const statusSelect = node.querySelector('.card-status-select');
+      statusSelect.value = rec.status || 'unpaid';
+      statusSelect.onchange = async () => {
+        rec.status = statusSelect.value;
+        rec.updatedAt = new Date().toISOString();
+        badge.textContent = statusLabel(rec.status);
+        badge.className = `card-status text-[10px] font-bold uppercase tracking-wider rounded-full px-2 py-0.5 status-${rec.status}`;
+        try { await SavedInvoices.save(rec); } catch {}
+        updateStats();
+      };
+
+      const edit = node.querySelector('.card-edit');
+      edit.href = rec.id ? `/#id=${encodeURIComponent(rec.id)}` : (rec.data ? '/' + SavedInvoices.encodeInvoiceLink(rec.data) : '/');
+
+      const cb = node.querySelector('.card-select');
+      cb.checked = selected.has(rec.id);
+      cb.onchange = () => {
+        if (cb.checked) selected.add(rec.id);
+        else selected.delete(rec.id);
+        updateBulkBar();
+      };
+
+      node.querySelector('.card-download').onclick = () => downloadInvoice(rec);
+      node.querySelector('.card-duplicate').onclick = () => duplicateInvoice(rec);
+      node.querySelector('.card-delete').onclick = () => deleteInvoice(rec);
+      return node;
+    }
+
+    function render() {
+      const q = filter.toLowerCase();
+      let items = invoices.filter((rec) => {
+        if (!q) return true;
+        const hay = [
+          rec.invoiceNumber, rec.client, rec.from, rec.currency,
+          rec.data ? rec.data.memo || '' : '',
+          ...(rec.data && rec.data.items ? rec.data.items : []).map((i) => i.description || '')
+        ].join(' ').toLowerCase();
+        return hay.includes(q);
+      });
+      items = sortInvoices(items);
+
+      updateStats();
+
+      if (!invoices.length) {
+        list.innerHTML = '';
+        $('emptyNone').classList.remove('hidden');
+        $('emptyFiltered').classList.add('hidden');
+        $('selectAll').disabled = true;
+        updateBulkBar();
+        return;
+      }
+      $('emptyNone').classList.add('hidden');
+      $('selectAll').disabled = false;
+      if (!items.length) {
+        list.innerHTML = '';
+        $('emptyQueryText').textContent = q;
+        $('emptyFiltered').classList.remove('hidden');
+        updateBulkBar();
+        return;
+      }
+      $('emptyFiltered').classList.add('hidden');
+      list.innerHTML = '';
+      items.forEach((rec) => list.appendChild(makeCard(rec)));
+      updateBulkBar();
+    }
+
+    async function deleteInvoice(rec) {
+      if (!confirm(I18N.confirmDelete)) return;
+      try {
+        await SavedInvoices.remove(rec.id);
+      } catch {}
+      invoices = invoices.filter((i) => i.id !== rec.id);
+      selected.delete(rec.id);
+      toast(I18N.toastDeleted);
+      render();
+    }
+
+    async function duplicateInvoice(rec) {
+      const copy = JSON.parse(JSON.stringify(rec));
+      copy.id = SavedInvoices.newId();
+      copy.savedAt = new Date().toISOString();
+      copy.updatedAt = copy.savedAt;
+      copy.status = 'draft';
+      copy.invoiceNumber = rec.invoiceNumber ? `${rec.invoiceNumber} copy` : '001';
+      try {
+        await SavedInvoices.save(copy);
+      } catch {}
+      invoices.unshift(copy);
+      toast(I18N.toastDuplicated);
+      render();
+    }
+
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.onload = resolve;
+        s.onerror = reject;
+        document.head.appendChild(s);
+      });
+    }
+
+    /* ---- html2pdf helpers (oklch -> rgb conversion for Tailwind v4) ---- */
+    function oklabToRgb(L, a, b, alpha) {
+      const l_ = L + 0.3963377774 * a + 0.2158037573 * b;
+      const m_ = L - 0.1055613458 * a - 0.0638541728 * b;
+      const s_ = L - 0.0894841775 * a - 1.2914855480 * b;
+      const l = l_ * l_ * l_, mm = m_ * m_ * m_, s = s_ * s_ * s_;
+      let r = 4.0767416621 * l - 3.3077115913 * mm + 0.2309699292 * s;
+      let g = -1.2684380046 * l + 2.6097574011 * mm - 0.3413193965 * s;
+      let bl = -0.0041960863 * l - 0.7034186147 * mm + 1.7076147010 * s;
+      const conv = (v) => { v = v <= 0.0031308 ? 12.92 * v : 1.055 * Math.pow(v, 1 / 2.4) - 0.055; return Math.max(0, Math.min(1, v)); };
+      const R = Math.round(conv(r) * 255), G = Math.round(conv(g) * 255), B = Math.round(conv(bl) * 255);
+      return alpha < 1 ? `rgba(${R},${G},${B},${alpha})` : `rgb(${R},${G},${B})`;
+    }
+
+    function colorToRgb(color) {
+      color = color.trim();
+      const num = (x) => x.endsWith('%') ? parseFloat(x) / 100 : parseFloat(x);
+      const alphaOf = (seg) => { const t = seg.trim(); return t.endsWith('%') ? parseFloat(t) / 100 : parseFloat(t); };
+      let m = color.match(/^oklch\(([^)]*)\)$/);
+      if (m) {
+        const seg = m[1].split('/');
+        const p = seg[0].trim().split(/\s+/);
+        const L = num(p[0]), C = num(p[1]), H = isNaN(num(p[2])) ? 0 : num(p[2]);
+        return oklabToRgb(L, C * Math.cos(H * Math.PI / 180), C * Math.sin(H * Math.PI / 180), seg[1] !== undefined ? alphaOf(seg[1]) : 1);
+      }
+      m = color.match(/^oklab\(([^)]+)\)$/);
+      if (m) {
+        const seg = m[1].split('/');
+        const p = seg[0].trim().split(/\s+/);
+        return oklabToRgb(num(p[0]), num(p[1]), num(p[2]), seg[1] !== undefined ? alphaOf(seg[1]) : 1);
+      }
+      m = color.match(/^color\((srgb|display-p3)\s+([^)]+)\)$/);
+      if (m) {
+        const p = m[2].trim().split(/\s+/);
+        const R = Math.round(Math.max(0, Math.min(1, num(p[0]))) * 255);
+        const G = Math.round(Math.max(0, Math.min(1, num(p[1]))) * 255);
+        const B = Math.round(Math.max(0, Math.min(1, num(p[2]))) * 255);
+        const a = p[3] !== undefined && p[3] !== 'none' ? alphaOf(p[3]) : 1;
+        return a < 1 ? `rgba(${R},${G},${B},${a})` : `rgb(${R},${G},${B})`;
+      }
+      return null;
+    }
+
+    function sanitizeCssValue(value) {
+      return value.replace(/oklch\([^)]*\)|oklab\([^)]*\)|color\([^)]*\)/g, (m) => { const c = colorToRgb(m); return c || m; });
+    }
+
+    function convertPreviewToRgb(paper) {
+      const snapshot = [];
+      for (const el of [paper, ...paper.querySelectorAll('*')]) {
+        const cs = getComputedStyle(el);
+        const fixes = {};
+        for (let i = 0; i < cs.length; i++) {
+          const p = cs[i];
+          const v = cs.getPropertyValue(p);
+          if (/oklch|oklab|\bcolor\(/.test(v)) { const nv = sanitizeCssValue(v); if (nv !== v) fixes[p] = nv; }
+        }
+        const keys = Object.keys(fixes);
+        if (keys.length) {
+          const prev = {};
+          for (const p of keys) prev[p] = el.style.getPropertyValue(p);
+          for (const p of keys) el.style.setProperty(p, fixes[p]);
+          snapshot.push({ el, prev });
+        }
+      }
+      return snapshot;
+    }
+
+    function restorePreviewRgb(snapshot) {
+      for (const { el, prev } of snapshot) {
+        for (const p in prev) {
+          if (prev[p] === '') el.style.removeProperty(p);
+          else el.style.setProperty(p, prev[p]);
+        }
+      }
+    }
+
+    /* ---- Fill the off-screen paper from saved data ---- */
+    const presets = {
+      liquid: 'bg-gradient-to-r from-teal-500 via-cyan-600 to-blue-700',
+      dots: 'bg-gradient-to-r from-blue-900 via-indigo-950 to-slate-900',
+      coral: 'bg-gradient-to-r from-rose-400 via-rose-500 to-pink-600',
+      monochrome: 'bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-600'
+    };
+    const patterns = {
+      liquid: 'bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/20 via-transparent to-black/30',
+      dots: 'bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:8px_8px] opacity-40',
+      coral: 'bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.2)_50%,transparent_75%)]',
+      monochrome: 'bg-[repeating-linear-gradient(-45deg,#fde047,#fde047_4px,#f59e0b_4px,#f59e0b_8px)] opacity-80'
+    };
+
+    function fillPaper(d, currency, savedAt) {
+      const cover = $('dlCoverArt'), coverImg = $('dlCoverImg'), coverPattern = $('dlCoverPattern');
+      if (d.coverArtData) {
+        coverImg.src = d.coverArtData;
+        coverImg.classList.remove('hidden');
+        coverPattern.className = 'hidden';
+        cover.className = 'w-full h-24 rounded-xl overflow-hidden mb-6 relative bg-zinc-900';
+      } else if (presets[d.selectedPreset]) {
+        coverImg.classList.add('hidden');
+        cover.className = 'w-full h-24 rounded-xl overflow-hidden mb-6 relative ' + presets[d.selectedPreset];
+        coverPattern.className = 'absolute inset-0 ' + patterns[d.selectedPreset];
+      } else {
+        coverImg.classList.add('hidden');
+        cover.className = 'w-full h-24 rounded-xl overflow-hidden mb-6 relative bg-zinc-900';
+        coverPattern.className = 'absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/20 via-transparent to-black/30';
+      }
+
+      const logo = $('dlLogo');
+      if (d.logoData) {
+        logo.src = d.logoData;
+        logo.classList.remove('hidden');
+      } else {
+        logo.classList.add('hidden');
+      }
+
+      $('dlDocTitle').textContent = `${I18N.tool.invoice} #${d.invoiceNumber || '001'}`;
+      $('dlIssueDate').textContent = `${I18N.tool.issued}: ${formatDateStr((savedAt || '').slice(0, 10) || todayIso)}`;
+      $('dlDueDate').textContent = `${I18N.tool.due}: ${formatDateStr(d.dueDate)}`;
+
+      $('dlFrom').textContent = d.fromAddress || I18N.tool.fromDefault;
+      $('dlTo').textContent = d.toAddress || I18N.tool.toDefault;
+
+      const items = d.items || [];
+      $('dlItems').innerHTML = items.map((x) => `
+        <tr>
+          <td class="py-2 font-medium text-zinc-800">${esc(x.description) || I18N.tool.itemDefault}</td>
+          <td class="py-2 text-center text-zinc-600">${x.qty}</td>
+          <td class="py-2 text-right text-zinc-600">${money(x.rate, currency)}</td>
+          <td class="py-2 text-right font-medium text-zinc-900">${money(x.qty * x.rate, currency)}</td>
+        </tr>
+      `).join('');
+
+      const subtotal = items.reduce((s, x) => s + (+x.qty || 0) * (+x.rate || 0), 0);
+      const discount = subtotal * (+d.discountRate || 0) / 100;
+      const shipping = +d.shippingAmount || 0;
+      const tax = (subtotal - discount) * (+d.taxRate || 0) / 100;
+      const total = subtotal - discount + shipping + tax;
+
+      $('dlSubtotal').textContent = money(subtotal, currency);
+
+      $('dlDiscountRow').classList.toggle('hidden', !discount);
+      $('dlDiscount').textContent = `-${money(discount, currency)}`;
+      $('dlDiscountLabel').textContent = `${I18N.tool.discount} (${d.discountRate || 0}%)`;
+
+      $('dlTaxRow').classList.toggle('hidden', !tax);
+      $('dlTax').textContent = money(tax, currency);
+      $('dlTaxLabel').textContent = `${I18N.tool.tax} (${d.taxRate || 0}%)`;
+
+      $('dlShippingRow').classList.toggle('hidden', !shipping);
+      $('dlShipping').textContent = money(shipping, currency);
+
+      $('dlTotal').textContent = money(total, currency);
+
+      const memo = (d.memo || '').trim();
+      $('dlMemo').textContent = memo || I18N.tool.memoDefault;
+      $('dlMemoBlock').classList.toggle('hidden', !memo);
+    }
+
+    async function downloadInvoice(rec) {
+      toast(I18N.toastPreparingPdf);
+      if (typeof html2pdf === 'undefined') {
+        try { await loadScript('/html2pdf.bundle.min.js'); }
+        catch { toast('Could not load PDF engine', 'error'); return; }
+      }
+      try {
+        fillPaper(rec.data || {}, rec.currency, rec.savedAt);
+        const paper = $('dlPaper');
+        const snapshot = convertPreviewToRgb(paper);
+        const now = new Date();
+        const pad = (n) => String(n).padStart(2, '0');
+        const ts = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+        const pdfName = `Invoice_${rec.invoiceNumber || '001'}_${ts}.pdf`;
+        let blob;
+        try {
+          blob = await html2pdf().set({
+            margin: 0,
+            filename: pdfName,
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { scale: 2, useCORS: true, logging: false, backgroundColor: '#ffffff', windowWidth: 794 },
+            jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
+          }).from(paper).outputPdf('blob');
+        } finally {
+          restorePreviewRgb(snapshot);
+        }
+        if (blob.type !== 'application/pdf') {
+          blob = new Blob([blob], { type: 'application/pdf' });
+        }
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = pdfName;
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(() => {
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        }, 0);
+        toast(I18N.toastPdfReady);
+      } catch {
+        toast('Could not generate PDF', 'error');
+      }
+    }
+
+    /* ---- Toolbar events ---- */
+    $('searchInput').addEventListener('input', (e) => {
+      filter = e.target.value;
+      render();
+    });
+    $('sortSelect').addEventListener('change', (e) => {
+      sort = e.target.value;
+      render();
+    });
+    $('selectAll').addEventListener('change', (e) => {
+      selected.clear();
+      if (e.target.checked) {
+        [...list.querySelectorAll('.saved-card')].forEach((c) => selected.add(c.dataset.id));
+      }
+      [...list.querySelectorAll('.card-select')].forEach((cb) => { cb.checked = e.target.checked; });
+      updateBulkBar();
+    });
+    $('deleteSelected').addEventListener('click', async () => {
+      if (!selected.size) return;
+      if (!confirm(I18N.confirmDeleteMany.replace('{count}', String(selected.size)))) return;
+      const ids = [...selected];
+      const n = ids.length;
+      try { await SavedInvoices.removeMany(ids); } catch {}
+      invoices = invoices.filter((i) => !selected.has(i.id));
+      selected.clear();
+      toast(I18N.toastDeletedMany.replace('{count}', String(n)));
+      render();
+    });
+    $('exportAll').addEventListener('click', async () => {
+      const blob = new Blob([JSON.stringify(invoices, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `saved-invoices-backup-${new Date().toISOString().slice(0, 10)}.json`;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(() => {
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 0);
+      toast(I18N.toastBackupExported);
+    });
+    $('clearSearch').addEventListener('click', () => {
+      filter = '';
+      $('searchInput').value = '';
+      render();
+    });
+
+    loadInvoices();
+  </script>
+</BaseLayout>
