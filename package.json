@@ -12,16 +12,14 @@
     "sitemap": "node scripts/generate-sitemap.mjs",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.1.6",
     "html2pdf.js": "^0.14.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",
-    "tailwindcss": "^4.3.3",
-    "wrangler": "^4.118.0"
+    "tailwindcss": "^4.3.3"
   }
 }

@@ -1,4 +1,4 @@
-const ROOT_EN = {
+﻿const ROOT_EN = {
   '/': '/en/',
   '/about': '/en/about/',
   '/contact': '/en/contact/',
