@@ -1,13 +1,8 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getTranslation, localeHref } from '../../i18n';
-import { locales } from '../../i18n';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getTranslation, localeHref } from '../i18n';
 
-export function getStaticPaths() {
-  return locales.filter((l) => l.code !== 'en').map((l) => ({ params: { lang: l.code } }));
-}
-
-const { lang = 'en' } = Astro.params;
+const lang = 'en';
 const t = getTranslation(lang);
 const updated = new Intl.DateTimeFormat(lang, { month: 'long', day: 'numeric', year: 'numeric' }).format(new Date());
 ---

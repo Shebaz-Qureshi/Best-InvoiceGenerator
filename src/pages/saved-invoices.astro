@@ -1,13 +1,8 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getTranslation, DEFAULT_LOCALE } from '../../i18n';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getTranslation, DEFAULT_LOCALE } from '../i18n';
 
-export async function getStaticPaths() {
-  const locales = ['es', 'fr', 'de', 'it', 'nl', 'pt', 'ar', 'ja'];
-  return locales.map((l) => ({ params: { lang: l } }));
-}
-
-const { lang = DEFAULT_LOCALE } = Astro.params;
+const lang = 'en';
 const t = getTranslation(lang);
 const si = t.savedInvoices!;
 const tool = t.tool;

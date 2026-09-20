@@ -30,8 +30,8 @@ const guideSlugs = slugMatches.map(m => m[1]);
 
 const guideUrls = guideSlugs.map(slug => `/guides/${slug}/`);
 
-// 3. Multilingual pages for locales: es, fr, de, it, nl, pt, ar, ja, and en
-const locales = ['en', 'es', 'fr', 'de', 'it', 'nl', 'pt', 'ar', 'ja'];
+// 3. Multilingual pages for locales: es, fr, de, it, nl, pt, ar, ja
+const locales = ['es', 'fr', 'de', 'it', 'nl', 'pt', 'ar', 'ja'];
 const localizedSubpages = [
   '',
   'about',
