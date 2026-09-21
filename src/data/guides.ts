@@ -130,19 +130,19 @@ export const guides: Guide[] = [
   },
   {
     slug: "payment-terms",
-    title: "Invoice payment terms: choose a clear due-date policy",
-    description: "How to select and write invoice payment terms with practical examples for different client relationships.",
+    title: "Invoice Payment Terms: How to Set a Clear Due Date",
+    description: "Learn how to choose and write invoice payment terms, from Net 14 to deposits, with clear examples, a follow-up plan, and answers to common questions.",
     category: "Getting paid",
     readingTime: "6 min read",
-    reviewed: "August 24, 2026",
-    author: "Best Invoice Generator Editorial Team",
-    editor: "Best Invoice Generator Editorial Team",
-    summary: "Good payment terms state a calendar date, a payment method, and what the client should use as a reference.",
-    image: { src: "/images/guides/payment-terms.svg", alt: "Invoice payment terms and calendar due date illustration" },
+    reviewed: "",
+    author: "",
+    editor: "",
+    summary: "Good payment terms give the client a date, a way to pay, and a reference to quote. Everything else is detail.",
+    image: { src: "/images/guides/payment-terms.svg", alt: "A calendar with a highlighted due date beside an invoice, illustrating clear payment terms" },
     intro: [
-      "Payment terms are the instruction that turns an invoice total into an expected payment. “Net 14” can be useful, but a visible due date removes ambiguity for a busy accounts-payable team.",
-      "Choose terms that fit the trust level, delivery pattern, and cash-flow needs of your work. Then use the same wording consistently on proposals, contracts, and invoices."
-],
+      "Payment terms turn an invoice total into an expected payment. They tell the client when the money is due, how to send it, and what happens if it arrives late. \u201cNet 14\u201d is a common way to say this, but a busy accounts team still has to count the days. A visible due date takes that step away.",
+      "This guide explains the most common terms, how to choose between them, and how to word them so they are hard to misread."
+    ],
     example: {
       label: "Worked example",
       title: "Three ways to state the same request",
@@ -174,30 +174,67 @@ export const guides: Guide[] = [
     },
     sections: [
       {
-            "heading": "Use calendar dates whenever possible",
+            "heading": "What payment terms should cover",
             "paragraphs": [
-                  "Relative terms can be interpreted differently when an invoice is forwarded or reissued. Add a date such as “Due September 2, 2026” alongside “Net 14.” This lets a client act without counting days."
+                  "A complete payment term answers three questions without making the client search for the details: When — a specific due date, not only a number of days. How — the accepted payment methods and where to send the money. Which invoice — a reference, such as the invoice number, for the payer to include.",
+                  "Use the same wording on proposals, contracts, and invoices. When the terms match everywhere, nobody can claim they were surprised."
             ]
       },
       {
-            "heading": "Match the payment rhythm to the work",
+            "heading": "Common payment terms explained",
             "paragraphs": [
-                  "A one-off small job may use payment on receipt. Larger projects often use a deposit and a final invoice, while recurring retainers can be billed on the same day each month. State the service period so a recurring charge is easy to match to the work completed."
+                  "Due on receipt. Payment is expected as soon as the invoice arrives. It suits small one-off jobs, consumer clients, and situations where you have no payment history yet. Net 7, Net 14, Net 30, Net 60. The number is how many days the client has after the invoice date. Shorter terms help your cash flow. Longer terms are often requested by larger organizations with formal approval processes. Deposit and final balance. You invoice a portion up front, often 25 to 50 percent, and the remainder on delivery. This is a good fit for new clients and projects with upfront costs. Milestone billing. Payments are tied to stages of a longer project. Each invoice describes the milestone reached, which makes approval easier. Recurring or retainer billing. The invoice goes out on the same day each period. State the service period so each charge can be matched to the work delivered. Early-payment discounts. A term such as “2/10 Net 30” offers a 2 percent discount if the client pays within 10 days, with the full amount due at 30 days. It can speed up payment, but make sure the discount fits your margins."
+            ]
+      },
+      {
+            "heading": "How to choose the right terms",
+            "paragraphs": [
+                  "Think about the relationship, the size of the job, and your own cash needs. New client — ask for a deposit or use short terms. Repeat client with good history — use the agreed terms and a fixed calendar date. Large or long project — use milestones so you are never far ahead of your payments. Client with strict procedures — ask what their approval process requires and match the invoice to it.",
+                  "Write a calendar date next to any relative term. When an invoice is forwarded or reissued, “Net 14” can be counted from different starting points. “Due 2 September 2026” cannot."
+            ]
+      },
+      {
+            "heading": "Set expectations before you send",
+            "paragraphs": [
+                  "Confirm the terms were agreed before starting work. Add the client’s purchase order number if they use one. Send the invoice to the person or mailbox that handles payments. Keep a copy of the sent PDF and the date it was issued. If you charge late fees, state the amount or rate in the contract and on the invoice."
             ],
             "checklist": [
                   "Confirm the terms were agreed before starting work.",
-                  "Use the client’s required purchase-order reference if they have one.",
+                  "Add the client’s purchase order number if they use one.",
                   "Send the invoice to the person or mailbox that handles payments.",
-                  "Keep a copy of the sent PDF and the date it was issued."
+                  "Keep a copy of the sent PDF and the date it was issued.",
+                  "If you charge late fees, state the amount or rate in the contract and on the invoice."
             ]
       },
       {
             "heading": "Write a calm follow-up plan",
             "paragraphs": [
-                  "Your invoice does not need a threatening note. A brief reminder schedule is usually enough: a friendly note a few days before the due date, a direct reminder on the due date, and a personal follow-up if the payment remains outstanding."
+                  "An invoice does not need a threatening tone. A short, predictable schedule works for most clients: a friendly note a few days before the due date with the invoice attached, a brief reminder on the due date with the payment details, a direct polite message after the due date asking for a payment date, and a personal call or formal notice if it remains unpaid, following your contract."
             ]
       }
-],
+    ],
+    faq: [
+      {
+            "question": "What does Net 30 mean on an invoice?",
+            "answer": "Net 30 means the full amount is due within 30 days of the invoice date. Net 14 and Net 60 work the same way with 14 or 60 days. Adding the actual due date next to the term removes any need for the client to count days."
+      },
+      {
+            "question": "Which payment terms should a freelancer choose?",
+            "answer": "Shorter terms such as due on receipt or Net 7 to Net 14 suit small jobs and new clients. Larger projects often work better with a deposit up front and a final invoice on delivery. Longer terms are usually a concession to larger clients that require them."
+      },
+      {
+            "question": "Can I charge a late fee?",
+            "answer": "Often yes, but only if the fee was agreed in writing before the work began, for example in a contract or quote. Rules on late fees and interest differ by country, so check the local requirements before adding one."
+      },
+      {
+            "question": "Is a deposit a good idea?",
+            "answer": "For new clients and larger projects, usually yes. A deposit confirms commitment, covers early costs, and reduces the risk of unpaid work. State the deposit amount and the balance due date in the quote and on each invoice."
+      },
+      {
+            "question": "When should I send a payment reminder?",
+            "answer": "A friendly reminder a few days before the due date, a short note on the due date, and a direct follow-up once the invoice is overdue is a reasonable schedule for most clients."
+      }
+    ],
     
     related: [
       "invoice-checklist",
