@@ -1090,58 +1090,46 @@ export const guides: Guide[] = [
   },
   {
     slug: "international-multi-currency-invoicing",
-    title: "Cross-border billing: invoicing global clients in multi-currencies",
-    description: "Learn how to bill international clients using an online invoice generator supporting EUR, USD, GBP, JPY, and 40+ currencies.",
+    title: "Multi-Currency Invoicing: How to Bill International Clients",
+    description: "Bill clients abroad with confidence: choose the currency, handle exchange rates and bank fees, add IBAN and SWIFT details, and note cross-border tax.",
     category: "Global Business",
     readingTime: "7 min read",
-    reviewed: "August 24, 2026",
-    author: "Best Invoice Generator Editorial Team",
-    editor: "Best Invoice Generator Editorial Team",
-    summary: "Master multi-currency billing, foreign exchange notations, and cross-border tax considerations for global clients.",
+    reviewed: "",
+    author: "",
+    editor: "",
+    summary: "Invoicing abroad? Learn how to pick the billing currency, state exchange rates and fees, show bank details, and handle cross-border tax notes.",
     image: { src: "/images/guides/international-billing.svg", alt: "Multi currency international invoicing illustration" },
     intro: [
-      "Working with international clients expands your market, but it introduces multi-currency billing complexities. Differences in currency symbols, exchange rate conventions, and cross-border banking codes can confuse overseas accounts departments.",
-      "By using a versatile online invoice generator that supports 40+ world currencies (including USD, EUR, GBP, JPY, CAD, AUD, and regional currencies), businesses can issue clear, compliant international invoices."
-],
+      "Working with clients abroad opens up a bigger market, but it also adds friction to the most routine document you send. A domestic invoice can rely on shared assumptions: the currency, the tax rules, the way to pay. An international one cannot. The client’s accounts team may be reading it in a second language, converting amounts against their own books, and checking bank details against a different national system.",
+      "The fix is not complicated. It is a matter of being explicit about a handful of details. This guide covers the decisions that matter most: currency, exchange rates, bank details, fees, tax notes, and language."
+    ],
     example: {
       label: "Worked example",
       title: "A European studio billing a US corporate client",
-      body: "A Berlin consulting firm bills a New York client in USD using a free invoice creator.",
+      body: "A Berlin consulting firm bills a New York client in USD.",
       rows: [
-        [
-                "Agreed Currency",
-                "USD ($) — eliminates currency conversion math for the payer"
-        ],
-        [
-                "Line Items",
-                "Strategic Brand Audit — $3,500.00 USD"
-        ],
-        [
-                "Banking Codes",
-                "IBAN & SWIFT/BIC codes clearly listed in remittance section"
-        ],
-        [
-                "Tax Note",
-                "Zero-rated export service (VAT Exempt under EU-US provisions)"
-        ]
-]
+        ["Billing currency", "USD, as agreed in the contract"],
+        ["Line item", "Strategic brand audit, 3,500.00 USD"],
+        ["Bank details", "Account holder, IBAN, and BIC/SWIFT shown in the payment section"],
+        ["Fees", "Payer covers their own bank charges"],
+        ["Tax note", "Treatment stated according to the applicable place-of-supply rules"],
+        ["Terms", "Net 30, due on a stated calendar date"]
+      ]
     },
     diagram: {
       title: "International invoicing checklist flow",
-      
       steps: [
         "Select client currency",
         "Set foreign bank routing (SWIFT/IBAN)",
         "Apply cross-border tax rules",
         "Export localized PDF invoice"
-]
+      ]
     },
     sections: [
       {
             "heading": "Best practices for multi-currency client billing",
             "paragraphs": [
-                  "Always agree on the billing currency in your initial contract. When filling out your best free invoice maker form, select the exact currency code (e.g., EUR, CAD, GBP) so all subtotal formatting and currency symbols align automatically.",
-                  "State which party absorbs wire transfer fees or currency conversion charges. Displaying your SWIFT/BIC code and IBAN clearly in the memo block prevents bank routing failures."
+                  "Always agree on the billing currency in your initial contract. When filling out your invoice form, select the exact currency code so all subtotal formatting and currency symbols align automatically. State which party absorbs wire transfer fees or currency conversion charges. Displaying your SWIFT/BIC code and IBAN clearly in the memo block prevents bank routing failures."
             ],
             "checklist": [
                   "Confirm the billing currency matches your contract agreement.",
@@ -1153,84 +1141,88 @@ export const guides: Guide[] = [
       {
             "heading": "Handling international VAT and sales taxes",
             "paragraphs": [
-                  "Cross-border services often qualify for zero-rated VAT or reverse-charge mechanisms. Use an online invoice creator to display separate tax rates or add explanatory notes in the invoice memo field."
+                  "Cross-border services often qualify for zero-rated VAT or reverse-charge mechanisms. Use an invoicing tool to display separate tax rates or add explanatory notes in the invoice memo field."
             ]
       }
-],
+    ],
     faq: [
       {
-            "question": "What currency should I select when invoicing international clients?",
-            "answer": "Invoice in the currency specified in your contract. If unspecified, billing in the client’s domestic currency or a stable major currency (like USD or EUR) simplifies approval."
+            "question": "What currency should I use when invoicing international clients?",
+            "answer": "Use the currency written into your contract. If none is specified, agree one before invoicing. Billing in the client’s local currency makes approval easier, while a stable major currency such as USD or EUR is a common compromise."
       },
       {
-            "question": "How do I include SWIFT and IBAN details on my invoice?",
-            "answer": "Add your international bank codes into the billing notes or memo field of your invoice generator software so they appear neatly at the bottom of the PDF."
+            "question": "Who pays the bank and conversion fees on an international payment?",
+            "answer": "Whoever you agree on in advance. State it on the invoice, for example that the payer covers their own bank charges so the full amount arrives. Without this, transfers often arrive short."
+      },
+      {
+            "question": "Do I need to include IBAN and SWIFT details?",
+            "answer": "For international bank transfers, usually yes. Include your account holder name, IBAN or account number, and BIC/SWIFT code, and double-check them, since a single wrong character can send the payment astray."
+      },
+      {
+            "question": "Which exchange rate should I use?",
+            "answer": "Agree the method in your contract, such as the rate on the invoice date, the delivery date, or a monthly average from a named source. Record the rate and source you used so you can explain the figures later."
+      },
+      {
+            "question": "Do I charge VAT or sales tax on international invoices?",
+            "answer": "It depends on where you and your client are, what you sell, and whether the client is a business. Rules such as reverse charge and export treatment vary widely, so confirm the correct treatment with a local accountant."
+      },
+      {
+            "question": "Can I send an invoice in a language other than English?",
+            "answer": "Yes. Many finance teams process invoices faster in their own language, so consider a bilingual invoice or one in the client’s language while keeping numbers and currency codes unambiguous."
       }
-],
+    ],
     related: [
       "pdf-invoice-generation",
-      "invoice-generator-software-guide",
-      "overdue-invoice-recovery"
-]
+      "overdue-invoice-recovery",
+      "invoice-generator-software-guide"
+    ]
   },
   {
     slug: "pdf-invoice-generation",
-    title: "Creating compliant PDF invoices: print standards and archival security",
-    description: "Why vector PDF invoices remain the gold standard for accounting compliance and how to generate high-resolution PDFs.",
+    title: "PDF Invoices: Formats, Print Standards and Archiving",
+    description: "Learn why PDF is the standard invoice format, how to check layout and print quality, when structured e-invoices apply, and how to archive invoices safely.",
     category: "Document Standards",
     readingTime: "6 min read",
-    reviewed: "August 24, 2026",
-    author: "Best Invoice Generator Editorial Team",
-    editor: "Best Invoice Generator Editorial Team",
-    summary: "Vector PDF files ensure your business invoices remain readable, printable, and legally compliant for years to come.",
+    reviewed: "",
+    author: "",
+    editor: "",
+    summary: "How to produce clean, readable PDF invoices, check them before sending, and archive them so they are easy to find years later.",
     image: { src: "/images/guides/pdf-generation.svg", alt: "Vector PDF invoice creation illustration" },
     intro: [
-      "While email notifications and payment links are convenient, formal business accounting still relies on PDF invoices. Tax authorities and corporate auditors require immutable, standalone document files that can be archived for years.",
-      "Using a dedicated pdf invoice maker ensures that your exported billing documents retain their exact visual formatting, font crispness, and mathematical integrity across any operating system or printer."
-],
+      "Email notifications and payment links are convenient, but the invoice itself is still usually a document, and that document is usually a PDF. It is easy to open, looks the same on a phone or a laptop, and prints predictably. Those qualities matter more than they sound. A layout that shifts between devices can hide a total or push the due date onto a second page.",
+      "This guide explains what makes a good PDF invoice, how to check it before sending, how PDFs relate to structured e-invoicing rules, and how to archive files so you can find them years later."
+    ],
     example: {
       label: "Worked example",
-      title: "Standard vector PDF export properties",
-      body: "Key technical attributes of a PDF document generated by a free invoice creator.",
+      title: "Standard PDF invoice properties",
+      body: "Key attributes of a well-produced PDF invoice.",
       rows: [
-        [
-                "Format Standard",
-                "PDF / Vector graphic elements with embedded system fonts"
-        ],
-        [
-                "File Size",
-                "Optimized lightweight document (< 100 KB)"
-        ],
-        [
-                "Print Layout",
-                "Standard A4 / US Letter portrait dimensions"
-        ],
-        [
-                "Color Compatibility",
-                "sRGB color conversion for html2pdf/html2canvas compatibility"
-        ]
-]
+        ["Content", "Real text and shapes, with selectable numbers"],
+        ["Page size", "A4 or US Letter, matching the client’s region"],
+        ["Margins", "Wide enough to print without clipping"],
+        ["Fonts", "Standard, legible fonts embedded or widely available"],
+        ["File size", "Small enough to email comfortably"],
+        ["File name", "Invoice number and client, for example NS-2026-041-Acme"]
+      ]
     },
     diagram: {
       title: "PDF generation and archiving process",
-      
       steps: [
         "Input invoice data",
         "Render live HTML canvas",
-        "Convert CSS to sRGB vector PDF",
-        "Download & archive locally"
-]
+        "Convert to vector PDF",
+        "Download and archive locally"
+      ]
     },
     sections: [
       {
             "heading": "Why PDF is the universal standard for client billing",
             "paragraphs": [
-                  "Unlike editable text files or raw web links, a PDF invoice maker freezes your document into a read-only format. This prevents accidental modifications after an invoice has been sent to a client.",
-                  "High-quality best free invoice generator online platforms build PDFs with vector text and shapes. This guarantees that your logo and text remain crisp even when printed on high-resolution paper."
+                  "Unlike editable text files or raw web links, a PDF invoice freezes your document into a read-only format. This prevents accidental modifications after an invoice has been sent to a client. High-quality invoice generators build PDFs with vector text and shapes, guaranteeing that your logo and text remain crisp even when printed on high-resolution paper."
             ],
             "checklist": [
                   "Verify PDF layout appearance before emailing clients.",
-                  "Ensure text is selectable (not flattened into low-res bitmaps).",
+                  "Ensure text is selectable, not flattened into low-res bitmaps.",
                   "Keep digital PDF copies organized by year and invoice number.",
                   "Test print layouts to confirm margins fit standard paper sizes."
             ]
@@ -1241,77 +1233,78 @@ export const guides: Guide[] = [
                   "Tax regulations in most jurisdictions require businesses to retain copies of all issued invoices for 5 to 7 years. Downloading and saving vector PDFs to secure local storage ensures long-term audit readiness."
             ]
       }
-],
+    ],
     faq: [
       {
-            "question": "Why are vector PDF invoices better than image screenshots?",
-            "answer": "Vector PDFs scale without losing quality, support selectable text for accounting automation, and produce much smaller file sizes than image formats."
+            "question": "Why send invoices as PDF instead of Word or Excel files?",
+            "answer": "A PDF keeps layout, fonts, and numbers fixed, so the invoice looks the same everywhere and is harder to change accidentally. Editable files can shift formatting or be altered after they leave your hands."
       },
       {
-            "question": "How can I convert my web invoice to a PDF for free?",
-            "answer": "Use a free invoice maker with built-in PDF export tools that convert your form data directly into a downloadable PDF in one click."
+            "question": "Is a PDF invoice the same as an e-invoice?",
+            "answer": "Not necessarily. A PDF is a visual document. In some countries and for some clients, e-invoicing means structured data in a specific format, sometimes sent through a defined network. Check what your client and local rules require."
+      },
+      {
+            "question": "Should the text in my PDF be selectable?",
+            "answer": "Yes. Selectable text lets clients copy invoice numbers and amounts and lets accounting software read the document. Avoid exporting invoices as flattened images or screenshots."
+      },
+      {
+            "question": "How should I name and store PDF invoices?",
+            "answer": "Use a consistent name, such as the invoice number and client, and store files in dated folders, for example by year. Back them up somewhere other than your main device."
+      },
+      {
+            "question": "How long should I keep invoice PDFs?",
+            "answer": "Retention rules depend on your country and business type, and are often several years. Check the requirement that applies to you, and keep credit notes and payment records alongside the invoices."
+      },
+      {
+            "question": "What should I check before emailing a PDF invoice?",
+            "answer": "Open the file, confirm every field, check page breaks and margins, and make sure the total and due date are visible without scrolling. Also check that the file name is clear."
       }
-],
+    ],
     related: [
       "invoice-generator-software-guide",
       "invoice-checklist",
       "international-multi-currency-invoicing"
-]
+    ]
   },
   {
     slug: "small-business-tax-invoicing",
-    title: "Small business invoicing for tax season: itemization, sales tax, and audit readiness",
-    description: "How small businesses and sole proprietors use a free invoice generator to accurately track regional sales tax, document deductible expenses, and prepare audit-ready billing records.",
+    title: "Invoicing for Tax Season: Itemization and Audit Readiness",
+    description: "Prepare invoices that make tax season easier: separate taxable and exempt items, show tax clearly, keep complete records, and stay ready for an audit.",
     category: "Accounting & Tax",
     readingTime: "7 min read",
-    reviewed: "August 24, 2026",
-    author: "Best Invoice Generator Editorial Team",
-    editor: "Best Invoice Generator Editorial Team",
-    summary: "Properly itemized invoices with clear tax breakdowns simplify annual tax filings and protect your business during audits.",
+    reviewed: "",
+    author: "",
+    editor: "",
+    summary: "Clear, itemized invoices simplify tax filing. Learn how to show sales tax, separate taxable lines, and keep records that hold up in an audit.",
     image: { src: "/images/guides/tax-invoicing.svg", alt: "Tax invoicing and sales tax compliance illustration" },
     intro: [
-      "For small business owners, year-end tax preparation often uncovers messy billing records, unrecorded sales taxes, and vague expense descriptions. Reconstructing months of client transactions from bank statements alone is tedious and prone to penalties.",
-      "Using a dedicated free invoice generator ensures that every invoice you issue records the customer tax ID, separates taxable products from exempt services, and itemizes state, provincial, or national VAT/GST with mathematical precision."
-],
+      "Most small business owners meet their billing habits again at tax time. Records that seemed fine in the moment turn out to be missing a tax rate, a customer’s tax number, or a clear description of what was sold. Rebuilding the picture from bank statements is slow, and mistakes can lead to corrections, penalties, or awkward questions.",
+      "The better approach is to make every invoice do some of the work. When each one shows what was sold, which items were taxable, and how much tax was charged, your year-end summary practically writes itself. This guide covers how to itemize clearly, show tax correctly, and keep records that will stand up to a review."
+    ],
     example: {
       label: "Worked example",
       title: "Tax-compliant retail supplier invoice",
-      body: "A local craft roasting company bills a corporate office client using an online invoice maker.",
+      body: "A local craft roasting company bills a corporate office client.",
       rows: [
-        [
-                "Subtotal (Taxable Goods)",
-                "$800.00 (Espresso beans & equipment rental)"
-        ],
-        [
-                "Subtotal (Exempt Service)",
-                "$250.00 (On-site barista training)"
-        ],
-        [
-                "State Sales Tax (8.25%)",
-                "$66.00 (Applied only to taxable goods)"
-        ],
-        [
-                "Total Documented",
-                "$1,116.00 with transparent tax ledger"
-        ]
-]
+        ["Espresso beans and equipment rental", "Taxable — 800.00"],
+        ["On-site barista training", "Exempt — 250.00"],
+        ["Sales tax at 8.25% on taxable lines", "66.00"],
+        ["Total", "1,116.00"]
+      ]
     },
     diagram: {
       title: "Audit-ready invoice validation path",
-      
       steps: [
-        "Capture client tax ID",
         "Separate taxable vs exempt lines",
         "Calculate exact tax rates",
         "Store vector PDF record"
-]
+      ]
     },
     sections: [
       {
             "heading": "Why itemized sales tax is critical for small business accounting",
             "paragraphs": [
-                  "Tax authorities require clear distinction between gross sales and collected sales taxes. When using an online invoice maker or invoice creator software, make sure tax rates are explicitly displayed on separate line items rather than bundled into arbitrary totals.",
-                  "With a reliable best free invoice generator online, you can adjust percentage tax rates to match local jurisdictions, making tax return reconciliation seamless at the end of each quarter."
+                  "Tax authorities require clear distinction between gross sales and collected sales taxes. When using an invoicing tool, make sure tax rates are explicitly displayed on separate line items rather than bundled into arbitrary totals. With a reliable invoice generator, you can adjust percentage tax rates to match local jurisdictions, making tax return reconciliation seamless at the end of each quarter."
             ],
             "checklist": [
                   "Verify client business registration and tax exemption certificates.",
@@ -1321,82 +1314,84 @@ export const guides: Guide[] = [
             ]
       },
       {
-            "heading": "Maintaining long-term records with a freeware invoice maker",
+            "heading": "Maintaining long-term records",
             "paragraphs": [
-                  "Most tax codes require retaining issued sales invoices for a minimum of five to seven years. Using a local-first freeware invoice maker ensures that your historic invoice PDFs remain accessible on your own hardware without risk of losing access behind expired cloud subscriptions."
+                  "Most tax codes require retaining issued sales invoices for a minimum of five to seven years. Using a local-first invoice maker ensures that your historic invoice PDFs remain accessible on your own hardware without risk of losing access behind expired cloud subscriptions."
             ]
       }
-],
+    ],
     faq: [
       {
-            "question": "Do all invoices need to display a sales tax rate?",
-            "answer": "Only if you are registered to collect sales tax, VAT, or GST in your jurisdiction, or if you sell taxable products or services under local tax laws."
+            "question": "Do all invoices need to show a sales tax rate?",
+            "answer": "Only if you are registered to charge sales tax, VAT, or GST, or if what you sell is taxable under local rules. Rules differ by country and region, so check which apply to you."
       },
       {
-            "question": "What is the best way to archive invoices for tax audits?",
-            "answer": "Export high-resolution files from a pdf invoice maker and store them in indexed, dated folders backed up to encrypted local and offline storage."
+            "question": "Why should tax appear on its own line?",
+            "answer": "A separate line shows the pre-tax amount, the rate, and the tax charged. That makes it easy for the client to verify and for you to reconcile your returns."
+      },
+      {
+            "question": "Can I charge tax on some lines and not others?",
+            "answer": "Yes, when some items are taxable and others are exempt or zero-rated. Mark each line clearly and calculate tax only on the lines that qualify."
+      },
+      {
+            "question": "What records should I keep for an audit?",
+            "answer": "Copies of every invoice, credit note, and payment record, plus supporting documents such as contracts, quotes, and expense receipts. Keep them organized so any transaction can be traced quickly."
+      },
+      {
+            "question": "How long should I keep invoices for tax purposes?",
+            "answer": "Retention periods vary by country and business type and are commonly several years. Ask a local accountant or check your tax authority’s guidance for the exact requirement."
+      },
+      {
+            "question": "Should I include my tax registration number on invoices?",
+            "answer": "If you are registered for a tax such as VAT or GST, many jurisdictions require the number on invoices. Check what applies to you, and add it to your header so it is never forgotten."
       }
-],
+    ],
     related: [
       "pdf-invoice-generation",
       "freelance-billing-essentials",
       "invoice-generator-software-guide"
-]
+    ]
   },
   {
     slug: "contractor-milestone-billing",
-    title: "Contractor milestone billing: structuring progress invoices for large projects",
-    description: "A step-by-step contractor guide to splitting large project scopes into phased billing milestones using an easy invoice creator to maintain consistent cash flow.",
+    title: "Milestone Billing: Structuring Progress Invoices",
+    description: "Split large projects into payment stages. Learn how to define milestones, write progress invoices, handle change orders, and keep cash flow steady.",
     category: "Contract Work",
     readingTime: "6 min read",
-    reviewed: "August 24, 2026",
-    author: "Best Invoice Generator Editorial Team",
-    editor: "Best Invoice Generator Editorial Team",
-    summary: "Milestone invoicing divides lengthy contracts into predictable payment stages, reducing financial risk for both clients and contractors.",
+    reviewed: "",
+    author: "",
+    editor: "",
+    summary: "Milestone billing links payment to real progress. See how to set milestones, write clear progress invoices, and handle scope changes.",
     image: { src: "/images/guides/milestone-billing.svg", alt: "Contractor milestone billing progress illustration" },
     intro: [
-      "Taking on a massive 3-month or 6-month contracting project is exciting, but waiting until final project delivery to send a single invoice can create severe cash flow strain and heighten non-payment risk.",
-      "Milestone billing (also known as progress invoicing) links payment requests to tangible project deliverables. Using an easy invoice creator, contractors can format phased invoices that clearly articulate completed scope versus remaining balance."
-],
+      "Taking on a project that lasts months is exciting, but waiting until the end to send a single invoice can put a real strain on your finances. You pay your costs as you go, carry the risk, and hope the final payment arrives on time. For the client, paying everything at the end may feel safe, but it also means you have little incentive to share progress or flag problems early.",
+      "Milestone billing, also called progress billing, solves both issues. You agree a set of stages in advance, each tied to a specific deliverable, and invoice each stage when it is completed and accepted. This guide explains how to design milestones, write invoices that clients approve quickly, and handle scope changes."
+    ],
     example: {
       label: "Worked example",
       title: "A 3-phase commercial web development contract",
-      body: "A software engineering firm bills a $12,000 project across three clear deliverables using an easy invoice maker.",
+      body: "A software engineering firm bills a $12,000 project across three clear deliverables.",
       rows: [
-        [
-                "Milestone 1 (Deposit)",
-                "$4,000.00 (Due upon contract signing & design approval)"
-        ],
-        [
-                "Milestone 2 (Beta Build)",
-                "$4,000.00 (Due upon staging deployment & QA signoff)"
-        ],
-        [
-                "Milestone 3 (Final Launch)",
-                "$4,000.00 (Due upon production handover & DNS switch)"
-        ],
-        [
-                "Total Contract Value",
-                "$12,000.00 tracked across sequential invoice numbers"
-        ]
-]
+        ["Milestone 1 (Deposit)", "Contract signed and design approved — 4,000.00"],
+        ["Milestone 2 (Beta build)", "Staging deployment and QA sign-off — 4,000.00"],
+        ["Milestone 3 (Final launch)", "Production handover complete — 4,000.00"],
+        ["Total contract value", "12,000.00 tracked across sequential invoice numbers"]
+      ]
     },
     diagram: {
       title: "Milestone progress cycle",
-      
       steps: [
         "Contract signing (Deposit)",
         "Mid-project review (Phase 2)",
         "Client acceptance (Phase 3)",
-        "Final signoff & archive"
-]
+        "Final signoff and archive"
+      ]
     },
     sections: [
       {
             "heading": "How to structure milestone invoices that clients approve immediately",
             "paragraphs": [
-                  "Each milestone invoice should clearly reference the master project contract, the specific milestone being billed, and a concise summary of approved deliverables. When searching for an invoice generator with best reviews, look for tools that allow detailed line notes without cluttering the layout.",
-                  "Using a simple invoice maker with clean template formatting ensures that client project managers and finance teams can immediately match your bill against their milestone verification checklist."
+                  "Each milestone invoice should clearly reference the master project contract, the specific milestone being billed, and a concise summary of approved deliverables. Using a simple invoice maker with clean template formatting ensures that client project managers and finance teams can immediately match your bill against their milestone verification checklist."
             ],
             "checklist": [
                   "State the milestone phase number (e.g., Phase 2 of 4) in the invoice title.",
@@ -1408,80 +1403,82 @@ export const guides: Guide[] = [
       {
             "heading": "Managing scope changes during milestone projects",
             "paragraphs": [
-                  "When client requirements expand mid-project, never bundle new work silently into an existing milestone. Use your invoice maker app to create a distinct change-order invoice that documents the approved additional scope and pricing separately."
+                  "When client requirements expand mid-project, never bundle new work silently into an existing milestone. Create a distinct change-order invoice that documents the approved additional scope and pricing separately."
             ]
       }
-],
+    ],
     faq: [
       {
-            "question": "What percentage deposit should a contractor request upfront?",
-            "answer": "Standard industry deposits range between 25% and 50% of the total project value, depending on upfront materials, software costs, and project duration."
+            "question": "What is milestone billing?",
+            "answer": "Milestone billing splits a project into stages and invoices each one when its agreed deliverable is complete. It is also called progress billing or stage payments."
       },
       {
-            "question": "What happens if a client delays approving a milestone deliverable?",
-            "answer": "Include a contract clause stipulating that deliverables are deemed accepted if no revision feedback is provided within 7 to 10 business days."
+            "question": "How much deposit should a contractor request?",
+            "answer": "It depends on upfront costs, project size, and client risk. Deposits are often in the range of 25 to 50 percent, but choose a figure that reflects what you would lose if the project stopped."
+      },
+      {
+            "question": "What if a client delays approving a milestone?",
+            "answer": "Include an acceptance period in the contract, such as a set number of business days, after which the milestone is treated as accepted unless the client gives specific feedback."
+      },
+      {
+            "question": "How do I invoice extra work added mid-project?",
+            "answer": "Agree the change in writing, then bill it as a separate labeled change order or on its own line. Do not fold it silently into an existing milestone."
+      },
+      {
+            "question": "Should each milestone be equal in value?",
+            "answer": "Not necessarily. Match payments to the effort, cost, and risk in each phase. Equal thirds are simple, but front-loading costs or a heavier final phase may suit some projects better."
+      },
+      {
+            "question": "What should a milestone invoice reference?",
+            "answer": "The contract or quote, the milestone name and number, what was delivered, the amount, and the amount billed and remaining so far."
       }
-],
+    ],
     related: [
       "payment-terms",
       "quote-vs-invoice",
       "freelance-billing-essentials"
-]
+    ]
   },
   {
     slug: "consultant-hourly-retainer-invoicing",
-    title: "Retainer and hourly billing: how consultants track time and bill transparently",
-    description: "How management, legal, and technical consultants turn billable timesheets and monthly retainer agreements into transparent client invoices using an online invoice creator.",
+    title: "Retainer and Hourly Billing for Consultants",
+    description: "Bill consulting work transparently: log time clearly, group tasks into readable lines, structure retainers and overage, and avoid disputes.",
     category: "Consulting",
     readingTime: "7 min read",
-    reviewed: "August 24, 2026",
-    author: "Best Invoice Generator Editorial Team",
-    editor: "Best Invoice Generator Editorial Team",
-    summary: "Transparent hourly breakdowns and clear retainer terms build long-term client trust and eliminate billing disputes.",
+    reviewed: "",
+    author: "",
+    editor: "",
+    summary: "How consultants turn timesheets and retainers into clear invoices: balanced detail, retainer draw-down, overage, and timing.",
     image: { src: "/images/guides/consultant-retainer.svg", alt: "Consulting retainer and hourly tracking illustration" },
     intro: [
-      "Consulting clients expect transparency. When a bill arrives with a single vague line item like “Advisory Services: $5,000,” corporate finance departments often pause payment to request detailed timesheets and task logs.",
-      "Professional consultants use a structured online invoice creator to provide itemized hourly logs, project sub-task categories, and clear retainer draw-down summaries that give clients complete confidence in every billable dollar."
-],
+      "Consulting is billed on trust, and trust is easier to keep when the numbers are transparent. When a client receives an invoice reading “Advisory services: 5,000” with no explanation, their finance team often pauses payment and asks for a breakdown. That pause costs you time, and it can cost the client’s confidence in the relationship.",
+      "The solution is a billing setup that makes detail easy: clear time records, readable task groupings, and a retainer structure everyone understands. This guide covers how to invoice hourly work and retainers, how to show overage and unused hours, and how to strike the right balance between detail and readability."
+    ],
     example: {
       label: "Worked example",
       title: "Monthly strategic advisory retainer invoice",
-      body: "A management consultancy bills a corporate client for monthly retainer hours plus overage using an online invoice generator.",
+      body: "A management consultancy bills a corporate client for monthly retainer hours plus overage.",
       rows: [
-        [
-                "Retainer Base",
-                "20 Advisory Hours Included — $3,000.00 monthly baseline"
-        ],
-        [
-                "Overage Hours",
-                "4.5 Additional Hours @ $175/hr — $787.50"
-        ],
-        [
-                "Total Due",
-                "$3,787.50 with detailed hourly task log attached"
-        ],
-        [
-                "Payment Window",
-                "Net 15 (Direct ACH transfer details provided)"
-        ]
-]
+        ["Monthly retainer", "20 advisory hours included — 3,000.00"],
+        ["Overage", "4.5 additional hours at 175 per hour — 787.50"],
+        ["Total due", "3,787.50 with detailed hourly task log attached"],
+        ["Payment window", "Net 15, direct ACH transfer details provided"]
+      ]
     },
     diagram: {
       title: "Consultant billing workflow",
-      
       steps: [
         "Log daily client tasks",
         "Group by deliverable category",
-        "Format with online invoice creator",
+        "Format with invoice tool",
         "Issue PDF with summary notes"
-]
+      ]
     },
     sections: [
       {
             "heading": "Balancing detail with readability on hourly invoices",
             "paragraphs": [
-                  "Too little detail causes client skepticism, while excessive micro-logging clutters the document. Use an ai invoice generator or time-tracking tool to summarize daily activities into coherent service clusters (e.g., “Architecture Review & Executive Strategy: 8 hrs”).",
-                  "With a best free invoice maker, you can easily input specific quantities and rates while maintaining a polished, uncluttered visual layout."
+                  "Too little detail causes client skepticism, while excessive micro-logging clutters the document. Group related hourly tasks under clear deliverable headings. With a good invoice maker, you can easily input specific quantities and rates while maintaining a polished, uncluttered visual layout."
             ],
             "checklist": [
                   "Group related hourly tasks under clear deliverable headings.",
@@ -1496,77 +1493,79 @@ export const guides: Guide[] = [
                   "Retainer agreements provide predictable income while giving clients guaranteed access to your expertise. Using an easy invoice maker to issue recurring retainer invoices on the 1st of every month creates dependable operational cash flow."
             ]
       }
-],
+    ],
     faq: [
       {
-            "question": "Should retainer invoices be billed in advance or in arrears?",
-            "answer": "Retainer baselines are standardly billed in advance on the first of each month, while any overage hours from the previous month are billed in arrears."
+            "question": "Should retainers be billed in advance or in arrears?",
+            "answer": "Retainers are commonly billed in advance, at the start of the period, while any overage is billed afterward. Whatever you choose, write it into the agreement."
       },
       {
-            "question": "Can I create consulting invoices on my phone?",
-            "answer": "Yes, using a responsive free invoice creator app in any mobile web browser allows consultants to draft, review, and email client invoices directly between meetings."
+            "question": "What happens to unused retainer hours?",
+            "answer": "Decide in the agreement whether unused hours expire, roll over for a limited time, or are refunded. Ambiguity here is a common source of disputes."
+      },
+      {
+            "question": "How detailed should an hourly invoice be?",
+            "answer": "Detailed enough that the client can see what was done, without listing every five-minute task. Group related work under clear headings and state the hours for each."
+      },
+      {
+            "question": "How do I bill overage on a retainer?",
+            "answer": "State the overage rate in the agreement, track hours beyond the included amount, and show them on their own line with the rate and the date range."
+      },
+      {
+            "question": "Can I bill for meetings and calls?",
+            "answer": "Usually yes, if the agreement says so. Confirm at the start which activities count as billable, including travel, meetings, and preparation."
+      },
+      {
+            "question": "How often should I invoice a consulting client?",
+            "answer": "Monthly is common for retainers and ongoing hourly work. Shorter cycles suit large or fast-moving engagements, and a long project may use milestones instead."
       }
-],
+    ],
     related: [
       "freelance-billing-essentials",
       "invoice-templates-branding",
       "payment-terms"
-]
+    ]
   },
   {
     slug: "recurring-subscription-invoicing",
-    title: "Recurring client invoicing: establishing predictable repeat billing cycles",
-    description: "Best practices for billing repeat maintenance agreements, monthly software retainers, and subscription services with an easy invoice maker.",
+    title: "Recurring Invoicing: Build Predictable Billing Cycles",
+    description: "Set up recurring invoices for retainers, maintenance plans, and subscriptions: consistent numbering, clear service periods, proration, and price-change notice.",
     category: "Recurring Billing",
     readingTime: "6 min read",
-    reviewed: "August 24, 2026",
-    author: "Best Invoice Generator Editorial Team",
-    editor: "Best Invoice Generator Editorial Team",
-    summary: "Streamline monthly retainers and ongoing service subscriptions with structured recurring billing templates.",
+    reviewed: "",
+    author: "",
+    editor: "",
+    summary: "Bill repeat clients faster and more consistently. Learn how to set up recurring invoices, show service periods, and handle upgrades and price changes.",
     image: { src: "/images/guides/recurring-billing.svg", alt: "Recurring subscription billing cycle illustration" },
     intro: [
-      "Agencies, SaaS developers, and maintenance providers thrive on recurring revenue. However, generating dozens of repeat invoices each month can consume valuable time if you start from scratch every single billing cycle.",
-      "By establishing a structured invoice creator template and saving client profiles in local browser storage, businesses can duplicate, update dates, and export recurring bills in under thirty seconds per client."
-],
+      "Agencies, developers, maintenance providers, and consultants all rely on recurring revenue. It is dependable income, but only if the billing itself is dependable. If every month you rebuild an invoice from scratch, you risk typos, wrong dates, duplicate numbers, and the occasional forgotten client. A repeatable process removes most of that.",
+      "This guide shows how to set up a reliable cycle for retainers, maintenance plans, and subscription-style services: what to standardize, what to change each time, how to handle upgrades and price rises, and how to keep everything traceable."
+    ],
     example: {
       label: "Worked example",
       title: "Monthly website maintenance subscription",
-      body: "A digital agency bills a retail client for monthly hosting, security updates, and CMS support using a free invoice maker.",
+      body: "A digital agency bills a retail client for monthly hosting, security updates, and CMS support.",
       rows: [
-        [
-                "Billing Period",
-                "September 1, 2026 – September 30, 2026"
-        ],
-        [
-                "Subscription Plan",
-                "Managed Cloud Hosting & Daily Security Audits — $250.00"
-        ],
-        [
-                "Support Retainer",
-                "2 Hours Dedicated Maintenance & Content Updates — $180.00"
-        ],
-        [
-                "Total Monthly",
-                "$430.00 (Due on the 1st of each calendar month)"
-        ]
-]
+        ["Billing period", "1 to 30 September 2026"],
+        ["Managed hosting", "Cloud hosting and daily security checks — 250.00"],
+        ["Support retainer", "2 hours of maintenance and content updates — 180.00"],
+        ["Total monthly", "430.00, due on the 1st of each calendar month"]
+      ]
     },
     diagram: {
       title: "Recurring invoice lifecycle",
-      
       steps: [
         "Save recurring template",
         "Duplicate on the 1st",
         "Update service period date",
-        "Export & email PDF to client"
-]
+        "Export and email PDF to client"
+      ]
     },
     sections: [
       {
             "heading": "Simplifying repeat billing with saved client templates",
             "paragraphs": [
-                  "When managing repeat monthly clients, look for a free invoice maker app or web tool that remembers your client information, recurring line items, and payment instructions. This eliminates manual re-typing and prevents invoice numbering errors.",
-                  "With an ai invoice creator or smart local-storage tool, updating an existing client bill for a new month requires only clicking duplicate, updating the invoice number and date, and exporting the new PDF."
+                  "When managing repeat monthly clients, use an invoice tool that remembers your client information, recurring line items, and payment instructions. This eliminates manual re-typing and prevents invoice numbering errors. Updating an existing client bill for a new month requires only clicking duplicate, updating the invoice number and date, and exporting the new PDF."
             ],
             "checklist": [
                   "State the exact service coverage period on every repeat invoice.",
@@ -1581,81 +1580,80 @@ export const guides: Guide[] = [
                   "When a client upgrades their subscription tier mid-cycle, calculate the prorated difference for the remaining days of the month and display it as an explicit credit or adjustment line item on their next scheduled bill."
             ]
       }
-],
+    ],
     faq: [
       {
-            "question": "What is the best way to manage recurring invoices without expensive software?",
-            "answer": "Use a browser-based freeware invoice maker with local IndexedDB storage to save customer profiles and duplicate monthly templates with one click."
+            "question": "What is the easiest way to manage recurring invoices without expensive software?",
+            "answer": "Save a template for each recurring client, duplicate it each cycle, then update the invoice number, dates, and any usage. A simple, consistent routine can be enough for a small number of clients."
       },
       {
-            "question": "How do I clearly show the billing period on a subscription invoice?",
-            "answer": "Include a prominent service date range in the invoice item description or memo block (e.g., “Service Period: Oct 1 – Oct 31, 2026”)."
+            "question": "How do I show the billing period on a subscription invoice?",
+            "answer": "Put the exact service dates in the line item or the invoice header, for example 1 to 30 September 2026. This makes it easy to match the charge to the period covered."
+      },
+      {
+            "question": "How should I handle a mid-cycle upgrade?",
+            "answer": "Calculate the price difference for the remaining days of the period and show it as a separate, labeled line on the next invoice, along with how you calculated it."
+      },
+      {
+            "question": "How much notice should I give before raising prices?",
+            "answer": "Follow the notice period in your agreement. Thirty days or more is a common courtesy, and it is best to confirm the change in writing."
+      },
+      {
+            "question": "Should recurring invoices be sent on the same date every month?",
+            "answer": "Yes. A consistent date helps clients plan their payments and helps you spot late ones quickly. Choose a date and stick to it."
+      },
+      {
+            "question": "Do recurring invoices need a new number each time?",
+            "answer": "Yes. Every invoice you issue needs its own unique number, even when the amount and services are identical."
       }
-],
+    ],
     related: [
       "invoice-templates-branding",
       "overdue-invoice-recovery",
       "freelance-billing-essentials"
-]
+    ]
   },
   {
     slug: "ecommerce-product-invoicing",
-    title: "E-commerce and wholesale invoicing: shipping charges, volume tiers, and SKU itemization",
-    description: "How product sellers, dropshippers, and wholesale distributors use a free invoice generator to itemize SKUs, manage bulk unit tiers, and apply shipping freight accurately.",
+    title: "Product and Wholesale Invoicing: SKUs, Shipping, Discounts",
+    description: "Invoice physical goods clearly: list SKUs and quantities, apply volume discounts, show shipping separately, and match purchase orders and packing slips.",
     category: "E-Commerce & Retail",
     readingTime: "6 min read",
-    reviewed: "August 24, 2026",
-    author: "Best Invoice Generator Editorial Team",
-    editor: "Best Invoice Generator Editorial Team",
-    summary: "Clear physical product itemization with explicit shipping rates and volume discounts prevents wholesale fulfillment delays.",
+    reviewed: "",
+    author: "",
+    editor: "",
+    summary: "Wholesale and product invoices need SKU detail, clear shipping, and correct discounts. Learn how to itemize so buyers can reconcile quickly.",
     image: { src: "/images/guides/ecommerce-invoicing.svg", alt: "E-commerce and wholesale product invoicing illustration" },
     intro: [
-      "Selling physical goods to B2B buyers, retail stockists, or corporate clients involves more complexity than basic service billing. Invoices must accurately reflect unit SKUs, volume discount thresholds, and separate freight or shipping fees.",
-      "Using a dedicated free invoice generator allows merchant sellers to generate detailed commercial invoices, itemize individual package quantities, and provide transparent cost breakdowns that accounts departments can reconcile against packing slips instantly."
-],
+      "Selling physical goods to retailers, distributors, or corporate buyers is more complicated to invoice than selling services. Instead of one or two lines, you may have dozens of products, different unit prices, volume breaks, freight charges, and a purchase order that has to match. The buyer’s team will compare your invoice against the order they placed and the delivery they received, line by line.",
+      "When those three documents agree, payment flows. When they do not, the invoice waits in a queue. This guide covers how to itemize products clearly, show discounts and shipping correctly, and reduce the mismatches that delay wholesale payments."
+    ],
     example: {
       label: "Worked example",
       title: "B2B wholesale bulk product order invoice",
-      body: "A specialty manufacturing brand bills an independent boutique retailer using an online invoice generator.",
+      body: "A specialty manufacturing brand bills an independent boutique retailer.",
       rows: [
-        [
-                "Product Line 1",
-                "SKU-802 Organic Cotton Tote Bags (200 units @ $4.50) — $900.00"
-        ],
-        [
-                "Product Line 2",
-                "SKU-805 Recycled Canvas Backpacks (50 units @ $28.00) — $1,400.00"
-        ],
-        [
-                "Volume Discount (5%)",
-                "-$115.00 applied to merchandise subtotal ($2,300.00)"
-        ],
-        [
-                "Freight Shipping",
-                "$145.00 Ground Freight with tracking ID ref"
-        ],
-        [
-                "Total Balance Due",
-                "$2,330.00 (Due within 30 days of shipment receipt)"
-        ]
-]
+        ["SKU-802 Organic cotton tote bags", "200 units at 4.50 — 900.00"],
+        ["SKU-805 Recycled canvas backpacks", "50 units at 28.00 — 1,400.00"],
+        ["Volume discount (5%)", "-115.00 applied to merchandise subtotal (2,300.00)"],
+        ["Ground freight", "145.00, tracking reference in notes"],
+        ["Total due", "2,330.00, Net 30 from delivery"]
+      ]
     },
     diagram: {
       title: "Wholesale order billing cycle",
-      
       steps: [
         "Receive purchase order (PO)",
-        "Verify stock & unit pricing",
-        "Calculate freight & volume tier",
+        "Verify stock and unit pricing",
+        "Calculate freight and volume tier",
         "Export printable PDF invoice"
-]
+      ]
     },
     sections: [
       {
             "heading": "Itemizing product SKUs and physical deliverable details",
             "paragraphs": [
-                  "Wholesale buyers rely on your invoice to check incoming warehouse shipments. Using a simple invoice maker or invoice creator template, clearly list item SKU codes, unit measurements, individual piece rates, and extended totals.",
-                  "When searching for invoice maker software, prioritize platforms that allow toggling dedicated shipping amount fields and discount percentages so freight costs are never obscured inside unit pricing."
+                  "Wholesale buyers rely on your invoice to check incoming warehouse shipments. Using an invoicing tool, clearly list item SKU codes, unit measurements, individual piece rates, and extended totals. When searching for invoice software, prioritize platforms that allow toggling dedicated shipping amount fields and discount percentages so freight costs are never obscured inside unit pricing."
             ],
             "checklist": [
                   "List official manufacturer SKU or part numbers for each item.",
@@ -1670,77 +1668,79 @@ export const guides: Guide[] = [
                   "For international or palletized freight orders, state the shipping incoterms (such as FOB, DDP, or EXW) in the invoice notes so both parties understand tax and customs duty liability."
             ]
       }
-],
+    ],
     faq: [
       {
-            "question": "Should shipping charges be taxed on a product invoice?",
-            "answer": "Taxability of shipping fees varies by state and country. In many jurisdictions, freight is taxable if the underlying product is taxable, while others exempt separately stated delivery fees."
+            "question": "Should shipping be charged tax on a product invoice?",
+            "answer": "It depends on the country or state and on how shipping is treated for the goods sold. In some places delivery is taxable when the goods are, and in others it is not. Confirm the rule for your location."
       },
       {
-            "question": "Can an online invoice generator generate invoices for dropshipping?",
-            "answer": "Yes, web invoice tools allow setting distinct billing and shipping addresses to accommodate dropshipping and third-party fulfillment arrangements."
+            "question": "Why list SKUs on an invoice?",
+            "answer": "SKUs let the buyer’s warehouse and accounts team match each line to the goods received and to their purchase order. Without them, matching depends on descriptions, which are easy to misread."
+      },
+      {
+            "question": "How do I show a volume discount?",
+            "answer": "Show it as a separate labeled line or as a clear percentage applied to the merchandise subtotal, so the original price and the reduction are both visible."
+      },
+      {
+            "question": "What are Incoterms and do I need them?",
+            "answer": "Incoterms are standard trade terms, such as EXW, FOB, or DDP, that say who arranges shipping and pays costs and duties at each stage. For international or freight shipments, stating the agreed term on the invoice avoids disputes."
+      },
+      {
+            "question": "Can I invoice for dropshipped orders?",
+            "answer": "Yes. Use the buyer’s billing address for the invoice and the recipient’s address for delivery, and reference the order number so the transaction is traceable."
+      },
+      {
+            "question": "When should I send a wholesale invoice: at order or at shipment?",
+            "answer": "This follows your agreement. Many sellers invoice at shipment, others at order confirmation with a deposit. State the trigger and the payment terms clearly so the buyer knows when payment is due."
       }
-],
+    ],
     related: [
       "pdf-invoice-generation",
       "small-business-tax-invoicing",
       "international-multi-currency-invoicing"
-]
+    ]
   },
   {
     slug: "agency-subcontractor-billing",
-    title: "Agency subcontractor invoicing: client pass-through costs and contractor payouts",
-    description: "A practical billing workflow for digital agencies and creative studios managing subcontractor invoices, markup fees, and client expense pass-throughs.",
+    title: "Agency Billing: Subcontractor Costs and Pass-Throughs",
+    description: "Bill clients cleanly when specialists and media costs are involved: choose a pricing model, add markup, pass through expenses, and align contractor payouts.",
     category: "Agencies & Teams",
     readingTime: "7 min read",
-    reviewed: "August 24, 2026",
-    author: "Best Invoice Generator Editorial Team",
-    editor: "Best Invoice Generator Editorial Team",
-    summary: "Learn how to manage external specialist costs, bill clients cleanly, and track subcontractor payouts with transparent accounting.",
+    reviewed: "",
+    author: "",
+    editor: "",
+    summary: "How agencies invoice subcontractor work and pass-through costs: markup, transparency, approvals, and cash flow between client and contractor payments.",
     image: { src: "/images/guides/agency-billing.svg", alt: "Agency subcontractor invoicing and project margins illustration" },
     intro: [
-      "Modern creative and technical agencies frequently collaborate with freelance specialists—such as copywriters, 3D animators, or database engineers—to deliver client campaigns. Billing these multi-party arrangements requires structured accounting.",
-      "Using a versatile online invoice creator, agency managers can format clean master client invoices that consolidate contractor hours under unified project milestones while maintaining internal records of subcontractor payables."
-],
+      "Modern agencies rarely do everything in-house. A campaign might involve your creative director, a freelance animator, a specialist developer, and a media budget spent on advertising platforms. Each party gets paid in a different way and on a different schedule, yet the client expects a single, coherent invoice that makes sense.",
+      "Getting this right protects your margins, your cash flow, and your relationships. This guide explains how to structure the client invoice, decide how transparent to be about subcontractor costs, handle pass-through spending, and pay contractors without financing the entire project yourself."
+    ],
     example: {
       label: "Worked example",
       title: "Full-service digital campaign agency invoice",
-      body: "A marketing agency bills an enterprise brand for a comprehensive product launch using an easy invoice creator.",
+      body: "A marketing agency bills an enterprise brand for a comprehensive product launch.",
       rows: [
-        [
-                "Lead Strategy & Direction",
-                "Senior Creative Direction (40 hrs @ $150/hr) — $6,000.00"
-        ],
-        [
-                "Subcontracted Asset Pack",
-                "3D Motion Graphics & Animation Package — $4,500.00"
-        ],
-        [
-                "Media Placement Pass-Through",
-                "Direct Paid Social Ad Spend Pass-Through — $2,500.00"
-        ],
-        [
-                "Total Campaign Invoice",
-                "$13,000.00 (Net 30 payment terms)"
-        ]
-]
+        ["Creative direction", "40 hours at 150 per hour — 6,000.00"],
+        ["Motion graphics package", "Subcontracted deliverable, fixed price — 4,500.00"],
+        ["Paid social media", "Pass-through of ad spend — 2,500.00"],
+        ["Total due", "13,000.00, Net 30"]
+      ]
     },
     diagram: {
       title: "Agency subcontractor billing chain",
-      
       steps: [
         "Contractor bills agency",
         "Agency verifies deliverables",
         "Consolidate into client invoice",
-        "Client pays agency & contractor payouts cleared"
-]
+        "Client pays agency and contractor payouts cleared"
+      ]
     },
     sections: [
       {
             "heading": "Structuring subcontractor costs on client-facing bills",
             "paragraphs": [
-                  "Agencies typically handle specialist costs in one of two ways: fixed milestone deliverables (where individual contractor rates are bundled into an overall project fee) or transparent cost-plus pass-through billing.",
-                  "With a best free invoice maker or invoice generator software, agencies can easily present unified, professional line items that reflect the total value delivered without exposing raw subcontractor margins."
+                  "Agencies typically handle specialist costs in one of two ways: fixed milestone deliverables (where individual contractor rates are bundled into an overall project fee) or transparent cost-plus pass-through billing. With a good invoice tool, agencies can easily present unified, professional line items that reflect the total value delivered without exposing raw subcontractor margins."
             ],
             "checklist": [
                   "Ensure subcontractor deliverables are fully approved before client billing.",
@@ -1752,25 +1752,41 @@ export const guides: Guide[] = [
       {
             "heading": "Managing cash flow between client receipts and contractor payouts",
             "paragraphs": [
-                  "To avoid cash flow crunches, negotiate payment terms with subcontractors that correspond with your client payment cycles (e.g., paying contractors within 7 days of client settlement). Utilizing a best invoice maker app ensures invoices are issued the moment project milestones are approved."
+                  "To avoid cash flow crunches, negotiate payment terms with subcontractors that correspond with your client payment cycles (e.g., paying contractors within 7 days of client settlement)."
             ]
       }
-],
+    ],
     faq: [
       {
-            "question": "Should agencies disclose subcontractor rates to end clients?",
-            "answer": "In fixed-price or milestone contracts, agencies bill for the total deliverable outcome rather than itemizing internal contractor costs."
+            "question": "Should agencies disclose subcontractor costs to clients?",
+            "answer": "It depends on the pricing model in the contract. With a fixed project fee, the client pays for the outcome and individual costs need not be itemized. With cost-plus or pass-through billing, costs are shown, so agree this in advance."
       },
       {
-            "question": "What is the easiest way for subcontractors to bill agencies?",
-            "answer": "Subcontractors can use a free invoice generator to send clean, standardized PDF invoices referencing the agency purchase order or project code."
+            "question": "Is it acceptable to add a markup on subcontractor work?",
+            "answer": "Often yes, if the client agreement allows it. Markup covers management, risk, and the cost of finding and supervising specialists. State the percentage or the pricing model in the contract."
+      },
+      {
+            "question": "What is a pass-through cost?",
+            "answer": "A cost you pay on the client’s behalf, such as advertising spend, software licenses, or printing, that is billed to the client at cost or with an agreed fee. Show it as a separate line."
+      },
+      {
+            "question": "How should subcontractors invoice an agency?",
+            "answer": "With a clear invoice that references the agency’s purchase order or project code, describes the approved deliverables, and states amount, currency, and payment terms."
+      },
+      {
+            "question": "Should I pay subcontractors before the client pays me?",
+            "answer": "It depends on your terms and your cash position. Many agencies align contractor terms with client terms, for example paying within a set number of days after the client pays, but this must be agreed in writing."
+      },
+      {
+            "question": "How do I avoid cash flow problems between client receipts and payouts?",
+            "answer": "Match payment terms, take deposits or milestone payments from clients, and bill large pass-through costs in advance so you are not financing the client’s spending."
       }
-],
+    ],
     related: [
       "contractor-milestone-billing",
       "consultant-hourly-retainer-invoicing",
       "freelance-billing-essentials"
-]
+    ]
   },
   {
     slug: "how-to-write-an-invoice",
