@@ -1,6 +1,7 @@
 import { guides } from './guides';
 import { guidesEs } from './guides-es';
 import { guidesPt } from './guides-pt';
+import { guidesAr } from './guides-ar';
 
 export interface GuideCardItem {
   slug: string;
@@ -614,6 +615,9 @@ export function getGuidesForLocale(locale: string): GuideCardItem[] {
       category: g.category,
       readingTime: g.readingTime,
     }));
+  }
+  if (locale === 'ar') {
+    return guidesAr.map((g) => ({ slug: g.slug, url: `/ar/guides/${g.slug}/`, title: g.title, summary: g.summary, category: g.category, readingTime: g.readingTime }));
   }
 
   const localeMap = localizedGuidesMap[locale];
