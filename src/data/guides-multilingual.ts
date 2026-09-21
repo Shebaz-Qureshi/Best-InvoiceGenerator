@@ -3,6 +3,7 @@ import { guidesEs } from './guides-es';
 import { guidesPt } from './guides-pt';
 import { guidesAr } from './guides-ar';
 import { guidesDe } from './guides-de';
+import { guidesJa } from './guides-ja';
 
 export interface GuideCardItem {
   slug: string;
@@ -622,6 +623,9 @@ export function getGuidesForLocale(locale: string): GuideCardItem[] {
   }
   if (locale === 'de') {
     return guidesDe.map((g) => ({ slug: g.slug, url: `/de/guides/${g.slug}/`, title: g.title, summary: g.summary, category: g.category, readingTime: g.readingTime }));
+  }
+  if (locale === 'ja') {
+    return guidesJa.map((g) => ({ slug: g.slug, url: `/ja/guides/${g.slug}/`, title: g.title, summary: g.summary, category: g.category, readingTime: g.readingTime }));
   }
 
   const localeMap = localizedGuidesMap[locale];
