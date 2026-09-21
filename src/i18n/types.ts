@@ -48,7 +48,7 @@ export interface Translation {
     subtitle: string;
     themeToggle: string;
     languageLabel: string;
-    quickLinks: { about: string; contact: string; privacy: string; terms: string; savedInvoices?: string; faq: string };
+    quickLinks: { about: string; contact: string; privacy: string; terms: string; savedInvoices?: string; faq: string; guides?: string };
   };
   tool: {
     invoicePdfInfo: string;
