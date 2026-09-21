@@ -5,6 +5,8 @@ import { guidesAr } from './guides-ar';
 import { guidesDe } from './guides-de';
 import { guidesJa } from './guides-ja';
 import { guidesIt } from './guides-it';
+import { guidesNl } from './guides-nl';
+import { guidesFr } from './guides-fr';
 
 export interface GuideCardItem {
   slug: string;
@@ -630,6 +632,12 @@ export function getGuidesForLocale(locale: string): GuideCardItem[] {
   }
   if (locale === 'it') {
     return guidesIt.map((g) => ({ slug: g.slug, url: `/it/guides/${g.slug}/`, title: g.title, summary: g.summary, category: g.category, readingTime: g.readingTime }));
+  }
+  if (locale === 'nl') {
+    return guidesNl.map((g) => ({ slug: g.slug, url: `/nl/guides/${g.slug}/`, title: g.title, summary: g.summary, category: g.category, readingTime: g.readingTime }));
+  }
+  if (locale === 'fr') {
+    return guidesFr.map((g) => ({ slug: g.slug, url: `/fr/guides/${g.slug}/`, title: g.title, summary: g.summary, category: g.category, readingTime: g.readingTime }));
   }
 
   const localeMap = localizedGuidesMap[locale];
