@@ -13,9 +13,11 @@ interface Props {
   hideLangSwitcher?: boolean;
   noindex?: boolean;
   localized?: boolean;
+  /** Per-locale path overrides for hreflang and language switcher URLs */
+  langPaths?: Record<string, string>;
 }
 
-const { title, description, path, lang, t, hideLangSwitcher = false, noindex = false, localized = true } = Astro.props;
+const { title, description, path, lang, t, hideLangSwitcher = false, noindex = false, localized = true, langPaths = {} } = Astro.props;
 const siteUrl = 'https://best-invoicegenerator.com';
 const dir = lang === 'ar' ? 'rtl' : 'ltr';
 const documentLang = lang === 'pt' ? 'pt-BR' : lang;
@@ -23,7 +25,10 @@ const isHome = lang === 'en' && !path;
 const canonical = isHome ? 'https://best-invoicegenerator.com/' : siteUrl + localePrefix(lang) + (path ? '/' + path + '/' : '/');
 const ogLocale = ogLocales[lang] ?? 'en_US';
 const allLocales = ['en', 'es', 'fr', 'de', 'it', 'nl', 'pt', 'ar', 'ja'];
-const altUrl = (code: string) => siteUrl + localePrefix(code) + (path ? '/' + path + '/' : (code === 'en' ? '/' : '/'));
+const altUrl = (code: string) => {
+  if (langPaths[code]) return siteUrl + '/' + langPaths[code] + '/';
+  return siteUrl + localePrefix(code) + (path ? '/' + path + '/' : (code === 'en' ? '/' : '/'));
+};
 ---
 
 <!doctype html>
@@ -88,7 +93,7 @@ const altUrl = (code: string) => siteUrl + localePrefix(code) + (path ? '/' + pa
             <a href={localeHref(lang, 'saved-invoices')} class="nav-link">{t.header.quickLinks.savedInvoices}</a>
             <a href={localeHref(lang, 'guides')} class="nav-link">Guides</a>
             <a href={localeHref(lang, '#faq')} class="nav-link">{t.header.quickLinks.faq}</a>
-            {!hideLangSwitcher && <LanguageSwitcher lang={lang} pagePath={path} label="" />}
+            {!hideLangSwitcher && <LanguageSwitcher lang={lang} pagePath={path} label="" langPaths={langPaths} />}
             <button id="themeToggle" class="button-secondary theme-toggle" type="button" aria-label={t.header.themeToggle} title={t.header.themeToggle}>☀️</button>
             <a href="/ai" class="button-primary text-sm font-semibold px-3 py-1.5" aria-label="Invoice with AI">✨ Invoice with AI</a>
           </nav>

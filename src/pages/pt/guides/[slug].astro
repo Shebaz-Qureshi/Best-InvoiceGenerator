@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslation } from '../../../i18n';
 import { guidesPt, getGuidePt } from '../../../data/guides-pt';
+import { EN_TO_ES } from '../../../data/guides-multilingual';
 
 export function getStaticPaths() {
   return guidesPt.map((guide) => ({ params: { slug: guide.slug } }));
@@ -31,9 +32,13 @@ const faqSchema = guide.faq ? {
   '@type': 'FAQPage',
   mainEntity: guide.faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })),
 } : null;
+
+const esSlug = EN_TO_ES[guide.slug];
+const langPaths: Record<string, string> = {};
+if (esSlug) langPaths['es'] = `es/guides/${esSlug}`;
 ---
 
-<BaseLayout title={`${guide.title} | Best Invoice Generator`} description={guide.description} path={guidePath} lang="pt" t={t} hideLangSwitcher={false} localized={false}>
+<BaseLayout title={`${guide.title} | Best Invoice Generator`} description={guide.description} path={guidePath} lang="pt" t={t} hideLangSwitcher={false} localized={false} langPaths={langPaths}>
   <article>
     <header class="border-b border-zinc-800">
       <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">

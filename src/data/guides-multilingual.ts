@@ -8,6 +8,53 @@ import { guidesIt } from './guides-it';
 import { guidesNl } from './guides-nl';
 import { guidesFr } from './guides-fr';
 
+/** Maps English guide slug → Spanish guide slug */
+export const EN_TO_ES: Record<string, string> = {
+  'invoice-checklist': 'lista-verificacion-factura',
+  'payment-terms': 'condiciones-de-pago',
+  'invoice-numbering': 'numeracion-de-facturas',
+  'quote-vs-invoice': 'presupuesto-vs-factura',
+  'freelance-billing-essentials': 'facturacion-autonomos',
+  'invoice-generator-software-guide': 'comparativa-software-facturacion',
+  'ai-invoice-automation': 'automatizacion-factura-ia',
+  'mobile-invoicing-apps': 'facturacion-movil',
+  'invoice-templates-branding': 'plantillas-marca-factura',
+  'overdue-invoice-recovery': 'recuperacion-facturas-vencidas',
+  'international-multi-currency-invoicing': 'facturacion-multidivisa-internacional',
+  'pdf-invoice-generation': 'generacion-factura-pdf',
+  'small-business-tax-invoicing': 'facturacion-fiscal-pequenas-empresas',
+  'contractor-milestone-billing': 'facturacion-por-hitos-contratistas',
+  'consultant-hourly-retainer-invoicing': 'facturacion-igualas-consultores',
+  'recurring-subscription-invoicing': 'facturacion-recurrente-suscripciones',
+  'ecommerce-product-invoicing': 'facturacion-ecommerce-productos',
+  'agency-subcontractor-billing': 'facturacion-agencia-subcontratistas',
+  'how-to-write-an-invoice': 'como-redactar-una-factura',
+  'invoice-vs-receipt': 'factura-vs-recibo',
+  'deposit-invoice-guide': 'factura-de-anticipo',
+  'proforma-invoice-guide': 'factura-proforma',
+  'invoice-email-templates': 'como-redactar-un-correo-de-factura',
+  'credit-note-invoice-corrections': 'notas-de-credito-y-correcciones-de-facturas',
+  'vat-invoice-requirements': 'requisitos-de-facturas-con-iva',
+  'invoice-vs-receipt-vs-purchase-order': 'factura-recibo-u-orden-de-compra',
+  'purchase-order-invoice-matching': 'orden-de-compra-y-conciliacion-de-tres-vias',
+  'e-invoicing-formats-compliance': 'facturacion-electronica-formatos-y-cumplimiento',
+  'invoice-payment-methods-fees': 'metodos-de-pago-y-comisiones-en-facturas',
+  'early-payment-discounts-late-fees': 'descuentos-por-pronto-pago-y-recargos-por-mora',
+  'invoice-disputes-short-payments': 'facturas-en-disputa-y-pagos-incompletos',
+  'invoice-record-retention-audit-trail': 'registros-de-facturas-conservacion-y-auditoria',
+  'invoice-fraud-prevention': 'fraude-con-facturas',
+  'accounts-receivable-aging-cash-flow': 'cuentas-por-cobrar-por-antiguedad',
+  'client-billing-onboarding': 'configuracion-de-facturacion-cliente-nuevo',
+  'deposits-advance-payments': 'anticipos-y-pagos-adelantados',
+  'invoice-email-delivery': 'envio-de-la-factura-por-correo',
+  'invoice-line-item-descriptions': 'lineas-de-factura-que-se-aprueben-sin-preguntas',
+  'invoicing-without-registered-business': 'facturar-sin-empresa-registrada',
+  'multilingual-invoices': 'facturas-en-otro-idioma',
+  'rebilling-expenses-disbursements': 'refacturacion-de-gastos-a-clientes',
+  'trades-field-service-invoicing': 'facturacion-oficios-servicio-en-campo',
+  'withholding-tax-on-invoices': 'retencion-de-impuestos-en-facturas',
+};
+
 export interface GuideCardItem {
   slug: string;
   url: string;

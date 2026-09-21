@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getTranslation } from '../../../i18n';
 import { guidesJa, getGuideJa } from '../../../data/guides-ja';
+import { EN_TO_ES } from '../../../data/guides-multilingual';
 
 export function getStaticPaths() { return guidesJa.map((guide) => ({ params: { slug: guide.slug } })); }
 const guide = getGuideJa(Astro.params.slug ?? '');
@@ -12,9 +13,12 @@ const guidePath = `guides/${guide.slug}`;
 const canonicalUrl = `https://best-invoicegenerator.com/ja/${guidePath}/`;
 const articleSchema = { '@context': 'https://schema.org', '@type': 'Article', headline: guide.title, description: guide.description, inLanguage: 'ja', dateModified: '2026-09-21', author: { '@type': 'Organization', name: guide.author }, editor: { '@type': 'Organization', name: guide.editor }, mainEntityOfPage: canonicalUrl };
 const faqSchema = guide.faq ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: guide.faq.map((item) => ({ '@type': 'Question', name: item.question, acceptedAnswer: { '@type': 'Answer', text: item.answer } })) } : null;
+const esSlug = EN_TO_ES[guide.slug];
+const langPaths: Record<string, string> = {};
+if (esSlug) langPaths['es'] = `es/guides/${esSlug}`;
 ---
 
-<BaseLayout title={`${guide.title} | Best Invoice Generator`} description={guide.description} path={guidePath} lang="ja" t={t} hideLangSwitcher={false} localized={false}>
+<BaseLayout title={`${guide.title} | Best Invoice Generator`} description={guide.description} path={guidePath} lang="ja" t={t} hideLangSwitcher={false} localized={false} langPaths={langPaths}>
   <article>
     <header class="border-b border-zinc-800"><div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
       <div class="flex flex-wrap items-center gap-4"><a href="/ja/guides/" class="text-sm font-medium text-zinc-400 hover:text-white">← すべてのガイド</a><a href={`/guides/${guide.slug}/`} class="text-sm font-medium text-zinc-500 hover:text-white">Read in English →</a></div>
