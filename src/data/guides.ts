@@ -25,96 +25,108 @@ export interface Guide {
 export const guides: Guide[] = [
   {
     slug: "invoice-checklist",
-    title: "Invoice checklist: 9 details to confirm before you send",
-    description: "A practical, field-by-field invoice checklist with a worked service invoice example.",
+    title: "Invoice Checklist: 9 Details to Check Before You Send",
+    description: "Use this 9-point invoice checklist to catch missing dates, wrong totals, and unclear line items before you send. Includes a worked example and FAQs.",
     category: "Invoice basics",
     readingTime: "5 min read",
-    reviewed: "August 24, 2026",
-    author: "Best Invoice Generator Editorial Team",
-    editor: "Best Invoice Generator Editorial Team",
-    summary: "A final review takes less than two minutes and can prevent a payment delay caused by a missing date, reference, or total.",
+    reviewed: "",
+    author: "",
+    editor: "",
+    summary: "A two-minute review can prevent a payment delay caused by a missing date, a wrong reference, or a total that does not add up.",
     image: { src: "/images/guides/invoice-checklist.svg", alt: "Invoice review checklist verification illustration" },
     intro: [
-      "An invoice is easier to pay when the recipient can immediately tell who billed them, what the work was, how much is due, and when to pay. This checklist focuses on those decision-making details—not decorative formatting.",
-      "Use it after entering your line items and before exporting a PDF or sharing a link. It works for freelancers, contractors, and small teams that bill for products or services."
-],
+      "An invoice gets paid faster when the person reading it can answer four questions at a glance: who is billing me, what was the work, how much do I owe, and when and how do I pay? This checklist covers the nine details that answer those questions. It skips decorative formatting on purpose, because clarity matters more than design.",
+      "Use it after you have entered your line items and before you export a PDF or share a link. It works for freelancers, contractors, and small teams selling either services or products."
+    ],
     example: {
       label: "Worked example",
       title: "A completed consulting invoice",
-      body: "Northstar Studio bills Acme Retail for a two-day website review. Each detail answers a question Acme’s accounts team needs resolved before payment.",
+      body: "Northstar Studio bills Acme Retail for a two-day website review. Every row below answers a question the accounts team would otherwise have to ask.",
       rows: [
         [
                 "Invoice number",
-                "NS-2026-041 — unique and easy to quote in an email"
+                "NS-2026-041"
         ],
         [
                 "Service period",
-                "Website review, August 14–15, 2026"
+                "Website review, 14\u201315 August 2026"
         ],
         [
                 "Payment terms",
-                "Net 14 — payment due September 2, 2026"
+                "Net 14, due 2 September 2026"
         ],
         [
                 "Amount due",
-                "$1,500.00 — tax treatment shown separately"
+                "1,500.00 USD, tax shown separately"
         ]
-]
+      ]
     },
     diagram: {
-      title: "The payer’s scan path",
-      
+      title: "The payer\u2019s scan path",
       steps: [
         "Who is billing?",
         "What was delivered?",
         "What is due?",
         "When and how do I pay?"
-]
+      ]
     },
     sections: [
       {
-            "heading": "Start with identity and references",
+            "heading": "Why a final check is worth the time",
             "paragraphs": [
-                  "Place your business name and a reliable contact method near the top. Then confirm the client’s billing name, contact, and address match the person or team that approves payment."
-            ],
-            "checklist": [
-                  "Your business name and email are present.",
-                  "The client name is spelled as their finance team expects.",
-                  "The invoice number is unique and follows your chosen sequence.",
-                  "The issue date and due date are both visible."
+                  "Most late payments are not caused by unwilling clients. They happen because someone in accounts payable cannot approve the invoice as written. Common causes include a missing or ambiguous due date, an invoice number that duplicates an earlier one, a client name that differs from the one on the contract, line items too vague to match against an agreement, and payment instructions that are incomplete or hard to find.",
+                  "Each of these triggers a follow-up email, and every email adds days. A short review before sending removes most of them."
             ]
       },
       {
-            "heading": "Make the work easy to recognize",
+            "heading": "The 9-point invoice checklist",
             "paragraphs": [
-                  "A vague line item such as “services” gives a client little to approve. Name the deliverable, quantity or time, unit rate, and relevant date range. If a purchase order, contract, or project code exists, place it in a reference field or note."
-            ],
-            "checklist": [
-                  "Each line item explains the product or service.",
-                  "Quantity and rate match the agreement.",
-                  "Discounts, shipping, and taxes are labeled—not hidden in a total.",
-                  "The currency matches the agreement."
+                  "Part 1: Identity and references. Your business details — put your business name and a reliable contact method near the top, so the payer knows exactly who to reply to. Legal or trading name matches your bank account and agreement, email address or phone number is monitored, tax or registration number is included if your region requires it. Client billing details — confirm the name, contact, and address match the team that approves payment, not necessarily the person you work with day to day. Company name is spelled the way their finance team writes it, billing address is current, purchase order or project code is added when the client uses one. Invoice number — give every invoice a unique number that follows a consistent sequence. It becomes the reference the client quotes in every email and payment. Number has not been used before, format is simple, for example a prefix, the year, and a running count.",
+                  "Part 2: The work and the money. Issue date and due date — both dates should be visible without scrolling or searching. Write the month as a word, such as “14 August 2026”, so it cannot be misread between date formats. Issue date is the day you actually send the invoice, due date matches the agreed payment terms. Line items — a line reading “services” gives a client nothing to approve. Name the deliverable, the quantity or time, the unit rate, and the relevant date range. Each line describes a specific product or service, quantities and rates match the quote or contract, work period is stated for time-based billing. Taxes, discounts, and currency — show these as labeled lines instead of folding them into a total. State the currency clearly, especially when working with international clients. Subtotal, tax, and discount each appear on their own line, tax label fits your region, such as VAT, GST, or sales tax, currency matches the agreement.",
+                  "Part 3: Getting paid. Total due — show the amount owed once, in a prominent place, and recalculate it against the line items. The sum of the lines equals the total, any deposit or earlier payment has been subtracted. Payment terms — state when payment is expected, for example “Net 14” or “on due receipt”. If you charge late fees, mention them here. Terms match what the client agreed to, the due date and the terms do not contradict each other. Payment instructions — tell the client how to pay. Share only the account details you are comfortable placing on a document that may be forwarded. Bank details or payment link have been tested, a reference for the payer to include is provided."
             ]
       },
       {
-            "heading": "Finish with a clear payment request",
+            "heading": "Your two-minute final review",
             "paragraphs": [
-                  "Show the total due once, prominently, and state the payment method or instructions. If you accept bank transfer, include only the details you are comfortable sharing on an invoice. For online payment links, confirm the link is correct before sending."
+                  "Read the invoice from the client’s point of view, starting at the top. Recalculate the total from the line items. Confirm both dates and the invoice number. Test any payment link or double-check bank details. Export the PDF and open it once to check the layout."
             ],
             "checklist": [
-                  "Total due has been checked against the line items.",
-                  "Payment terms match the client agreement.",
-                  "A short thank-you or remittance note is optional but specific.",
-                  "You have opened the exported PDF once to verify the layout."
+                  "Read the invoice from the client’s point of view.",
+                  "Recalculate the total from the line items.",
+                  "Confirm both dates and the invoice number.",
+                  "Test any payment link or double-check bank details.",
+                  "Export the PDF and open it once to check the layout."
             ]
       }
-],
-    
+    ],
+    faq: [
+      {
+            "question": "What should an invoice include?",
+            "answer": "At minimum: your business name and contact details, the client\u2019s billing details, a unique invoice number, the issue date and due date, itemized products or services with quantities and rates, any taxes or discounts, the total due, and payment instructions."
+      },
+      {
+            "question": "How long should I take to review an invoice before sending it?",
+            "answer": "About two minutes. Check the client details, dates, totals, and payment instructions, then open the exported PDF once to confirm the layout looks right."
+      },
+      {
+            "question": "Do I need a purchase order number on my invoice?",
+            "answer": "Only if your client uses one. Many finance teams cannot approve an invoice without its purchase order or project code, so add it in a reference field whenever the client provides it."
+      },
+      {
+            "question": "Should taxes be shown separately from the subtotal?",
+            "answer": "In most cases, yes. Showing the subtotal, tax, and total on separate lines makes the amount easy to verify. Tax rules differ by country and business type, so confirm the requirements that apply to you with a local accountant or tax authority."
+      },
+      {
+            "question": "What is the most common invoice mistake?",
+            "answer": "Vague or incomplete details: a missing due date, a duplicated invoice number, a wrong client name, or line items described only as \u201cservices\u201d. Each one gives the payer a reason to pause and ask questions."
+      }
+    ],
     related: [
       "payment-terms",
       "invoice-numbering",
       "freelance-billing-essentials"
-]
+    ]
   },
   {
     slug: "payment-terms",
