@@ -17,7 +17,7 @@ const en: Translation = {
     subtitle: 'Free. No signup. No watermark. Your invoice data stays on your device.',
     themeToggle: 'Switch color theme',
     languageLabel: 'Language',
-    quickLinks: { about: 'About', contact: 'Contact', privacy: 'Privacy Policy', terms: 'Terms', savedInvoices: 'My Invoices', faq: 'FAQ' },
+    quickLinks: { about: 'About', contact: 'Contact', privacy: 'Privacy Policy', terms: 'Terms', savedInvoices: 'My Invoices', faq: 'FAQ', guides: 'Guides' },
   },
   tool: {
     invoicePdfInfo: 'Invoice PDF info',

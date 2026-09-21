@@ -17,7 +17,7 @@ const fr: Translation = {
     subtitle: 'Gratuit. Sans inscription. Sans filigrane. Vos données restent sur votre appareil.',
     themeToggle: 'Changer le thème de couleur',
     languageLabel: 'Langue',
-    quickLinks: { about: 'À propos', contact: 'Contact', privacy: 'Politique de confidentialité', terms: 'Conditions', savedInvoices: 'Mes factures', faq: 'FAQ' },
+    quickLinks: { about: 'À propos', contact: 'Contact', privacy: 'Politique de confidentialité', terms: 'Conditions', savedInvoices: 'Mes factures', faq: 'FAQ', guides: 'Guides' },
   },
   tool: {
     invoicePdfInfo: 'Informations sur le PDF de la facture',

@@ -1,2 +1,4 @@
 /en    /    301
 /en/*  /:splat  301
+/es/guias    /es/guides    301
+/es/guias/*  /es/guides/:splat  301

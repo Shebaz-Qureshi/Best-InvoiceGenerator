@@ -21,6 +21,19 @@ const altUrl = (code: string) => siteUrl + localePrefix(code) + '/';
 
 const faqItems = t.faqItems.map((item) => [item.q, item.a] as [string, string]);
 
+const exploreGuidesLabels: Record<string, string> = {
+  en: 'Explore invoice guides',
+  es: 'Explorar guías de facturación',
+  fr: 'Explorer les guides de facturation',
+  de: 'Rechnungsleitfäden entdecken',
+  it: 'Esplora le guide di fatturazione',
+  nl: 'Factuurgidsen ontdekken',
+  pt: 'Explorar guias de faturação',
+  ar: 'استكشف أدلة الفوترة',
+  ja: '請求書ガイドを見る',
+};
+const exploreGuidesText = exploreGuidesLabels[lang] || 'Explore invoice guides';
+
 const toolJs = {
   lang,
   messages: t.tool.messages,
@@ -126,7 +139,7 @@ const qaPageSchema = {
           </a>
           <div class="flex items-center gap-2">
             <a href={localeHref(lang, 'saved-invoices')} class="nav-link">{t.header.quickLinks.savedInvoices}</a>
-            <a href={localeHref(lang, lang === 'es' ? 'guias' : 'guides')} class="nav-link">{t.header.quickLinks.guides || 'Guides'}</a>
+            <a href={localeHref(lang, 'guides')} class="nav-link">{t.header.quickLinks.guides || 'Guides'}</a>
             <a href="#faq" class="nav-link">{t.header.quickLinks.faq}</a>
             <LanguageSwitcher lang={lang} pagePath="" label="" />
             <button id="themeToggle" class="button-secondary theme-toggle" type="button" aria-label={t.header.themeToggle} title={t.header.themeToggle}>☀️</button>
@@ -477,7 +490,7 @@ const qaPageSchema = {
               </div>
             ))}
           </div>
-          <a href={localeHref(lang, lang === 'es' ? 'guias' : 'guides')} class="mt-10 inline-flex items-center rounded-lg border border-zinc-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:border-zinc-500 hover:bg-zinc-900 explore-guides-btn">{lang === 'es' ? 'Explorar guías de facturación' : 'Explore invoice guides'} <span aria-hidden="true" class="ml-2">→</span></a>
+          <a href={localeHref(lang, 'guides')} class="mt-10 inline-flex items-center rounded-lg border border-zinc-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:border-zinc-500 hover:bg-zinc-900 explore-guides-btn">{exploreGuidesText} <span aria-hidden="true" class="ml-2">→</span></a>
         </div>
       </section>
 
@@ -519,7 +532,7 @@ const qaPageSchema = {
             <nav aria-label={t.footer.resources}>
               <p class="text-[11px] font-bold uppercase tracking-wider text-zinc-500">{t.footer.resources}</p>
               <ul class="mt-3 space-y-2 text-sm">
-                <li><a href={localeHref(lang, lang === 'es' ? 'guias' : 'guides')} class="footer-link">{t.header.quickLinks.guides || 'Guides'}</a></li>
+                <li><a href={localeHref(lang, 'guides')} class="footer-link">{t.header.quickLinks.guides || 'Guides'}</a></li>
               </ul>
             </nav>
             <nav aria-label={t.footer.legal}>

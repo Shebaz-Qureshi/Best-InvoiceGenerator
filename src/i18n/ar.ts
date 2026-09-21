@@ -17,7 +17,7 @@ const ar: Translation = {
     subtitle: 'مجاني. بدون تسجيل. بدون علامة مائية. تظل بيانات الفاتورة على جهازك.',
     themeToggle: 'تبديل المظهر',
     languageLabel: 'اللغة',
-    quickLinks: { about: 'من نحن', contact: 'اتصل بنا', privacy: 'سياسة الخصوصية', terms: 'الشروط', savedInvoices: 'فواتيري', faq: 'الأسئلة الشائعة' },
+    quickLinks: { about: 'من نحن', contact: 'اتصل بنا', privacy: 'سياسة الخصوصية', terms: 'الشروط', savedInvoices: 'فواتيري', faq: 'الأسئلة الشائعة', guides: 'الأدلة' },
   },
   tool: {
     invoicePdfInfo: 'معلومات فاتورة PDF',

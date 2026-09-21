@@ -1,34 +1,29 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getTranslation } from '../../i18n';
-import { guides, getGuide } from '../../data/guides';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getTranslation } from '../../../i18n';
+import { guidesEs, getGuideEs } from '../../../data/guides-es';
 
 export function getStaticPaths() {
-  const paths = guides.map((guide) => ({ params: { slug: guide.slug } }));
-  paths.push({ params: { slug: 'credit-notes-invoice-corrections' } });
-  return paths;
+  return guidesEs.map((guide) => ({ params: { slug: guide.slug } }));
 }
 
 const slugParam = Astro.params.slug ?? '';
-if (slugParam === 'credit-notes-invoice-corrections') {
-  return Astro.redirect('/guides/credit-note-invoice-corrections/', 301);
-}
+const guide = getGuideEs(slugParam);
+if (!guide) return Astro.redirect('/es/guides/');
 
-const guide = getGuide(slugParam);
-if (!guide) return Astro.redirect('/guides/');
-
-const t = getTranslation('en');
-const relatedGuides = guide.related.map((slug) => getGuide(slug)).filter(Boolean);
-const canonicalPath = `guides/${guide.slug}`;
+const t = getTranslation('es');
+const relatedGuides = guide.related.map((slug) => getGuideEs(slug)).filter(Boolean);
+const guidePath = `guides/${guide.slug}`;
+const canonicalUrl = `https://best-invoicegenerator.com/es/${guidePath}/`;
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: guide.title,
   description: guide.description,
   dateModified: '2026-08-24',
-  author: { '@type': 'Organization', name: guide.author },
-  editor: { '@type': 'Organization', name: guide.editor },
-  mainEntityOfPage: `https://best-invoicegenerator.com/${canonicalPath}/`,
+  author: { '@type': 'Organization', name: 'Best Invoice Generator' },
+  editor: { '@type': 'Organization', name: 'Best Invoice Generator' },
+  mainEntityOfPage: canonicalUrl,
 };
 const faqSchema = guide.faq ? {
   '@context': 'https://schema.org',
@@ -37,13 +32,13 @@ const faqSchema = guide.faq ? {
 } : null;
 ---
 
-<BaseLayout title={`${guide.title} | Best Invoice Generator`} description={guide.description} path={canonicalPath} lang="en" t={t} hideLangSwitcher={false} localized={true}>
+<BaseLayout title={`${guide.title} | Best Invoice Generator`} description={guide.description} path={guidePath} lang="es" t={t} hideLangSwitcher={false} localized={false}>
   <article>
     <header class="border-b border-zinc-800">
       <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
         <div class="flex items-center gap-4">
-          <a href="/guides/" class="text-sm font-medium text-zinc-400 hover:text-white">← All guides</a>
-          <a href={`/es/guides/${guide.slug}/`} class="text-sm font-medium text-zinc-500 hover:text-white">Leer en español →</a>
+          <a href="/es/guides/" class="text-sm font-medium text-zinc-400 hover:text-white">← Todas las guías</a>
+          <a href={`/guides/${guide.slug}/`} class="text-sm font-medium text-zinc-500 hover:text-white">Read in English →</a>
         </div>
         <p class="eyebrow mt-8">{guide.category} · {guide.readingTime}</p>
         <h1 class="mt-3 text-4xl font-semibold tracking-tight text-white sm:text-5xl">{guide.title}</h1>
@@ -74,7 +69,7 @@ const faqSchema = guide.faq ? {
         </section>
 
         <figure class="mt-10 rounded-2xl border border-zinc-800 bg-zinc-950 p-6" aria-labelledby="diagram-title">
-          <p class="eyebrow">Original diagram</p>
+          <p class="eyebrow">Diagrama original</p>
           <h2 id="diagram-title" class="mt-2 text-xl font-semibold tracking-tight text-white">{guide.diagram.title}</h2>
           <ol class="mt-6 grid gap-3 sm:grid-cols-2" aria-label={guide.diagram.title}>
             {guide.diagram.steps.map((step, index) => <li class="rounded-xl border border-zinc-800 bg-zinc-900/70 p-4 text-sm font-medium text-zinc-200"><span class="mb-3 grid h-6 w-6 place-items-center rounded-full bg-white text-xs font-bold text-zinc-950">{index + 1}</span>{step}</li>)}
@@ -93,23 +88,23 @@ const faqSchema = guide.faq ? {
         ))}
 
         {guide.faq && <section class="mt-12 border-t border-zinc-800 pt-10" aria-labelledby="guide-faq">
-          <p class="eyebrow">Common questions</p>
-          <h2 id="guide-faq" class="mt-2 text-2xl font-semibold tracking-tight text-white">Helpful clarifications</h2>
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 id="guide-faq" class="mt-2 text-2xl font-semibold tracking-tight text-white">Aclaraciones útiles</h2>
           <div class="mt-6 divide-y divide-zinc-800 rounded-xl border border-zinc-800 bg-zinc-950">
             {guide.faq.map((item) => <details class="group p-5"><summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-medium text-white">{item.question}<span aria-hidden="true" class="text-lg text-zinc-400 group-open:rotate-45">+</span></summary><p class="pt-4 text-sm leading-7 text-zinc-400">{item.answer}</p></details>)}
           </div>
         </section>}
       </div>
 
-      <aside class="h-fit rounded-2xl border border-zinc-800 bg-zinc-950 p-5 lg:sticky lg:top-24" aria-label="Related resources">
-        <p class="eyebrow">Use the tool</p>
-        <h2 class="mt-2 text-lg font-semibold text-white">Ready to make the document?</h2>
-        <p class="mt-3 text-sm leading-6 text-zinc-400">Open the invoice generator with this guide’s checklist fresh in mind.</p>
-        <a href="/" class="mt-5 inline-flex w-full items-center justify-center rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-zinc-950 hover:bg-zinc-200">Create an invoice</a>
+      <aside class="h-fit rounded-2xl border border-zinc-800 bg-zinc-950 p-5 lg:sticky lg:top-24" aria-label="Recursos relacionados">
+        <p class="eyebrow">Usa la herramienta</p>
+        <h2 class="mt-2 text-lg font-semibold text-white">¿Listo para crear el documento?</h2>
+        <p class="mt-3 text-sm leading-6 text-zinc-400">Abre el generador de facturas con la lista de verificación de esta guía todavía fresca.</p>
+        <a href="/es/" class="mt-5 inline-flex w-full items-center justify-center rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-zinc-950 hover:bg-zinc-200">Crear una factura</a>
         <div class="mt-8 border-t border-zinc-800 pt-5">
-          <p class="eyebrow">Related guides</p>
+          <p class="eyebrow">Guías relacionadas</p>
           <ul class="mt-3 space-y-3 text-sm leading-6">
-            {relatedGuides.map((related) => related && <li><a href={`/guides/${related.slug}/`} class="text-zinc-300 hover:text-white">{related.title} <span aria-hidden="true">→</span></a></li>)}
+            {relatedGuides.map((related) => related && <li><a href={`/es/guides/${related.slug}/`} class="text-zinc-300 hover:text-white">{related.title} <span aria-hidden="true">→</span></a></li>)}
           </ul>
         </div>
       </aside>

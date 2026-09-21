@@ -30,6 +30,16 @@ const guideSlugs = slugMatches.map(m => m[1]);
 
 const guideUrls = guideSlugs.map(slug => `/guides/${slug}/`);
 
+// Spanish guides slugs
+const guidesEsPath = path.join(rootDir, 'src', 'data', 'guides-es.ts');
+let guideEsUrls = [];
+if (fs.existsSync(guidesEsPath)) {
+  const guidesEsContent = fs.readFileSync(guidesEsPath, 'utf8');
+  const slugMatchesEs = [...guidesEsContent.matchAll(/slug:\s*[`"']([^`"']+)[`"']/g)];
+  const guideEsSlugs = slugMatchesEs.map(m => m[1]);
+  guideEsUrls = guideEsSlugs.map(slug => `/es/guides/${slug}/`);
+}
+
 // 3. Multilingual pages for locales: es, fr, de, it, nl, pt, ar, ja
 const locales = ['es', 'fr', 'de', 'it', 'nl', 'pt', 'ar', 'ja'];
 const localizedSubpages = [
@@ -37,6 +47,7 @@ const localizedSubpages = [
   'about',
   'contact',
   'faq',
+  'guides',
   'privacy-policy',
   'saved-invoices',
   'terms',
@@ -55,6 +66,7 @@ for (const loc of locales) {
 const allPaths = [
   ...corePages,
   ...guideUrls,
+  ...guideEsUrls,
   ...localizedUrls
 ];
 

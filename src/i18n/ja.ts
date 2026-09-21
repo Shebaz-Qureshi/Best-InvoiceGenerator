@@ -17,7 +17,7 @@ const ja: Translation = {
     subtitle: '無料。登録不要。ウォーターマークなし。データはデバイス内に保存されます。',
     themeToggle: '色のテーマを切り替える',
     languageLabel: '言語',
-    quickLinks: { about: '概要', contact: 'お問い合わせ', privacy: 'プライバシーポリシー', terms: '利用規約', savedInvoices: 'マイ請求書', faq: 'よくある質問' },
+    quickLinks: { about: '概要', contact: 'お問い合わせ', privacy: 'プライバシーポリシー', terms: '利用規約', savedInvoices: 'マイ請求書', faq: 'よくある質問', guides: 'ガイド' },
   },
   tool: {
     invoicePdfInfo: '請求書PDF情報',
