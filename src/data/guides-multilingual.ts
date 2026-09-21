@@ -1,5 +1,6 @@
 import { guides } from './guides';
 import { guidesEs } from './guides-es';
+import { guidesPt } from './guides-pt';
 
 export interface GuideCardItem {
   slug: string;
@@ -104,17 +105,17 @@ export const hubMetaByLocale: Record<string, HubMeta> = {
     editorialNote: 'Redactionele opmerking: deze gidsen bieden algemene procesinformatie en vormen geen fiscaal, juridisch of boekhoudkundig advies. Controleer de regels die op uw bedrijf van toepassing zijn.',
   },
   pt: {
-    title: 'Guias práticos de faturação para uma cobrança clara | Best Invoice Generator',
-    description: 'Guias originais e práticos para criar faturas, definir prazos de pagamento, numerar documentos e passar do orçamento ao recebimento.',
-    eyebrow: 'Guia de faturação',
-    heading: 'Guias práticos de faturação pensados para o trabalho real.',
-    intro: 'Explicações curtas e diretas para as decisões mais comuns de faturação. Cada guia inclui um exemplo resolvido, um diagrama simples e um atalho para a ferramenta.',
+    title: 'Guias práticos para emitir e gerenciar faturas | Best Invoice Generator',
+    description: 'Guias em português brasileiro para criar faturas, definir prazos, organizar cobranças e acompanhar pagamentos.',
+    eyebrow: 'Guias de faturamento',
+    heading: 'Guias práticos de faturamento para o trabalho real.',
+    intro: 'Orientações diretas para decisões comuns de faturamento. Cada guia traz um exemplo, um diagrama simples e um atalho para o gerador de faturas.',
     cta: 'Criar uma fatura',
     libraryEyebrow: 'Explorar a biblioteca',
-    libraryHeading: 'Comece pela decisão que tem pela frente.',
-    librarySubtitle: 'Sem manuais genéricos — apenas passos concretos aplicáveis à sua próxima fatura.',
+    libraryHeading: 'Comece pela decisão que você precisa tomar agora.',
+    librarySubtitle: 'Sem conteúdo genérico: apenas passos que você pode aplicar à sua próxima cobrança.',
     readGuide: 'Ler guia',
-    editorialNote: 'Nota editorial: estes guias oferecem informações gerais sobre fluxos de trabalho e não constituem consultoria fiscal, jurídica ou contabilística. Verifique os requisitos aplicáveis ao seu negócio.',
+    editorialNote: 'Nota editorial: estes guias trazem informações gerais sobre processos de faturamento e não substituem orientação fiscal, jurídica ou contábil. Verifique os requisitos aplicáveis à sua atividade antes de emitir uma fatura.',
   },
   ar: {
     title: 'أدلة إعداد الفواتير لتحصيل مستحقات أكثر وضوحاً | Best Invoice Generator',
@@ -598,6 +599,16 @@ export function getGuidesForLocale(locale: string): GuideCardItem[] {
     return guidesEs.map((g) => ({
       slug: g.slug,
       url: `/es/guides/${g.slug}/`,
+      title: g.title,
+      summary: g.summary,
+      category: g.category,
+      readingTime: g.readingTime,
+    }));
+  }
+  if (locale === 'pt') {
+    return guidesPt.map((g) => ({
+      slug: g.slug,
+      url: `/pt/guides/${g.slug}/`,
       title: g.title,
       summary: g.summary,
       category: g.category,

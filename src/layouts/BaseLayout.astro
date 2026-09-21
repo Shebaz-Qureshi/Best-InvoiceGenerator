@@ -18,6 +18,7 @@ interface Props {
 const { title, description, path, lang, t, hideLangSwitcher = false, noindex = false, localized = true } = Astro.props;
 const siteUrl = 'https://best-invoicegenerator.com';
 const dir = lang === 'ar' ? 'rtl' : 'ltr';
+const documentLang = lang === 'pt' ? 'pt-BR' : lang;
 const isHome = lang === 'en' && !path;
 const canonical = isHome ? 'https://best-invoicegenerator.com/' : siteUrl + localePrefix(lang) + (path ? '/' + path + '/' : '/');
 const ogLocale = ogLocales[lang] ?? 'en_US';
@@ -26,7 +27,7 @@ const altUrl = (code: string) => siteUrl + localePrefix(code) + (path ? '/' + pa
 ---
 
 <!doctype html>
-<html lang={lang} dir={dir}>
+<html lang={documentLang} dir={dir}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
