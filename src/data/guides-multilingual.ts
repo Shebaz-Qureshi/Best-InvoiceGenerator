@@ -2,6 +2,7 @@ import { guides } from './guides';
 import { guidesEs } from './guides-es';
 import { guidesPt } from './guides-pt';
 import { guidesAr } from './guides-ar';
+import { guidesDe } from './guides-de';
 
 export interface GuideCardItem {
   slug: string;
@@ -618,6 +619,9 @@ export function getGuidesForLocale(locale: string): GuideCardItem[] {
   }
   if (locale === 'ar') {
     return guidesAr.map((g) => ({ slug: g.slug, url: `/ar/guides/${g.slug}/`, title: g.title, summary: g.summary, category: g.category, readingTime: g.readingTime }));
+  }
+  if (locale === 'de') {
+    return guidesDe.map((g) => ({ slug: g.slug, url: `/de/guides/${g.slug}/`, title: g.title, summary: g.summary, category: g.category, readingTime: g.readingTime }));
   }
 
   const localeMap = localizedGuidesMap[locale];

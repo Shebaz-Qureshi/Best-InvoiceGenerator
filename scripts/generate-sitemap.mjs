@@ -31,6 +31,7 @@ const guideSlugs = slugMatches.map(m => m[1]);
 const guideUrls = guideSlugs.map(slug => `/guides/${slug}/`);
 const guidePtUrls = guideSlugs.map(slug => `/pt/guides/${slug}/`);
 const guideArUrls = guideSlugs.map(slug => `/ar/guides/${slug}/`);
+const guideDeUrls = guideSlugs.map(slug => `/de/guides/${slug}/`);
 
 // Spanish guides slugs
 const guidesEsPath = path.join(rootDir, 'src', 'data', 'guides-es.ts');
@@ -71,6 +72,7 @@ const allPaths = [
   ...guideEsUrls,
   ...guidePtUrls,
   ...guideArUrls,
+  ...guideDeUrls,
   ...localizedUrls
 ];
 
