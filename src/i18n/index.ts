@@ -22,7 +22,7 @@ export const locales: LocaleMeta[] = [
   { code: 'de', label: 'Deutsch', dir: 'ltr' },
   { code: 'it', label: 'Italiano', dir: 'ltr' },
   { code: 'nl', label: 'Nederlands', dir: 'ltr' },
-  { code: 'pt', label: 'Português (Brasil)', dir: 'ltr' },
+  { code: 'pt', label: 'Português', dir: 'ltr' },
   { code: 'ar', label: 'العربية', dir: 'rtl' },
   { code: 'ja', label: '日本語', dir: 'ltr' },
 ];
