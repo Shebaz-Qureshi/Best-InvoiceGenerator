@@ -12,10 +12,10 @@ export interface MessageStrings {
   billToAddress: string;
   serviceOrProduct: string;
   thankYou: string;
-  invoiceSaved?: string;
-  invoiceUpdated?: string;
+  invoiceSaved: string;
+  invoiceUpdated: string;
   savedInvoices?: string;
-  saveFailed?: string;
+  saveFailed: string;
 }
 
 export interface FaqItem {
@@ -86,7 +86,7 @@ export interface Translation {
     pdfPreview: string;
     printExport: string;
     downloadPdf: string;
-    saveInvoice?: string;
+    saveInvoice: string;
     subtotal: string;
     discount: string;
     tax: string;

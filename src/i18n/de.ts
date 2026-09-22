@@ -55,6 +55,7 @@ const de: Translation = {
     pdfPreview: 'PDF-Vorschau',
     printExport: 'Drucken / Exportieren',
     downloadPdf: 'PDF kostenlos herunterladen',
+    saveInvoice: 'Rechnung speichern',
     subtotal: 'Zwischensumme',
     discount: 'Rabatt',
     tax: 'Steuer',
@@ -80,6 +81,9 @@ const de: Translation = {
       billToAddress: 'Rechnungsadresse',
       serviceOrProduct: 'Leistung oder Produkt',
       thankYou: 'Vielen Dank für Ihr Vertrauen!',
+      invoiceSaved: 'Rechnung in Ihrem Browser gespeichert',
+      invoiceUpdated: 'Rechnung in Ihrem Browser aktualisiert',
+      saveFailed: 'Rechnung konnte nicht gespeichert werden',
     },
   },
   seoContent: {

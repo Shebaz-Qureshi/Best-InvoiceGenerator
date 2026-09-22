@@ -55,6 +55,7 @@ const ar: Translation = {
     pdfPreview: 'معاينة PDF',
     printExport: 'طباعة / تصدير',
     downloadPdf: 'تحميل PDF مجاني',
+    saveInvoice: 'حفظ الفاتورة',
     subtotal: 'المجموع الفرعي',
     discount: 'الخصم',
     tax: 'الضريبة',
@@ -80,6 +81,9 @@ const ar: Translation = {
       billToAddress: 'عنوان المستلم',
       serviceOrProduct: 'الخدمة أو المنتج',
       thankYou: 'شكرًا لتعاملكم معنا!',
+      invoiceSaved: 'تم حفظ الفاتورة في متصفحك',
+      invoiceUpdated: 'تم تحديث الفاتورة في متصفحك',
+      saveFailed: 'تعذر حفظ الفاتورة',
     },
   },
   seoContent: {

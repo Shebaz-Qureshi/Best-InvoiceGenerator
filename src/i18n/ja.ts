@@ -55,6 +55,7 @@ const ja: Translation = {
     pdfPreview: 'PDFプレビュー',
     printExport: '印刷 / エクスポート',
     downloadPdf: '無料PDFをダウンロード',
+    saveInvoice: '請求書を保存',
     subtotal: '小計',
     discount: '割引',
     tax: '税',
@@ -80,6 +81,9 @@ const ja: Translation = {
       billToAddress: '請求先住所',
       serviceOrProduct: 'サービスまたは製品',
       thankYou: 'ご利用ありがとうございます！',
+      invoiceSaved: '請求書がブラウザに保存されました',
+      invoiceUpdated: '請求書がブラウザで更新されました',
+      saveFailed: '請求書を保存できませんでした',
     },
   },
   seoContent: {

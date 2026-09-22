@@ -55,6 +55,7 @@ const nl: Translation = {
     pdfPreview: 'PDF-voorbeeld',
     printExport: 'Afdrukken / Exporteren',
     downloadPdf: 'Download gratis PDF',
+    saveInvoice: 'Factuur opslaan',
     subtotal: 'Subtotaal',
     discount: 'Korting',
     tax: 'Btw',
@@ -80,6 +81,9 @@ const nl: Translation = {
       billToAddress: 'Factuuradres',
       serviceOrProduct: 'Dienst of product',
       thankYou: 'Bedankt voor uw zaken!',
+      invoiceSaved: 'Factuur opgeslagen in je browser',
+      invoiceUpdated: 'Factuur bijgewerkt in je browser',
+      saveFailed: 'Factuur kon niet worden opgeslagen',
     },
   },
   seoContent: {

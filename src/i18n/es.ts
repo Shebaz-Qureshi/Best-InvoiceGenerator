@@ -55,6 +55,7 @@ const es: Translation = {
     pdfPreview: 'Vista previa del PDF',
     printExport: 'Imprimir / Exportar',
     downloadPdf: 'Descargar PDF Gratis',
+    saveInvoice: 'Guardar factura',
     subtotal: 'Subtotal',
     discount: 'Descuento',
     tax: 'Impuesto',
@@ -80,6 +81,9 @@ const es: Translation = {
       billToAddress: 'Dirección de facturación',
       serviceOrProduct: 'Servicio o producto',
       thankYou: '¡Gracias por su negocio!',
+      invoiceSaved: 'Factura guardada en tu navegador',
+      invoiceUpdated: 'Factura actualizada en tu navegador',
+      saveFailed: 'No se pudo guardar la factura',
     },
   },
   seoContent: {
