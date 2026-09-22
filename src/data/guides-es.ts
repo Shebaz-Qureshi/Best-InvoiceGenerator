@@ -12,7 +12,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Una lista de verificación práctica, campo por campo, con un ejemplo de factura de servicios ya completado.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/invoice-checklist.svg`,
       alt: `Lista de verificación de facturas: 9 detalles que confirmar antes de enviarlas`,
     },
     intro: [
@@ -122,7 +122,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Cómo elegir y redactar condiciones de pago para facturas, con ejemplos prácticos según el tipo de relación con el cliente.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/payment-terms.svg`,
       alt: `Condiciones de pago de facturas: cómo fijar una fecha de vencimiento clara`,
     },
     intro: [
@@ -208,7 +208,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Elige un formato de numeración de facturas único, mira ejemplos reales y evita los errores más comunes al numerar.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/invoice-numbering.svg`,
       alt: `Numeración de facturas: un sistema sencillo que se mantiene organizado`,
     },
     intro: [
@@ -296,7 +296,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Entiende para qué sirven los presupuestos y las facturas, con un ejemplo de flujo de trabajo para un proyecto de servicios.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/quote-vs-invoice.svg`,
       alt: `Presupuesto vs. factura: un flujo de trabajo práctico desde la aprobación hasta el pago`,
     },
     intro: [
@@ -385,7 +385,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Aprende cómo autónomos y contratistas usan un generador de facturas gratuito para crear flujos de facturación sencillos que se cobran a tiempo.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/freelance-billing.svg`,
       alt: `Fundamentos de facturación para autónomos: cómo montar un sistema de facturación limpio`,
     },
     intro: [
@@ -479,7 +479,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Una mirada independiente al software de facturación, las aplicaciones de escritorio y los generadores de facturas en línea para la contabilidad de pequeños negocios.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/software-guide.svg`,
       alt: `Comparativa de herramientas de facturación: generador de facturas en línea vs software de escritorio`,
     },
     intro: [
@@ -573,7 +573,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Descubre cómo un generador de facturas con IA puede ayudar a estructurar conceptos, calcular tarifas y redactar descripciones de entregables con precisión.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/ai-automation.svg`,
       alt: `Flujos de facturación con IA: cómo aprovechar herramientas inteligentes de creación de facturas`,
     },
     intro: [
@@ -667,7 +667,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Cómo técnicos móviles, contratistas de campo y consultores remotos usan una app de facturación para cobrar a los clientes directamente desde el móvil.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/mobile-apps.svg`,
       alt: `Facturación móvil sobre la marcha: cómo encontrar la mejor app gratuita para crear facturas`,
     },
     intro: [
@@ -761,7 +761,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Aprende a usar un creador de facturas sencillo para personalizar colores, subir logotipos y aplicar una tipografía de diseño limpia.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/template-design.svg`,
       alt: `Diseño de facturas profesionales: plantillas personalizadas y estética de marca`,
     },
     intro: [
@@ -855,7 +855,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Estrategias prácticas, guiones de correo y flujos de trabajo para recuperar pagos atrasados usando un creador de facturas en línea.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/overdue-recovery.svg`,
       alt: `Cómo gestionar pagos atrasados: seguimientos amables y protocolos de cobro`,
     },
     intro: [
@@ -945,7 +945,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Aprende a facturar a clientes internacionales usando un generador de facturas en línea compatible con EUR, USD, GBP, JPY y más de 40 divisas.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/international-billing.svg`,
       alt: `Facturación internacional: cómo facturar a clientes globales en varias divisas`,
     },
     intro: [
@@ -1039,7 +1039,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Por qué las facturas en PDF vectorial siguen siendo el estándar de referencia en materia de cumplimiento contable, y cómo generar PDFs de alta resolución.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/pdf-generation.svg`,
       alt: `Cómo crear facturas en PDF conformes: estándares de impresión y seguridad de archivo`,
     },
     intro: [
@@ -1133,7 +1133,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Cómo las pequeñas empresas y los autónomos usan un generador de facturas gratuito para registrar con precisión el impuesto sobre ventas, documentar gastos deducibles y preparar registros de facturación listos para una auditoría.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/tax-invoicing.svg`,
       alt: `Facturación para pequeñas empresas en temporada fiscal: desglose, impuesto sobre ventas y preparación para auditorías`,
     },
     intro: [
@@ -1227,7 +1227,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Una guía paso a paso para contratistas sobre cómo dividir el alcance de un gran proyecto en hitos de facturación, usando un creador de facturas sencillo para mantener un flujo de caja constante.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/milestone-billing.svg`,
       alt: `Facturación por hitos para contratistas: cómo estructurar facturas de avance en proyectos grandes`,
     },
     intro: [
@@ -1321,7 +1321,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Cómo los consultores de gestión, legales y técnicos convierten hojas de horas facturables y acuerdos de iguala mensual en facturas transparentes para el cliente, usando un creador de facturas en línea.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/consultant-retainer.svg`,
       alt: `Facturación por horas e igualas: cómo los consultores registran su tiempo y facturan con transparencia`,
     },
     intro: [
@@ -1415,7 +1415,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Buenas prácticas para facturar acuerdos de mantenimiento recurrentes, igualas mensuales de software y servicios por suscripción usando un creador de facturas sencillo.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/recurring-billing.svg`,
       alt: `Facturación recurrente a clientes: cómo establecer ciclos de facturación repetitivos y predecibles`,
     },
     intro: [
@@ -1509,7 +1509,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Cómo los vendedores de productos, el dropshipping y los distribuidores mayoristas usan un generador de facturas gratuito para desglosar SKUs, gestionar niveles de compra por volumen y aplicar correctamente los gastos de envío.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/ecommerce-invoicing.svg`,
       alt: `Facturación de comercio electrónico y venta al por mayor: gastos de envío, niveles por volumen y desglose por SKU`,
     },
     intro: [
@@ -1607,7 +1607,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Un flujo de facturación práctico para agencias digitales y estudios creativos que gestionan facturas de subcontratistas, comisiones de margen y traspaso de gastos al cliente.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/agency-billing.svg`,
       alt: `Facturación de subcontratistas en agencias: costes repercutidos al cliente y pagos a contratistas`,
     },
     intro: [
@@ -1701,7 +1701,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Aprende a redactar una factura profesional desde cero: qué incluir, un proceso paso a paso, un ejemplo práctico y respuestas a las dudas más comunes sobre la primera factura.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/how-to-write-an-invoice.svg`,
       alt: `Cómo redactar una factura: guía paso a paso para principiantes`,
     },
     intro: [
@@ -1851,7 +1851,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Las facturas y los recibos se confunden a menudo. Aquí tienes la diferencia práctica, cuándo necesitas cada uno y cómo evitar mezclarlos en tus registros.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/invoice-vs-receipt.svg`,
       alt: `Factura vs. recibo: en qué se diferencian y cuándo usar cada uno`,
     },
     intro: [
@@ -3992,7 +3992,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Cómo describir el trabajo en una factura para que quien la aprueba, aunque no lo haya encargado, pueda darle el visto bueno: nivel de detalle, redacción y ejemplos prácticos de antes y después.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/invoice-line-item-descriptions.svg`,
       alt: `Cómo redactar líneas de factura que se aprueben sin preguntas`,
     },
     intro: [
@@ -4123,7 +4123,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Qué poner en una factura cuando no tienes número de registro de empresa, cómo proyectar una imagen profesional desde el primer trabajo y qué datos debes cuidar de todos modos.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/invoicing-without-registered-business.svg`,
       alt: `Facturar sin una empresa registrada: tu primera factura`,
     },
     intro: [
@@ -4249,7 +4249,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Cuándo traducir una factura, cómo diseñar un documento bilingüe y qué convenciones de formato —fechas, números, nombres— causan confusión real.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/multilingual-invoices.svg`,
       alt: `Facturar en otro idioma: facturas bilingües y localizadas`,
     },
     intro: [
@@ -4393,7 +4393,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Cómo cobrar a un cliente los viajes, los materiales y los costos de terceros: qué conviene marcar con margen, qué trasladar al costo y qué comprobantes adjuntar.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/rebilling-expenses-disbursements.svg`,
       alt: `Refacturación de gastos a clientes: márgenes, kilometraje y suplidos`,
     },
     intro: [
@@ -4490,7 +4490,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Cómo facturar el trabajo en sitio: fijar el precio de las visitas, gestionar las modificaciones, separar mano de obra y materiales, y conseguir la conformidad antes de irte del lugar.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/trades-field-service-invoicing.svg`,
       alt: `Facturación de oficios y servicio en campo: trabajos, modificaciones y visitas`,
     },
     intro: [
@@ -4601,7 +4601,7 @@ export const guidesEs: Guide[] = [
     editor: ``,
     summary: `Por qué algunos clientes descuentan impuestos antes de pagar, cómo mostrarlo en la factura y qué certificado pedir para poder recuperarlo o compensarlo.`,
     image: {
-      src: `/images/guides/default.svg`,
+      src: `/images/guides/withholding-tax-on-invoices.svg`,
       alt: `Retención de impuestos en las facturas: cuando un cliente te paga menos`,
     },
     intro: [
