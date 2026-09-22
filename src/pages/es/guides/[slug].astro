@@ -38,10 +38,12 @@ const faqSchema = guide.faq ? {
 } : null;
 
 const enSlug = ES_TO_EN[guide.slug] ?? guide.slug;
-// For the language switcher on the Spanish page, 'en' should point to the EN article.
 const langPaths: Record<string, string> = {
   en: `guides/${enSlug}`,
 };
+for (const l of ['fr', 'de', 'it', 'nl', 'pt', 'ar', 'ja']) {
+  langPaths[l] = `${l}/guides/${enSlug}`;
+}
 ---
 
 <BaseLayout title={`${guide.title} | Best Invoice Generator`} description={guide.description} path={guidePath} lang="es" t={t} hideLangSwitcher={false} localized={false} langPaths={langPaths}>
