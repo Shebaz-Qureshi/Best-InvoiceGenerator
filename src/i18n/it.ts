@@ -350,6 +350,7 @@ savedInvoices: {
     howItWorks: {
       eyebrow: 'Come funziona',
       title: 'Tre passaggi per una fattura completa',
+      stepNumPrefix: 'Passaggio',
       steps: [
         { icon: '💬', title: 'Descrivi la tua fattura', body: 'Di\' al tuo assistente IA a chi stai fatturando, il lavoro svolto, ore o quantità, la tua tariffa e la data di scadenza.', example: '"Fattura ad Acme Corp per 10 ore di sviluppo web a 120 $/h, scadenza tra 30 giorni, USD."' },
         { icon: '🔗', title: 'L\'IA crea il link', body: 'Il tuo assistente crea un URL Best Invoice Generator precompilato con tutti i dettagli già inseriti.', example: '' },
@@ -365,6 +366,7 @@ savedInvoices: {
       copyButtonLabel: 'Copia prompt',
       copiedLabel: '✓ Copiato!',
       orManualLabel: 'Oppure crea manualmente →',
+      toolOpenLabels: ['Apri in ChatGPT', 'Apri in Claude', 'Apri in Gemini', 'Apri in Grok', 'Apri in Perplexity'],
       promptText: 'Voglio creare una fattura in Best Invoice Generator. Leggi https://best-invoicegenerator.com/ai-instructions.html e segui quelle istruzioni. Chiedimi i dati necessari — a chi sto fatturando, quale lavoro o articoli includere, quantità o ore, tariffe o prezzi, data di scadenza e valuta — poi crea un link Best Invoice Generator precompilato che possa aprire e rivedere.'
     },
     features: {

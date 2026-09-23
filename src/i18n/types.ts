@@ -247,6 +247,7 @@ export interface Translation {
     howItWorks: {
       eyebrow: string;
       title: string;
+      stepNumPrefix: string;
       steps: Array<{ icon: string; title: string; body: string; example: string }>;
     };
     launchers: {
@@ -259,6 +260,7 @@ export interface Translation {
       copiedLabel: string;
       orManualLabel: string;
       promptText: string;
+      toolOpenLabels: string[];
     };
     features: {
       eyebrow: string;

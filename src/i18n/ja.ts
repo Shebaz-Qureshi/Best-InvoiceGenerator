@@ -348,6 +348,7 @@ savedInvoices: {
     howItWorks: {
       eyebrow: '利用の流れ',
       title: '請求書完成までの3ステップ',
+      stepNumPrefix: 'ステップ',
       steps: [
         { icon: '💬', title: '請求内容を伝える', body: '誰に請求するか、実施した作業内容、時間や数量、単価、支払期限をAIアシスタントに伝えます。', example: '「Acme Corpに、Web開発10時間分、時給120ドルで請求。支払期限30日後、USD。」' },
         { icon: '🔗', title: 'AIがリンクを作成', body: 'アシスタントが、必要事項をすべて入力済みのBest Invoice Generator URLを作成します。', example: '' },
@@ -363,6 +364,7 @@ savedInvoices: {
       copyButtonLabel: 'プロンプトをコピー',
       copiedLabel: '✓ コピーしました!',
       orManualLabel: 'または手動で作成 →',
+      toolOpenLabels: ['ChatGPTで開く', 'Claudeで開く', 'Geminiで開く', 'Grokで開く', 'Perplexityで開く'],
       promptText: 'Best Invoice Generatorで請求書を作成したいです。https://best-invoicegenerator.com/ai-instructions.html を読み、その指示に従ってください。請求先、含める作業や項目、数量や時間、単価や金額、支払期限、通貨など必要な情報を私に質問した上で、私が開いて確認できる入力済みのBest Invoice Generatorリンクを作成してください。'
     },
     features: {

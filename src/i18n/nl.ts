@@ -350,6 +350,7 @@ savedInvoices: {
     howItWorks: {
       eyebrow: 'Hoe het werkt',
       title: 'Drie stappen naar een afgeronde factuur',
+      stepNumPrefix: 'Stap',
       steps: [
         { icon: '💬', title: 'Beschrijf je factuur', body: 'Vertel je AI-assistent aan wie je factureert, welk werk is verricht, uren of aantallen, je tarief en de vervaldatum.', example: '"Factureer Acme Corp voor 10 uur webontwikkeling tegen $120/uur, vervalt over 30 dagen, USD."' },
         { icon: '🔗', title: 'AI maakt de link', body: 'Je assistent maakt een vooraf ingevulde Best Invoice Generator-URL met alle gegevens al ingevuld.', example: '' },
@@ -365,6 +366,7 @@ savedInvoices: {
       copyButtonLabel: 'Prompt kopiëren',
       copiedLabel: '✓ Gekopieerd!',
       orManualLabel: 'Of handmatig opbouwen →',
+      toolOpenLabels: ['Openen in ChatGPT', 'Openen in Claude', 'Openen in Gemini', 'Openen in Grok', 'Openen in Perplexity'],
       promptText: 'Ik wil een factuur maken in Best Invoice Generator. Lees https://best-invoicegenerator.com/ai-instructions.html en volg die instructies. Vraag mij om de benodigde gegevens — aan wie ik factureer, welk werk of welke items ik wil opnemen, aantallen of uren, tarieven of prijzen, vervaldatum en valuta — en maak vervolgens een vooraf ingevulde Best Invoice Generator-link die ik kan openen en controleren.'
     },
     features: {

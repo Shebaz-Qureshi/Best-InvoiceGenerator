@@ -1,8 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { getTranslation } from '../i18n';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTranslation, localeHref, locales } from '../../i18n';
 
-const lang = 'en';
+export function getStaticPaths() {
+  return locales.filter((l) => l.code !== 'en').map((l) => ({ params: { lang: l.code } }));
+}
+
+const { lang = 'en' } = Astro.params;
 const t = getTranslation(lang);
 const aiPage = t.aiPage;
 
@@ -10,36 +14,11 @@ const aiPrompt = aiPage.launchers.promptText;
 const encodedPrompt = encodeURIComponent(aiPrompt);
 
 const toolBase = [
-  {
-    name: 'ChatGPT',
-    href: `https://chatgpt.com/?q=${encodedPrompt}`,
-    color: '#10a37f',
-    letter: 'G',
-  },
-  {
-    name: 'Claude',
-    href: `https://claude.ai/new?q=${encodedPrompt}`,
-    color: '#d4703a',
-    letter: 'C',
-  },
-  {
-    name: 'Gemini',
-    href: `https://gemini.google.com/app?q=${encodedPrompt}`,
-    color: '#4285f4',
-    letter: 'G',
-  },
-  {
-    name: 'Grok',
-    href: `https://grok.com/?q=${encodedPrompt}`,
-    color: '#ffffff',
-    letter: 'X',
-  },
-  {
-    name: 'Perplexity',
-    href: `https://www.perplexity.ai/search?q=${encodedPrompt}`,
-    color: '#20b2aa',
-    letter: 'P',
-  },
+  { name: 'ChatGPT', href: `https://chatgpt.com/?q=${encodedPrompt}`, color: '#10a37f', letter: 'G' },
+  { name: 'Claude', href: `https://claude.ai/new?q=${encodedPrompt}`, color: '#d4703a', letter: 'C' },
+  { name: 'Gemini', href: `https://gemini.google.com/app?q=${encodedPrompt}`, color: '#4285f4', letter: 'G' },
+  { name: 'Grok', href: `https://grok.com/?q=${encodedPrompt}`, color: '#ffffff', letter: 'X' },
+  { name: 'Perplexity', href: `https://www.perplexity.ai/search?q=${encodedPrompt}`, color: '#20b2aa', letter: 'P' },
 ];
 
 const aiTools = toolBase.map((tool, i) => ({
@@ -47,9 +26,12 @@ const aiTools = toolBase.map((tool, i) => ({
   desc: aiPage.launchers.toolOpenLabels[i] ?? `Open in ${tool.name}`,
 }));
 
-const features = aiPage.features.items;
-const steps = aiPage.howItWorks.steps;
-const chatMessages = aiPage.chatDemo.messages;
+const chatMessages = aiPage.chatDemo.messages.map((m) => ({
+  ...m,
+  linkUrl: m.linkUrl === '/' ? localeHref(lang, '') : (m.linkUrl ?? ''),
+}));
+
+const manualHref = localeHref(lang, '');
 ---
 
 <BaseLayout
@@ -63,7 +45,6 @@ const chatMessages = aiPage.chatDemo.messages;
 
   <!-- ░░░ HERO ░░░ -->
   <section class="ai-hero relative overflow-hidden">
-    <!-- Animated mesh background -->
     <div class="ai-hero-mesh" aria-hidden="true">
       <div class="mesh-blob mesh-blob-1"></div>
       <div class="mesh-blob mesh-blob-2"></div>
@@ -71,7 +52,6 @@ const chatMessages = aiPage.chatDemo.messages;
     </div>
 
     <div class="relative mx-auto max-w-5xl px-4 py-20 sm:px-6 sm:py-28 text-center">
-      <!-- Badge -->
       <div class="ai-badge inline-flex items-center gap-2 mb-6">
         <span class="ai-badge-dot"></span>
         <span>{aiPage.hero.badge}</span>
@@ -86,7 +66,6 @@ const chatMessages = aiPage.chatDemo.messages;
         {aiPage.hero.subtitle}
       </p>
 
-      <!-- Quick-launch AI buttons -->
       <div class="ai-hero-launchers mt-10 flex flex-wrap justify-center gap-3">
         {aiTools.map((tool) => (
           <a
@@ -150,7 +129,7 @@ const chatMessages = aiPage.chatDemo.messages;
       <h2 id="how-it-works-heading" class="ai-section-title text-center">{aiPage.howItWorks.title}</h2>
 
       <div class="ai-steps-grid mt-12">
-        {steps.map((step, i) => (
+        {aiPage.howItWorks.steps.map((step, i) => (
           <div class="ai-step-card">
             <div class="ai-step-icon">{step.icon}</div>
             <div class="ai-step-num">{aiPage.howItWorks.stepNumPrefix} {i + 1}</div>
@@ -195,7 +174,6 @@ const chatMessages = aiPage.chatDemo.messages;
         ))}
       </div>
 
-      <!-- Copy Prompt box -->
       <div class="ai-copy-box mt-10">
         <div class="ai-copy-box-header">
           <div>
@@ -235,7 +213,7 @@ const chatMessages = aiPage.chatDemo.messages;
       <h2 id="features-heading" class="ai-section-title text-center">{aiPage.features.title}</h2>
 
       <div class="ai-features-grid mt-10">
-        {features.map((f) => (
+        {aiPage.features.items.map((f) => (
           <div class="ai-feature-card">
             <div class="ai-feature-icon">{f.icon}</div>
             <h3 class="ai-feature-title">{f.title}</h3>
@@ -270,7 +248,14 @@ const chatMessages = aiPage.chatDemo.messages;
       <div class="ai-mcp-url-box mt-8">
         <div class="ai-mcp-url-row">
           <label for="mcpServerUrl" class="ai-mcp-url-label">{aiPage.mcp.urlLabel}</label>
-          <button id="copyMcpBtn" class="ai-copy-btn" type="button" aria-label={aiPage.mcp.copyButtonLabel} data-default-label={aiPage.mcp.copyButtonLabel} data-copied-label={aiPage.mcp.copiedLabel}>
+          <button
+            id="copyMcpBtn"
+            class="ai-copy-btn"
+            type="button"
+            aria-label={aiPage.mcp.copyButtonLabel}
+            data-default-label={aiPage.mcp.copyButtonLabel}
+            data-copied-label={aiPage.mcp.copiedLabel}
+          >
             <svg viewBox="0 0 16 16" fill="none" class="h-4 w-4" aria-hidden="true">
               <rect x="5" y="5" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
               <path d="M11 5V3.5A1.5 1.5 0 0 0 9.5 2h-6A1.5 1.5 0 0 0 2 3.5v6A1.5 1.5 0 0 0 3.5 11H5" stroke="currentColor" stroke-width="1.5"/>
@@ -309,7 +294,7 @@ const chatMessages = aiPage.chatDemo.messages;
             <span>{tool.name}</span>
           </a>
         ))}
-        <a href="/" class="ai-plain-btn">
+        <a href={manualHref} class="ai-plain-btn">
           {aiPage.launchers.orManualLabel}
         </a>
       </div>
@@ -317,7 +302,6 @@ const chatMessages = aiPage.chatDemo.messages;
   </section>
 
 </BaseLayout>
-
 
 <style>
   /* ── Hero ── */

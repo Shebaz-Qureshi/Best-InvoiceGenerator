@@ -350,6 +350,7 @@ const en: Translation = {
     howItWorks: {
       eyebrow: 'How it works',
       title: 'Three steps to a finished invoice',
+      stepNumPrefix: 'Step',
       steps: [
         { icon: '💬', title: 'Describe your invoice', body: 'Tell your AI assistant who you\'re billing, the work done, hours or quantities, your rate, and when payment is due.', example: '"Invoice Acme Corp for 10 hours of web dev at $120/hr, due in 30 days, USD."' },
         { icon: '🔗', title: 'AI builds the link', body: 'Your assistant creates a prefilled Best Invoice Generator URL with all the details already filled in.', example: '' },
@@ -365,6 +366,7 @@ const en: Translation = {
       copyButtonLabel: 'Copy prompt',
       copiedLabel: '✓ Copied!',
       orManualLabel: 'Or build it manually →',
+      toolOpenLabels: ['Open in ChatGPT', 'Open in Claude', 'Open in Gemini', 'Open in Grok', 'Open in Perplexity'],
       promptText: 'I want to create an invoice in Best Invoice Generator. Read https://best-invoicegenerator.com/ai-instructions.html and follow those instructions. Ask me for the details you need—such as who I\'m billing, what work or items to include, quantities or hours, rates or prices, due date, and currency—then create a prefilled Best Invoice Generator link I can open and review.'
     },
     features: {

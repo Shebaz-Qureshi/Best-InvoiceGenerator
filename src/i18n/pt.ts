@@ -350,6 +350,7 @@ savedInvoices: {
     howItWorks: {
       eyebrow: 'Como funciona',
       title: 'Três passos para uma fatura concluída',
+      stepNumPrefix: 'Passo',
       steps: [
         { icon: '💬', title: 'Descreva sua fatura', body: 'Diga ao seu assistente de IA para quem você está faturando, o trabalho realizado, horas ou quantidades, sua tarifa e a data de vencimento.', example: '"Fature a Acme Corp por 10 horas de desenvolvimento web a $120/h, vencimento em 30 dias, USD."' },
         { icon: '🔗', title: 'A IA gera o link', body: 'Seu assistente cria uma URL pré-preenchida da Best Invoice Generator com todos os detalhes já preenchidos.', example: '' },
@@ -365,6 +366,7 @@ savedInvoices: {
       copyButtonLabel: 'Copiar prompt',
       copiedLabel: '✓ Copiado!',
       orManualLabel: 'Ou monte manualmente →',
+      toolOpenLabels: ['Abrir no ChatGPT', 'Abrir no Claude', 'Abrir no Gemini', 'Abrir no Grok', 'Abrir no Perplexity'],
       promptText: 'Quero criar uma fatura na Best Invoice Generator. Leia https://best-invoicegenerator.com/ai-instructions.html e siga essas instruções. Pergunte-me os dados que precisar — para quem estou faturando, qual trabalho ou itens incluir, quantidades ou horas, tarifas ou preços, data de vencimento e moeda — e então crie um link pré-preenchido da Best Invoice Generator que eu possa abrir e revisar.'
     },
     features: {

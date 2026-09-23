@@ -348,6 +348,7 @@ savedInvoices: {
     howItWorks: {
       eyebrow: 'كيف يعمل',
       title: 'ثلاث خطوات لإنجاز الفاتورة',
+      stepNumPrefix: 'الخطوة',
       steps: [
         { icon: '💬', title: 'صف فاتورتك', body: 'أخبر مساعد الذكاء الاصطناعي بمن تصدر له الفاتورة، والعمل المنجز، والساعات أو الكميات، وسعرك، وتاريخ الاستحقاق.', example: '"أصدر فاتورة لشركة Acme مقابل 10 ساعات تطوير ويب بسعر 120 دولارًا للساعة، تستحق خلال 30 يومًا، بالدولار الأمريكي."' },
         { icon: '🔗', title: 'الذكاء الاصطناعي ينشئ الرابط', body: 'يقوم مساعدك بإنشاء رابط Best Invoice Generator معبأ مسبقًا بجميع التفاصيل.', example: '' },
@@ -363,6 +364,7 @@ savedInvoices: {
       copyButtonLabel: 'نسخ الطلب',
       copiedLabel: '✓ تم النسخ!',
       orManualLabel: 'أو أنشئها يدويًا ←',
+      toolOpenLabels: ['افتح في ChatGPT', 'افتح في Claude', 'افتح في Gemini', 'افتح في Grok', 'افتح في Perplexity'],
       promptText: 'أريد إنشاء فاتورة في Best Invoice Generator. اقرأ https://best-invoicegenerator.com/ai-instructions.html واتبع تلك التعليمات. اسألني عن التفاصيل التي تحتاجها — لمن أصدر الفاتورة، وما العمل أو العناصر المطلوب تضمينها، والكميات أو الساعات، والأسعار، وتاريخ الاستحقاق، والعملة — ثم أنشئ رابط Best Invoice Generator معبأ مسبقًا يمكنني فتحه ومراجعته.'
     },
     features: {

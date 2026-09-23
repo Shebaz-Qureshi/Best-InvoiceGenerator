@@ -52,6 +52,7 @@ const locales = ['es', 'fr', 'de', 'it', 'nl', 'pt', 'ar', 'ja'];
 const localizedSubpages = [
   '',
   'about',
+  'ai',
   'contact',
   'faq',
   'guides',

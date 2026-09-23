@@ -350,6 +350,7 @@ savedInvoices: {
     howItWorks: {
       eyebrow: 'So funktioniert\'s',
       title: 'Drei Schritte zu einer fertigen Rechnung',
+      stepNumPrefix: 'Schritt',
       steps: [
         { icon: '💬', title: 'Rechnung beschreiben', body: 'Teilen Sie Ihrem KI-Assistenten mit, wem Sie eine Rechnung stellen, welche Arbeit erledigt wurde, Stunden oder Mengen, Ihren Stundensatz und das Fälligkeitsdatum.', example: '„Rechnung an Acme Corp für 10 Stunden Webentwicklung zu 120 $/Std., fällig in 30 Tagen, USD."' },
         { icon: '🔗', title: 'KI erstellt den Link', body: 'Ihr Assistent erstellt eine vorausgefüllte Best Invoice Generator-URL mit allen bereits eingetragenen Details.', example: '' },
@@ -365,6 +366,7 @@ savedInvoices: {
       copyButtonLabel: 'Prompt kopieren',
       copiedLabel: '✓ Kopiert!',
       orManualLabel: 'Oder manuell erstellen →',
+      toolOpenLabels: ['In ChatGPT öffnen', 'In Claude öffnen', 'In Gemini öffnen', 'In Grok öffnen', 'In Perplexity öffnen'],
       promptText: 'Ich möchte eine Rechnung in Best Invoice Generator erstellen. Lies https://best-invoicegenerator.com/ai-instructions.html und befolge diese Anweisungen. Frage mich nach den nötigen Angaben — wem ich eine Rechnung stelle, welche Arbeiten oder Artikel enthalten sein sollen, Mengen oder Stunden, Sätze oder Preise, Fälligkeitsdatum und Währung — und erstelle dann einen vorausgefüllten Best Invoice Generator-Link, den ich öffnen und prüfen kann.'
     },
     features: {
