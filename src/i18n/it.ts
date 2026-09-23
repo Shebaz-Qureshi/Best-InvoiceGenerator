@@ -17,7 +17,7 @@ const it: Translation = {
     subtitle: 'Gratuito. Senza registrazione. Senza filigrana. I tuoi dati rimangono sul tuo dispositivo.',
     themeToggle: 'Cambia tema colori',
     languageLabel: 'Lingua',
-    quickLinks: { about: 'Chi siamo', contact: 'Contatti', privacy: 'Informativa sulla privacy', terms: 'Termini', savedInvoices: 'Le mie fatture', faq: 'FAQ', guides: 'Guide' },
+    quickLinks: { about: 'Chi siamo', contact: 'Contatti', privacy: 'Informativa sulla privacy', terms: 'Termini', savedInvoices: 'Le mie fatture', faq: 'FAQ', guides: 'Guide', aiInvoice: 'Fattura con l\'IA' },
   },
   tool: {
     invoicePdfInfo: 'Info fattura PDF',

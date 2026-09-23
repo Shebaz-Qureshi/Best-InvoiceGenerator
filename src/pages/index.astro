@@ -125,7 +125,7 @@ const qaPageSchema = {
             <a href="#faq" class="nav-link">{t.header.quickLinks.faq}</a>
             <LanguageSwitcher lang={lang} pagePath="" label="" />
             <button id="themeToggle" class="button-secondary theme-toggle" type="button" aria-label={t.header.themeToggle} title={t.header.themeToggle}>☀️</button>
-            <a href="/ai" class="button-primary text-sm font-semibold px-3 py-1.5" aria-label="Invoice with AI">✨ Invoice with AI</a>
+            <a href="/ai" class="button-primary text-sm font-semibold px-3 py-1.5" aria-label={t.header.quickLinks.aiInvoice || 'Invoice with AI'}>✨ {t.header.quickLinks.aiInvoice || 'Invoice with AI'}</a>
           </div>
         </div>
       </header>

@@ -17,7 +17,7 @@ const es: Translation = {
     subtitle: 'Gratis. Sin registro. Sin marca de agua. Tus datos permanecen en tu dispositivo.',
     themeToggle: 'Cambiar tema de color',
     languageLabel: 'Idioma',
-    quickLinks: { about: 'Acerca de', contact: 'Contacto', privacy: 'Política de privacidad', terms: 'Términos', savedInvoices: 'Mis facturas', faq: 'Preguntas frecuentes', guides: 'Guías' },
+    quickLinks: { about: 'Acerca de', contact: 'Contacto', privacy: 'Política de privacidad', terms: 'Términos', savedInvoices: 'Mis facturas', faq: 'Preguntas frecuentes', guides: 'Guías', aiInvoice: 'Factura con IA' },
   },
   tool: {
     invoicePdfInfo: 'Información del PDF de la factura',

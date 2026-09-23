@@ -17,7 +17,7 @@ const de: Translation = {
     subtitle: 'Kostenlos. Keine Registrierung. Kein Wasserzeichen. Ihre Rechnungsdaten bleiben auf Ihrem Gerät.',
     themeToggle: 'Farbschema wechseln',
     languageLabel: 'Sprache',
-    quickLinks: { about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutzerklärung', terms: 'AGB', savedInvoices: 'Meine Rechnungen', faq: 'FAQ', guides: 'Leitfäden' },
+    quickLinks: { about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutzerklärung', terms: 'AGB', savedInvoices: 'Meine Rechnungen', faq: 'FAQ', guides: 'Leitfäden', aiInvoice: 'Rechnung mit KI' },
   },
   tool: {
     invoicePdfInfo: 'Rechnungs-PDF-Info',

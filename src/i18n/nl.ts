@@ -17,7 +17,7 @@ const nl: Translation = {
     subtitle: 'Gratis. Geen registratie. Geen watermerk. Uw factuurgegevens blijven op uw apparaat.',
     themeToggle: 'Schakel kleurenthema',
     languageLabel: 'Taal',
-    quickLinks: { about: 'Over ons', contact: 'Contact', privacy: 'Privacybeleid', terms: 'Voorwaarden', savedInvoices: 'Mijn facturen', faq: 'Veelgestelde vragen', guides: 'Gidsen' },
+    quickLinks: { about: 'Over ons', contact: 'Contact', privacy: 'Privacybeleid', terms: 'Voorwaarden', savedInvoices: 'Mijn facturen', faq: 'Veelgestelde vragen', guides: 'Gidsen', aiInvoice: 'Factuur met AI' },
   },
   tool: {
     invoicePdfInfo: 'Factuur-PDF-info',
