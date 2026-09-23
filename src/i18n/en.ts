@@ -367,7 +367,7 @@ const en: Translation = {
       copiedLabel: '✓ Copied!',
       orManualLabel: 'Or build it manually →',
       toolOpenLabels: ['Open in ChatGPT', 'Open in Claude', 'Open in Google AI Mode', 'Open in Grok', 'Open in Perplexity'],
-      promptText: 'I want to create an invoice in Best Invoice Generator. Read https://best-invoicegenerator.com/ai-instructions.html and follow those instructions. Ask me for the details you need—such as who I\'m billing, what work or items to include, quantities or hours, rates or prices, due date, and currency—then create a prefilled Best Invoice Generator link I can open and review.'
+      promptText: 'I want to create an invoice in Best Invoice Generator. Read https://best-invoicegenerator.com/ai.md and follow those instructions. Ask me for the details you need—such as who I\'m billing, what work or items to include, quantities or hours, rates or prices, due date, and currency—then create a prefilled Best Invoice Generator link I can open and review.'
     },
     features: {
       eyebrow: 'Why it works',

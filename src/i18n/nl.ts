@@ -367,7 +367,7 @@ savedInvoices: {
       copiedLabel: '✓ Gekopieerd!',
       orManualLabel: 'Of handmatig opbouwen →',
       toolOpenLabels: ['Openen in ChatGPT', 'Openen in Claude', 'Openen in Google AI Mode', 'Openen in Grok', 'Openen in Perplexity'],
-      promptText: 'Ik wil een factuur maken in Best Invoice Generator. Lees https://best-invoicegenerator.com/ai-instructions.html en volg die instructies. Vraag mij om de benodigde gegevens — aan wie ik factureer, welk werk of welke items ik wil opnemen, aantallen of uren, tarieven of prijzen, vervaldatum en valuta — en maak vervolgens een vooraf ingevulde Best Invoice Generator-link die ik kan openen en controleren.'
+      promptText: 'Ik wil een factuur maken in Best Invoice Generator. Lees https://best-invoicegenerator.com/ai.md en volg die instructies. Vraag mij om de benodigde gegevens — aan wie ik factureer, welk werk of welke items ik wil opnemen, aantallen of uren, tarieven of prijzen, vervaldatum en valuta — en maak vervolgens een vooraf ingevulde Best Invoice Generator-link die ik kan openen en controleren.'
     },
     features: {
       eyebrow: 'Waarom het werkt',

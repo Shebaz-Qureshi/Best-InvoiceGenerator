@@ -365,7 +365,7 @@ savedInvoices: {
       copiedLabel: '✓ تم النسخ!',
       orManualLabel: 'أو أنشئها يدويًا ←',
       toolOpenLabels: ['افتح في ChatGPT', 'افتح في Claude', 'افتح في Google AI Mode', 'افتح في Grok', 'افتح في Perplexity'],
-      promptText: 'أريد إنشاء فاتورة في Best Invoice Generator. اقرأ https://best-invoicegenerator.com/ai-instructions.html واتبع تلك التعليمات. اسألني عن التفاصيل التي تحتاجها — لمن أصدر الفاتورة، وما العمل أو العناصر المطلوب تضمينها، والكميات أو الساعات، والأسعار، وتاريخ الاستحقاق، والعملة — ثم أنشئ رابط Best Invoice Generator معبأ مسبقًا يمكنني فتحه ومراجعته.'
+      promptText: 'أريد إنشاء فاتورة في Best Invoice Generator. اقرأ https://best-invoicegenerator.com/ai.md واتبع تلك التعليمات. اسألني عن التفاصيل التي تحتاجها — لمن أصدر الفاتورة، وما العمل أو العناصر المطلوب تضمينها، والكميات أو الساعات، والأسعار، وتاريخ الاستحقاق، والعملة — ثم أنشئ رابط Best Invoice Generator معبأ مسبقًا يمكنني فتحه ومراجعته.'
     },
     features: {
       eyebrow: 'لماذا ينجح',

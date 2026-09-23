@@ -367,7 +367,7 @@ savedInvoices: {
       copiedLabel: '✓ Copiado!',
       orManualLabel: 'Ou monte manualmente →',
       toolOpenLabels: ['Abrir no ChatGPT', 'Abrir no Claude', 'Abrir no Google AI Mode', 'Abrir no Grok', 'Abrir no Perplexity'],
-      promptText: 'Quero criar uma fatura na Best Invoice Generator. Leia https://best-invoicegenerator.com/ai-instructions.html e siga essas instruções. Pergunte-me os dados que precisar — para quem estou faturando, qual trabalho ou itens incluir, quantidades ou horas, tarifas ou preços, data de vencimento e moeda — e então crie um link pré-preenchido da Best Invoice Generator que eu possa abrir e revisar.'
+      promptText: 'Quero criar uma fatura na Best Invoice Generator. Leia https://best-invoicegenerator.com/ai.md e siga essas instruções. Pergunte-me os dados que precisar — para quem estou faturando, qual trabalho ou itens incluir, quantidades ou horas, tarifas ou preços, data de vencimento e moeda — e então crie um link pré-preenchido da Best Invoice Generator que eu possa abrir e revisar.'
     },
     features: {
       eyebrow: 'Por que funciona',

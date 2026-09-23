@@ -365,7 +365,7 @@ savedInvoices: {
       copiedLabel: '✓ コピーしました!',
       orManualLabel: 'または手動で作成 →',
       toolOpenLabels: ['ChatGPTで開く', 'Claudeで開く', 'Google AI Modeで開く', 'Grokで開く', 'Perplexityで開く'],
-      promptText: 'Best Invoice Generatorで請求書を作成したいです。https://best-invoicegenerator.com/ai-instructions.html を読み、その指示に従ってください。請求先、含める作業や項目、数量や時間、単価や金額、支払期限、通貨など必要な情報を私に質問した上で、私が開いて確認できる入力済みのBest Invoice Generatorリンクを作成してください。'
+      promptText: 'Best Invoice Generatorで請求書を作成したいです。https://best-invoicegenerator.com/ai.md を読み、その指示に従ってください。請求先、含める作業や項目、数量や時間、単価や金額、支払期限、通貨など必要な情報を私に質問した上で、私が開いて確認できる入力済みのBest Invoice Generatorリンクを作成してください。'
     },
     features: {
       eyebrow: '選ばれる理由',

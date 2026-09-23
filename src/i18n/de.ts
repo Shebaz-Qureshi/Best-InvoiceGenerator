@@ -367,7 +367,7 @@ savedInvoices: {
       copiedLabel: '✓ Kopiert!',
       orManualLabel: 'Oder manuell erstellen →',
       toolOpenLabels: ['In ChatGPT öffnen', 'In Claude öffnen', 'In Google AI Mode öffnen', 'In Grok öffnen', 'In Perplexity öffnen'],
-      promptText: 'Ich möchte eine Rechnung in Best Invoice Generator erstellen. Lies https://best-invoicegenerator.com/ai-instructions.html und befolge diese Anweisungen. Frage mich nach den nötigen Angaben — wem ich eine Rechnung stelle, welche Arbeiten oder Artikel enthalten sein sollen, Mengen oder Stunden, Sätze oder Preise, Fälligkeitsdatum und Währung — und erstelle dann einen vorausgefüllten Best Invoice Generator-Link, den ich öffnen und prüfen kann.'
+      promptText: 'Ich möchte eine Rechnung in Best Invoice Generator erstellen. Lies https://best-invoicegenerator.com/ai.md und befolge diese Anweisungen. Frage mich nach den nötigen Angaben — wem ich eine Rechnung stelle, welche Arbeiten oder Artikel enthalten sein sollen, Mengen oder Stunden, Sätze oder Preise, Fälligkeitsdatum und Währung — und erstelle dann einen vorausgefüllten Best Invoice Generator-Link, den ich öffnen und prüfen kann.'
     },
     features: {
       eyebrow: 'Warum es funktioniert',
