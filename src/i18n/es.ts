@@ -326,7 +326,7 @@ savedInvoices: {
   aiPage: {
     meta: {
       title: 'Factura con IA | Best Invoice Generator',
-      description: 'Crea facturas profesionales en segundos con IA. Dile a ChatGPT, Claude, Gemini o cualquier asistente de IA lo que necesitas y obtén una factura prellenada al instante. No se requiere cuenta.'
+      description: 'Crea facturas profesionales en segundos con IA. Dile a ChatGPT, Claude, Google AI Mode o cualquier asistente de IA lo que necesitas y obtén una factura prellenada al instante. No se requiere cuenta.'
     },
     hero: {
       badge: 'Generador de facturas con IA',
@@ -366,7 +366,7 @@ savedInvoices: {
       copyButtonLabel: 'Copiar mensaje',
       copiedLabel: '✓ ¡Copiado!',
       orManualLabel: 'O compártelo manualmente →',
-      toolOpenLabels: ['Abrir en ChatGPT', 'Abrir en Claude', 'Abrir en Gemini', 'Abrir en Grok', 'Abrir en Perplexity'],
+      toolOpenLabels: ['Abrir en ChatGPT', 'Abrir en Claude', 'Abrir en Google AI Mode', 'Abrir en Grok', 'Abrir en Perplexity'],
       promptText: 'Quiero crear una factura en Best Invoice Generator. Lee https://best-invoicegenerator.com/ai-instructions.html y sigue esas instrucciones. Pregúntame los datos que necesites — a quién le facturo, qué trabajo o artículos incluir, cantidades u horas, tarifas o precios, fecha de vencimiento y moneda — y luego crea un enlace prellenado de Best Invoice Generator que pueda abrir y revisar.'
     },
     features: {
@@ -376,7 +376,7 @@ savedInvoices: {
         { icon: '🔓', title: 'No se requiere cuenta', body: 'Genera un enlace de factura prellenado y ábrelo al instante, sin registro, sin inicio de sesión.' },
         { icon: '👁️', title: 'Tú revisas primero', body: 'La IA prepara el borrador. Tú lo abres, revisas cada detalle y decides qué finalizar.' },
         { icon: '📄', title: 'Todos los tipos de documentos', body: 'Facturas, presupuestos, cotizaciones, recibos, notas de crédito, órdenes de compra y más.' },
-        { icon: '🤖', title: 'Cualquier asistente de IA', body: 'Funciona con ChatGPT, Claude, Gemini, Grok, Perplexity — o el asistente que prefieras.' }
+        { icon: '🤖', title: 'Cualquier asistente de IA', body: 'Funciona con ChatGPT, Claude, Google AI Mode, Grok, Perplexity — o el asistente que prefieras.' }
       ]
     },
     mcp: {

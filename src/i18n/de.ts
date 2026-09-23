@@ -326,7 +326,7 @@ savedInvoices: {
   aiPage: {
     meta: {
       title: 'Rechnung mit KI | Best Invoice Generator',
-      description: 'Erstellen Sie professionelle Rechnungen in Sekunden mit KI. Sagen Sie ChatGPT, Claude, Gemini oder einem beliebigen KI-Assistenten, was Sie brauchen, und erhalten Sie sofort eine vorausgefüllte Rechnung. Kein Konto erforderlich.'
+      description: 'Erstellen Sie professionelle Rechnungen in Sekunden mit KI. Sagen Sie ChatGPT, Claude, Google AI Mode oder einem beliebigen KI-Assistenten, was Sie brauchen, und erhalten Sie sofort eine vorausgefüllte Rechnung. Kein Konto erforderlich.'
     },
     hero: {
       badge: 'KI-Rechnungsgenerator',
@@ -366,7 +366,7 @@ savedInvoices: {
       copyButtonLabel: 'Prompt kopieren',
       copiedLabel: '✓ Kopiert!',
       orManualLabel: 'Oder manuell erstellen →',
-      toolOpenLabels: ['In ChatGPT öffnen', 'In Claude öffnen', 'In Gemini öffnen', 'In Grok öffnen', 'In Perplexity öffnen'],
+      toolOpenLabels: ['In ChatGPT öffnen', 'In Claude öffnen', 'In Google AI Mode öffnen', 'In Grok öffnen', 'In Perplexity öffnen'],
       promptText: 'Ich möchte eine Rechnung in Best Invoice Generator erstellen. Lies https://best-invoicegenerator.com/ai-instructions.html und befolge diese Anweisungen. Frage mich nach den nötigen Angaben — wem ich eine Rechnung stelle, welche Arbeiten oder Artikel enthalten sein sollen, Mengen oder Stunden, Sätze oder Preise, Fälligkeitsdatum und Währung — und erstelle dann einen vorausgefüllten Best Invoice Generator-Link, den ich öffnen und prüfen kann.'
     },
     features: {
@@ -376,7 +376,7 @@ savedInvoices: {
         { icon: '🔓', title: 'Kein Konto erforderlich', body: 'Erstellen Sie einen vorausgefüllten Rechnungslink und öffnen Sie ihn sofort — ohne Anmeldung, ohne Login.' },
         { icon: '👁️', title: 'Sie prüfen zuerst', body: 'Die KI erstellt den Entwurf. Sie öffnen ihn, prüfen jedes Detail und entscheiden, was final übernommen wird.' },
         { icon: '📄', title: 'Alle Belegarten', body: 'Rechnungen, Angebote, Kostenvoranschläge, Quittungen, Gutschriften, Bestellungen und mehr.' },
-        { icon: '🤖', title: 'Jeder KI-Assistent', body: 'Funktioniert mit ChatGPT, Claude, Gemini, Grok, Perplexity — oder dem Assistenten Ihrer Wahl.' }
+        { icon: '🤖', title: 'Jeder KI-Assistent', body: 'Funktioniert mit ChatGPT, Claude, Google AI Mode, Grok, Perplexity — oder dem Assistenten Ihrer Wahl.' }
       ]
     },
     mcp: {

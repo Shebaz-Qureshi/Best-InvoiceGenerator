@@ -11,12 +11,13 @@ const t = getTranslation(lang);
 const aiPage = t.aiPage;
 
 const aiPrompt = aiPage.launchers.promptText;
+const geminiPrompt = aiPrompt.replace(/\s*\n+\s*/g, ' ').trim();
 const encodedPrompt = encodeURIComponent(aiPrompt);
 
 const toolBase = [
   { name: 'ChatGPT', href: `https://chatgpt.com/?q=${encodedPrompt}`, color: '#10a37f', letter: 'G' },
   { name: 'Claude', href: `https://claude.ai/new?q=${encodedPrompt}`, color: '#d4703a', letter: 'C' },
-  { name: 'Gemini', href: `https://gemini.google.com/app?q=${encodedPrompt}`, color: '#4285f4', letter: 'G' },
+  { name: 'Google AI Mode', href: `https://www.google.com/search?udm=50&q=${encodeURIComponent(geminiPrompt)}`, color: '#4285f4', letter: 'G' },
   { name: 'Grok', href: `https://grok.com/?q=${encodedPrompt}`, color: '#ffffff', letter: 'X' },
   { name: 'Perplexity', href: `https://www.perplexity.ai/search?q=${encodedPrompt}`, color: '#20b2aa', letter: 'P' },
 ];

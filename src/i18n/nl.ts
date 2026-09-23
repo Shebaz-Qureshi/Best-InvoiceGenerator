@@ -326,7 +326,7 @@ savedInvoices: {
   aiPage: {
     meta: {
       title: 'Factuur met AI | Best Invoice Generator',
-      description: 'Maak binnen enkele seconden professionele facturen met AI. Vertel ChatGPT, Claude, Gemini of een andere AI-assistent wat je nodig hebt en krijg direct een vooraf ingevulde factuur. Geen account nodig.'
+      description: 'Maak binnen enkele seconden professionele facturen met AI. Vertel ChatGPT, Claude, Google AI Mode of een andere AI-assistent wat je nodig hebt en krijg direct een vooraf ingevulde factuur. Geen account nodig.'
     },
     hero: {
       badge: 'AI-factuurgenerator',
@@ -366,7 +366,7 @@ savedInvoices: {
       copyButtonLabel: 'Prompt kopiëren',
       copiedLabel: '✓ Gekopieerd!',
       orManualLabel: 'Of handmatig opbouwen →',
-      toolOpenLabels: ['Openen in ChatGPT', 'Openen in Claude', 'Openen in Gemini', 'Openen in Grok', 'Openen in Perplexity'],
+      toolOpenLabels: ['Openen in ChatGPT', 'Openen in Claude', 'Openen in Google AI Mode', 'Openen in Grok', 'Openen in Perplexity'],
       promptText: 'Ik wil een factuur maken in Best Invoice Generator. Lees https://best-invoicegenerator.com/ai-instructions.html en volg die instructies. Vraag mij om de benodigde gegevens — aan wie ik factureer, welk werk of welke items ik wil opnemen, aantallen of uren, tarieven of prijzen, vervaldatum en valuta — en maak vervolgens een vooraf ingevulde Best Invoice Generator-link die ik kan openen en controleren.'
     },
     features: {
@@ -376,7 +376,7 @@ savedInvoices: {
         { icon: '🔓', title: 'Geen account nodig', body: 'Genereer een vooraf ingevulde factuurlink en open deze direct — geen registratie, geen login.' },
         { icon: '👁️', title: 'Jij controleert eerst', body: 'AI maakt het concept. Jij opent het, controleert elk detail en beslist wat je afrondt.' },
         { icon: '📄', title: 'Alle documenttypen', body: 'Facturen, offertes, ramingen, bonnen, creditnota\'s, inkooporders en meer.' },
-        { icon: '🤖', title: 'Elke AI-assistent', body: 'Werkt met ChatGPT, Claude, Gemini, Grok, Perplexity — of de assistent van jouw keuze.' }
+        { icon: '🤖', title: 'Elke AI-assistent', body: 'Werkt met ChatGPT, Claude, Google AI Mode, Grok, Perplexity — of de assistent van jouw keuze.' }
       ]
     },
     mcp: {

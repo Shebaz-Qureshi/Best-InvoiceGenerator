@@ -324,7 +324,7 @@ savedInvoices: {
   aiPage: {
     meta: {
       title: 'AIで請求書作成 | Best Invoice Generator',
-      description: 'AIで数秒でプロ仕様の請求書を作成。ChatGPT、Claude、Geminiなど好きなAIアシスタントに必要事項を伝えるだけで、入力済みの請求書がすぐに完成します。アカウント登録不要。'
+      description: 'AIで数秒でプロ仕様の請求書を作成。ChatGPT、Claude、Google AI Modeなど好きなAIアシスタントに必要事項を伝えるだけで、入力済みの請求書がすぐに完成します。アカウント登録不要。'
     },
     hero: {
       badge: 'AI請求書ジェネレーター',
@@ -364,7 +364,7 @@ savedInvoices: {
       copyButtonLabel: 'プロンプトをコピー',
       copiedLabel: '✓ コピーしました!',
       orManualLabel: 'または手動で作成 →',
-      toolOpenLabels: ['ChatGPTで開く', 'Claudeで開く', 'Geminiで開く', 'Grokで開く', 'Perplexityで開く'],
+      toolOpenLabels: ['ChatGPTで開く', 'Claudeで開く', 'Google AI Modeで開く', 'Grokで開く', 'Perplexityで開く'],
       promptText: 'Best Invoice Generatorで請求書を作成したいです。https://best-invoicegenerator.com/ai-instructions.html を読み、その指示に従ってください。請求先、含める作業や項目、数量や時間、単価や金額、支払期限、通貨など必要な情報を私に質問した上で、私が開いて確認できる入力済みのBest Invoice Generatorリンクを作成してください。'
     },
     features: {
@@ -374,7 +374,7 @@ savedInvoices: {
         { icon: '🔓', title: 'アカウント登録不要', body: '入力済みの請求書リンクを作成し、すぐに開けます。登録もログインも不要です。' },
         { icon: '👁️', title: 'まずあなたが確認', body: 'AIが下書きを作成。あなたが開いて各詳細を確認し、何を確定するか決めます。' },
         { icon: '📄', title: 'あらゆる書類に対応', body: '請求書、見積書、概算書、領収書、クレジットノート、発注書など。' },
-        { icon: '🤖', title: 'どのAIアシスタントでも', body: 'ChatGPT、Claude、Gemini、Grok、Perplexity、お好みのアシスタントで利用可能。' }
+        { icon: '🤖', title: 'どのAIアシスタントでも', body: 'ChatGPT、Claude、Google AI Mode、Grok、Perplexity、お好みのアシスタントで利用可能。' }
       ]
     },
     mcp: {

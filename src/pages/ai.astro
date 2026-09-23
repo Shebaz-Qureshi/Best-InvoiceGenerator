@@ -7,6 +7,7 @@ const t = getTranslation(lang);
 const aiPage = t.aiPage;
 
 const aiPrompt = aiPage.launchers.promptText;
+const geminiPrompt = aiPrompt.replace(/\s*\n+\s*/g, ' ').trim();
 const encodedPrompt = encodeURIComponent(aiPrompt);
 
 const toolBase = [
@@ -23,8 +24,8 @@ const toolBase = [
     letter: 'C',
   },
   {
-    name: 'Gemini',
-    href: `https://gemini.google.com/app?q=${encodedPrompt}`,
+    name: 'Google AI Mode',
+    href: `https://www.google.com/search?udm=50&q=${encodeURIComponent(geminiPrompt)}`,
     color: '#4285f4',
     letter: 'G',
   },

@@ -326,7 +326,7 @@ const en: Translation = {
   aiPage: {
     meta: {
       title: 'Invoice with AI | Best Invoice Generator',
-      description: 'Create professional invoices in seconds with AI. Tell ChatGPT, Claude, Gemini, or any AI assistant what you need and get a prefilled invoice instantly. No account required.'
+      description: 'Create professional invoices in seconds with AI. Tell ChatGPT, Claude, Google AI Mode, or any AI assistant what you need and get a prefilled invoice instantly. No account required.'
     },
     hero: {
       badge: 'AI Invoice Generator',
@@ -366,7 +366,7 @@ const en: Translation = {
       copyButtonLabel: 'Copy prompt',
       copiedLabel: '✓ Copied!',
       orManualLabel: 'Or build it manually →',
-      toolOpenLabels: ['Open in ChatGPT', 'Open in Claude', 'Open in Gemini', 'Open in Grok', 'Open in Perplexity'],
+      toolOpenLabels: ['Open in ChatGPT', 'Open in Claude', 'Open in Google AI Mode', 'Open in Grok', 'Open in Perplexity'],
       promptText: 'I want to create an invoice in Best Invoice Generator. Read https://best-invoicegenerator.com/ai-instructions.html and follow those instructions. Ask me for the details you need—such as who I\'m billing, what work or items to include, quantities or hours, rates or prices, due date, and currency—then create a prefilled Best Invoice Generator link I can open and review.'
     },
     features: {
@@ -376,7 +376,7 @@ const en: Translation = {
         { icon: '🔓', title: 'No account required', body: 'Generate a prefilled invoice link and open it instantly—no sign-up, no login.' },
         { icon: '👁️', title: 'You review first', body: 'AI prepares the draft. You open it, check every detail, and decide what to finalize.' },
         { icon: '📄', title: 'All document types', body: 'Invoices, quotes, estimates, receipts, credit notes, purchase orders and more.' },
-        { icon: '🤖', title: 'Any AI assistant', body: 'Works with ChatGPT, Claude, Gemini, Grok, Perplexity—or any assistant you prefer.' }
+        { icon: '🤖', title: 'Any AI assistant', body: 'Works with ChatGPT, Claude, Google AI Mode, Grok, Perplexity—or any assistant you prefer.' }
       ]
     },
     mcp: {

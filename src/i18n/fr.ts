@@ -326,7 +326,7 @@ savedInvoices: {
   aiPage: {
     meta: {
       title: 'Facture avec l\'IA | Best Invoice Generator',
-      description: 'Créez des factures professionnelles en quelques secondes grâce à l\'IA. Dites à ChatGPT, Claude, Gemini ou tout autre assistant IA ce dont vous avez besoin et obtenez une facture préremplie instantanément. Aucun compte requis.'
+      description: 'Créez des factures professionnelles en quelques secondes grâce à l\'IA. Dites à ChatGPT, Claude, Google AI Mode ou tout autre assistant IA ce dont vous avez besoin et obtenez une facture préremplie instantanément. Aucun compte requis.'
     },
     hero: {
       badge: 'Générateur de factures IA',
@@ -366,7 +366,7 @@ savedInvoices: {
       copyButtonLabel: 'Copier l\'invite',
       copiedLabel: '✓ Copié !',
       orManualLabel: 'Ou créez-la manuellement →',
-      toolOpenLabels: ['Ouvrir dans ChatGPT', 'Ouvrir dans Claude', 'Ouvrir dans Gemini', 'Ouvrir dans Grok', 'Ouvrir dans Perplexity'],
+      toolOpenLabels: ['Ouvrir dans ChatGPT', 'Ouvrir dans Claude', 'Ouvrir dans Google AI Mode', 'Ouvrir dans Grok', 'Ouvrir dans Perplexity'],
       promptText: 'Je veux créer une facture dans Best Invoice Generator. Lisez https://best-invoicegenerator.com/ai-instructions.html et suivez ces instructions. Demandez-moi les informations nécessaires — à qui je facture, quel travail ou articles inclure, les quantités ou heures, les tarifs ou prix, la date d\'échéance et la devise — puis créez un lien Best Invoice Generator prérempli que je peux ouvrir et vérifier.'
     },
     features: {
@@ -376,7 +376,7 @@ savedInvoices: {
         { icon: '🔓', title: 'Aucun compte requis', body: 'Générez un lien de facture prérempli et ouvrez-le instantanément — sans inscription, sans connexion.' },
         { icon: '👁️', title: 'Vous vérifiez en premier', body: 'L\'IA prépare le brouillon. Vous l\'ouvrez, vérifiez chaque détail et décidez ce qu\'il faut finaliser.' },
         { icon: '📄', title: 'Tous types de documents', body: 'Factures, devis, estimations, reçus, avoirs, bons de commande et plus encore.' },
-        { icon: '🤖', title: 'N\'importe quel assistant IA', body: 'Fonctionne avec ChatGPT, Claude, Gemini, Grok, Perplexity — ou l\'assistant de votre choix.' }
+        { icon: '🤖', title: 'N\'importe quel assistant IA', body: 'Fonctionne avec ChatGPT, Claude, Google AI Mode, Grok, Perplexity — ou l\'assistant de votre choix.' }
       ]
     },
     mcp: {

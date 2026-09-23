@@ -324,7 +324,7 @@ savedInvoices: {
   aiPage: {
     meta: {
       title: 'فاتورة بالذكاء الاصطناعي | Best Invoice Generator',
-      description: 'أنشئ فواتير احترافية خلال ثوانٍ باستخدام الذكاء الاصطناعي. أخبر ChatGPT أو Claude أو Gemini أو أي مساعد ذكاء اصطناعي بما تحتاجه، واحصل على فاتورة معبأة مسبقًا فورًا. لا حاجة لحساب.'
+      description: 'أنشئ فواتير احترافية خلال ثوانٍ باستخدام الذكاء الاصطناعي. أخبر ChatGPT أو Claude أو Google AI Mode أو أي مساعد ذكاء اصطناعي بما تحتاجه، واحصل على فاتورة معبأة مسبقًا فورًا. لا حاجة لحساب.'
     },
     hero: {
       badge: 'مولّد الفواتير بالذكاء الاصطناعي',
@@ -364,7 +364,7 @@ savedInvoices: {
       copyButtonLabel: 'نسخ الطلب',
       copiedLabel: '✓ تم النسخ!',
       orManualLabel: 'أو أنشئها يدويًا ←',
-      toolOpenLabels: ['افتح في ChatGPT', 'افتح في Claude', 'افتح في Gemini', 'افتح في Grok', 'افتح في Perplexity'],
+      toolOpenLabels: ['افتح في ChatGPT', 'افتح في Claude', 'افتح في Google AI Mode', 'افتح في Grok', 'افتح في Perplexity'],
       promptText: 'أريد إنشاء فاتورة في Best Invoice Generator. اقرأ https://best-invoicegenerator.com/ai-instructions.html واتبع تلك التعليمات. اسألني عن التفاصيل التي تحتاجها — لمن أصدر الفاتورة، وما العمل أو العناصر المطلوب تضمينها، والكميات أو الساعات، والأسعار، وتاريخ الاستحقاق، والعملة — ثم أنشئ رابط Best Invoice Generator معبأ مسبقًا يمكنني فتحه ومراجعته.'
     },
     features: {
@@ -374,7 +374,7 @@ savedInvoices: {
         { icon: '🔓', title: 'لا حاجة لحساب', body: 'أنشئ رابط فاتورة معبأ مسبقًا وافتحه فورًا — بلا تسجيل وبلا دخول.' },
         { icon: '👁️', title: 'أنت تراجع أولًا', body: 'يجهّز الذكاء الاصطناعي المسودة. أنت تفتحها، وتتحقق من كل تفصيل، وتقرر ما يتم إنهاؤه.' },
         { icon: '📄', title: 'جميع أنواع المستندات', body: 'فواتير، عروض أسعار، تقديرات، إيصالات، إشعارات دائنة، أوامر شراء، والمزيد.' },
-        { icon: '🤖', title: 'أي مساعد ذكاء اصطناعي', body: 'يعمل مع ChatGPT وClaude وGemini وGrok وPerplexity — أو أي مساعد تفضله.' }
+        { icon: '🤖', title: 'أي مساعد ذكاء اصطناعي', body: 'يعمل مع ChatGPT وClaude وGoogle AI Mode وGrok وPerplexity — أو أي مساعد تفضله.' }
       ]
     },
     mcp: {
