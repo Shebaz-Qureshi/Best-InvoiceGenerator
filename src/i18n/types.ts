@@ -235,4 +235,45 @@ export interface Translation {
     invoicesWord: string;
     actionLabel: string;
   };
+  aiPage: {
+    meta: { title: string; description: string };
+    hero: { badge: string; titleLine1: string; titleLine2: string; subtitle: string; disclaimer: string };
+    chatDemo: {
+      eyebrow: string;
+      title: string;
+      label: string;
+      messages: Array<{ role: 'ai' | 'user'; text: string; linkText?: string; linkUrl?: string; tag?: string }>;
+    };
+    howItWorks: {
+      eyebrow: string;
+      title: string;
+      steps: Array<{ icon: string; title: string; body: string; example: string }>;
+    };
+    launchers: {
+      eyebrow: string;
+      title: string;
+      subtitle: string;
+      copyPromptLabel: string;
+      copyPromptHint: string;
+      copyButtonLabel: string;
+      copiedLabel: string;
+      orManualLabel: string;
+      promptText: string;
+    };
+    features: {
+      eyebrow: string;
+      title: string;
+      items: Array<{ icon: string; title: string; body: string }>;
+    };
+    mcp: {
+      eyebrow: string;
+      title: string;
+      subtitle: string;
+      steps: Array<{ title: string; body: string }>;
+      urlLabel: string;
+      copyButtonLabel: string;
+      copiedLabel: string;
+    };
+    cta: { title: string; subtitle: string };
+  };
 }

@@ -323,6 +323,78 @@ savedInvoices: {
     invoicesWord: 'facturas',
     actionLabel: 'Acciones de factura',
   },
+  aiPage: {
+    meta: {
+      title: 'Factura con IA | Best Invoice Generator',
+      description: 'Crea facturas profesionales en segundos con IA. Dile a ChatGPT, Claude, Gemini o cualquier asistente de IA lo que necesitas y obtén una factura prellenada al instante. No se requiere cuenta.'
+    },
+    hero: {
+      badge: 'Generador de facturas con IA',
+      titleLine1: 'Crea facturas en',
+      titleLine2: 'Segundos con IA',
+      subtitle: 'Solo dile a tu asistente de IA favorito qué estás facturando. Genera un enlace de factura prellenado, sin cuenta, sin rellenar formularios, sin fricción.',
+      disclaimer: 'No se requiere cuenta · Revisa antes de finalizar · Funciona con cualquier IA'
+    },
+    chatDemo: {
+      eyebrow: 'Véalo en acción',
+      title: 'Una conversación que se convierte en factura',
+      label: 'Asistente de facturación con IA',
+      messages: [
+        { role: 'ai', text: '¡Hola! Estoy listo para crear tu factura. ¿A quién le facturas y por qué?' },
+        { role: 'user', text: 'Factura a Acme Corp por 10 horas de diseño web a $150/hora. Vence en 30 días.' },
+        { role: 'ai', text: 'Entendido. ¿En qué moneda debo hacerlo?' },
+        { role: 'user', text: 'En dólares (USD), por favor' },
+        { role: 'ai', text: '✅ Aquí tienes tu enlace de factura prellenado: ábrelo para revisar y finalizar', linkText: '🔗 best-invoicegenerator.com/?to=Acme+Corp&item=Web+Design&qty=10&rate=150...', linkUrl: '/', tag: '$1,500.00 · Vence en 30 días · USD' }
+      ]
+    },
+    howItWorks: {
+      eyebrow: 'Cómo funciona',
+      title: 'Tres pasos para una factura terminada',
+      steps: [
+        { icon: '💬', title: 'Describe tu factura', body: 'Dile a tu asistente de IA a quién le facturas, el trabajo realizado, horas o cantidades, tu tarifa y la fecha de vencimiento.', example: '"Factura a Acme Corp por 10 horas de desarrollo web a $120/hora, vence en 30 días, USD."' },
+        { icon: '🔗', title: 'La IA genera el enlace', body: 'Tu asistente crea una URL prellenada de Best Invoice Generator con todos los datos ya completados.', example: '' },
+        { icon: '✅', title: 'Revisa y finaliza', body: 'Abre el enlace, revisa cada campo, haz los cambios necesarios y descarga o envía tu factura profesional.', example: '' }
+      ]
+    },
+    launchers: {
+      eyebrow: 'Abre tu asistente de IA',
+      title: 'Abre tu asistente de IA',
+      subtitle: 'Elige el asistente que ya usas. Lo cargaremos con la indicación correcta para que sepa de inmediato cómo crear tu factura.',
+      copyPromptLabel: 'O copia este mensaje en cualquier IA',
+      copyPromptHint: 'Pégalo en ChatGPT, Copilot, Claude o el asistente que prefieras.',
+      copyButtonLabel: 'Copiar mensaje',
+      copiedLabel: '✓ ¡Copiado!',
+      orManualLabel: 'O compártelo manualmente →',
+      promptText: 'Quiero crear una factura en Best Invoice Generator. Lee https://best-invoicegenerator.com/ai-instructions.html y sigue esas instrucciones. Pregúntame los datos que necesites — a quién le facturo, qué trabajo o artículos incluir, cantidades u horas, tarifas o precios, fecha de vencimiento y moneda — y luego crea un enlace prellenado de Best Invoice Generator que pueda abrir y revisar.'
+    },
+    features: {
+      eyebrow: 'Por qué funciona',
+      title: 'Mantienes el control',
+      items: [
+        { icon: '🔓', title: 'No se requiere cuenta', body: 'Genera un enlace de factura prellenado y ábrelo al instante, sin registro, sin inicio de sesión.' },
+        { icon: '👁️', title: 'Tú revisas primero', body: 'La IA prepara el borrador. Tú lo abres, revisas cada detalle y decides qué finalizar.' },
+        { icon: '📄', title: 'Todos los tipos de documentos', body: 'Facturas, presupuestos, cotizaciones, recibos, notas de crédito, órdenes de compra y más.' },
+        { icon: '🤖', title: 'Cualquier asistente de IA', body: 'Funciona con ChatGPT, Claude, Gemini, Grok, Perplexity — o el asistente que prefieras.' }
+      ]
+    },
+    mcp: {
+      eyebrow: 'Para usuarios avanzados',
+      title: 'Guarda facturas directamente vía MCP',
+      subtitle: 'Si tu asistente de IA es compatible con MCP (Model Context Protocol), conecta Best Invoice Generator para guardar documentos directamente en tu espacio de trabajo, sin copiar y pegar.',
+      steps: [
+        { title: 'Abre la configuración de tu app de IA', body: 'Ve a la configuración de MCP o "Herramientas" en ChatGPT, Claude, Cursor u otro asistente compatible con MCP.' },
+        { title: 'Agrega la URL del servidor MCP', body: 'Copia la URL de abajo y pégala como el endpoint del servidor MCP.' },
+        { title: 'Pide a tu IA que cree una factura', body: 'Tu asistente crea la factura en tu espacio de trabajo y te devuelve un enlace para revisarla.' }
+      ],
+      urlLabel: 'URL del servidor MCP',
+      copyButtonLabel: 'Copiar',
+      copiedLabel: '✓ ¡Copiado!'
+    },
+    cta: {
+      title: '¿Listo para crear tu factura?',
+      subtitle: 'Elige tu asistente de IA arriba, describe tu factura en lenguaje sencillo y obtén un enlace prellenado en segundos.'
+    }
+  }
 };
 
 export default es;

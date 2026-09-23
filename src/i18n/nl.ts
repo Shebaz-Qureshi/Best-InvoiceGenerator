@@ -323,6 +323,78 @@ savedInvoices: {
     invoicesWord: 'facturen',
     actionLabel: 'Factuuracties',
   },
+  aiPage: {
+    meta: {
+      title: 'Factuur met AI | Best Invoice Generator',
+      description: 'Maak binnen enkele seconden professionele facturen met AI. Vertel ChatGPT, Claude, Gemini of een andere AI-assistent wat je nodig hebt en krijg direct een vooraf ingevulde factuur. Geen account nodig.'
+    },
+    hero: {
+      badge: 'AI-factuurgenerator',
+      titleLine1: 'Maak facturen in',
+      titleLine2: 'Enkele seconden met AI',
+      subtitle: 'Vertel je favoriete AI-assistent gewoon waarvoor je factureert. Deze maakt een vooraf ingevulde factuurlink — geen account, geen formulieren, geen gedoe.',
+      disclaimer: 'Geen account nodig · Controleer voor het afronden · Werkt met elke AI'
+    },
+    chatDemo: {
+      eyebrow: 'Bekijk het in actie',
+      title: 'Een gesprek dat een factuur wordt',
+      label: 'AI-factuurassistent',
+      messages: [
+        { role: 'ai', text: 'Hoi! Ik ben klaar om je factuur te maken. Aan wie factureer je en waarvoor?' },
+        { role: 'user', text: 'Factureer Acme Corp voor 10 uur webdesign tegen $150/uur. Vervalt over 30 dagen.' },
+        { role: 'ai', text: 'Begrepen. Welke valuta moet ik gebruiken?' },
+        { role: 'user', text: 'USD, graag' },
+        { role: 'ai', text: '✅ Hier is je vooraf ingevulde factuurlink — open deze om te controleren en af te ronden', linkText: '🔗 best-invoicegenerator.com/?to=Acme+Corp&item=Web+Design&qty=10&rate=150...', linkUrl: '/', tag: '$1.500,00 · Vervalt over 30 dagen · USD' }
+      ]
+    },
+    howItWorks: {
+      eyebrow: 'Hoe het werkt',
+      title: 'Drie stappen naar een afgeronde factuur',
+      steps: [
+        { icon: '💬', title: 'Beschrijf je factuur', body: 'Vertel je AI-assistent aan wie je factureert, welk werk is verricht, uren of aantallen, je tarief en de vervaldatum.', example: '"Factureer Acme Corp voor 10 uur webontwikkeling tegen $120/uur, vervalt over 30 dagen, USD."' },
+        { icon: '🔗', title: 'AI maakt de link', body: 'Je assistent maakt een vooraf ingevulde Best Invoice Generator-URL met alle gegevens al ingevuld.', example: '' },
+        { icon: '✅', title: 'Controleer & rond af', body: 'Open de link, controleer elk veld, breng eventuele wijzigingen aan en download of verstuur je professionele factuur.', example: '' }
+      ]
+    },
+    launchers: {
+      eyebrow: 'Open je AI-assistent',
+      title: 'Open je AI-assistent',
+      subtitle: 'Kies de assistent die je al gebruikt. We laden deze met de juiste prompt zodat hij direct weet hoe je factuur te maken.',
+      copyPromptLabel: 'Of kopieer deze prompt naar een willekeurige AI',
+      copyPromptHint: 'Plak deze in ChatGPT, Copilot, Claude of een assistent naar keuze.',
+      copyButtonLabel: 'Prompt kopiëren',
+      copiedLabel: '✓ Gekopieerd!',
+      orManualLabel: 'Of handmatig opbouwen →',
+      promptText: 'Ik wil een factuur maken in Best Invoice Generator. Lees https://best-invoicegenerator.com/ai-instructions.html en volg die instructies. Vraag mij om de benodigde gegevens — aan wie ik factureer, welk werk of welke items ik wil opnemen, aantallen of uren, tarieven of prijzen, vervaldatum en valuta — en maak vervolgens een vooraf ingevulde Best Invoice Generator-link die ik kan openen en controleren.'
+    },
+    features: {
+      eyebrow: 'Waarom het werkt',
+      title: 'Jij houdt de controle',
+      items: [
+        { icon: '🔓', title: 'Geen account nodig', body: 'Genereer een vooraf ingevulde factuurlink en open deze direct — geen registratie, geen login.' },
+        { icon: '👁️', title: 'Jij controleert eerst', body: 'AI maakt het concept. Jij opent het, controleert elk detail en beslist wat je afrondt.' },
+        { icon: '📄', title: 'Alle documenttypen', body: 'Facturen, offertes, ramingen, bonnen, creditnota\'s, inkooporders en meer.' },
+        { icon: '🤖', title: 'Elke AI-assistent', body: 'Werkt met ChatGPT, Claude, Gemini, Grok, Perplexity — of de assistent van jouw keuze.' }
+      ]
+    },
+    mcp: {
+      eyebrow: 'Voor gevorderde gebruikers',
+      title: 'Sla facturen direct op via MCP',
+      subtitle: 'Als je AI-assistent MCP (Model Context Protocol) ondersteunt, koppel dan Best Invoice Generator om documenten direct in je werkruimte op te slaan — zonder kopiëren en plakken.',
+      steps: [
+        { title: 'Open de instellingen van je AI-app', body: 'Ga naar de MCP- of "Tools"-instellingen in ChatGPT, Claude, Cursor of een andere MCP-geschikte assistent.' },
+        { title: 'Voeg de MCP-server-URL toe', body: 'Kopieer onderstaande URL en plak deze als MCP-server-endpoint.' },
+        { title: 'Vraag je AI om een factuur te maken', body: 'Je assistent maakt de factuur in je werkruimte en stuurt je een link om deze te controleren.' }
+      ],
+      urlLabel: 'MCP-server-URL',
+      copyButtonLabel: 'Kopiëren',
+      copiedLabel: '✓ Gekopieerd!'
+    },
+    cta: {
+      title: 'Klaar om je factuur te maken?',
+      subtitle: 'Kies hierboven je AI-assistent, beschrijf je factuur in gewone taal en krijg binnen enkele seconden een vooraf ingevulde link.'
+    }
+  }
 };
 
 export default nl;

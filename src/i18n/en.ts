@@ -323,6 +323,78 @@ const en: Translation = {
     invoicesWord: 'invoices',
     actionLabel: 'Invoice actions',
   },
+  aiPage: {
+    meta: {
+      title: 'Invoice with AI | Best Invoice Generator',
+      description: 'Create professional invoices in seconds with AI. Tell ChatGPT, Claude, Gemini, or any AI assistant what you need and get a prefilled invoice instantly. No account required.'
+    },
+    hero: {
+      badge: 'AI Invoice Generator',
+      titleLine1: 'Create Invoices in',
+      titleLine2: 'Seconds with AI',
+      subtitle: 'Just tell your favourite AI assistant what you\'re billing for. It builds a prefilled invoice link—no account, no form-filling, no friction.',
+      disclaimer: 'No account required · Review before finalizing · Works with any AI'
+    },
+    chatDemo: {
+      eyebrow: 'See it in action',
+      title: 'A conversation that becomes an invoice',
+      label: 'AI Invoice Assistant',
+      messages: [
+        { role: 'ai', text: 'Hi! I\'m ready to create your invoice. Who are you billing and what for?' },
+        { role: 'user', text: 'Invoice Acme Corp for 10 hours of web design at $150/hr. Due in 30 days.' },
+        { role: 'ai', text: 'Got it! What currency should I use?' },
+        { role: 'user', text: 'USD please' },
+        { role: 'ai', text: '✅ Here\'s your prefilled invoice link — open it to review and finalize:', linkText: '🔗 best-invoicegenerator.com/?to=Acme+Corp&item=Web+Design&qty=10&rate=150...', linkUrl: '/', tag: '$1,500.00 · Due in 30 days · USD' }
+      ]
+    },
+    howItWorks: {
+      eyebrow: 'How it works',
+      title: 'Three steps to a finished invoice',
+      steps: [
+        { icon: '💬', title: 'Describe your invoice', body: 'Tell your AI assistant who you\'re billing, the work done, hours or quantities, your rate, and when payment is due.', example: '"Invoice Acme Corp for 10 hours of web dev at $120/hr, due in 30 days, USD."' },
+        { icon: '🔗', title: 'AI builds the link', body: 'Your assistant creates a prefilled Best Invoice Generator URL with all the details already filled in.', example: '' },
+        { icon: '✅', title: 'Review & finalize', body: 'Open the link, check every field, make any changes, and download or send your professional invoice.', example: '' }
+      ]
+    },
+    launchers: {
+      eyebrow: 'Launch',
+      title: 'Open your AI assistant',
+      subtitle: 'Pick the assistant you already use. We\'ll load it with the right prompt so it immediately knows how to create your invoice.',
+      copyPromptLabel: 'Or copy this prompt into any AI',
+      copyPromptHint: 'Paste it into ChatGPT, Copilot, Claude, or any assistant you like.',
+      copyButtonLabel: 'Copy prompt',
+      copiedLabel: '✓ Copied!',
+      orManualLabel: 'Or build it manually →',
+      promptText: 'I want to create an invoice in Best Invoice Generator. Read https://best-invoicegenerator.com/ai-instructions.html and follow those instructions. Ask me for the details you need—such as who I\'m billing, what work or items to include, quantities or hours, rates or prices, due date, and currency—then create a prefilled Best Invoice Generator link I can open and review.'
+    },
+    features: {
+      eyebrow: 'Why it works',
+      title: 'You stay in control',
+      items: [
+        { icon: '🔓', title: 'No account required', body: 'Generate a prefilled invoice link and open it instantly—no sign-up, no login.' },
+        { icon: '👁️', title: 'You review first', body: 'AI prepares the draft. You open it, check every detail, and decide what to finalize.' },
+        { icon: '📄', title: 'All document types', body: 'Invoices, quotes, estimates, receipts, credit notes, purchase orders and more.' },
+        { icon: '🤖', title: 'Any AI assistant', body: 'Works with ChatGPT, Claude, Gemini, Grok, Perplexity—or any assistant you prefer.' }
+      ]
+    },
+    mcp: {
+      eyebrow: 'For power users',
+      title: 'Save invoices directly via MCP',
+      subtitle: 'If your AI assistant supports MCP (Model Context Protocol), connect Best Invoice Generator to save documents directly to your workspace—no copy-pasting needed.',
+      steps: [
+        { title: 'Open your AI app\'s settings', body: 'Go to the MCP or "Tools" settings in ChatGPT, Claude, Cursor, or another MCP-capable assistant.' },
+        { title: 'Add the MCP server URL', body: 'Copy the URL below and paste it as the MCP server endpoint.' },
+        { title: 'Ask your AI to create an invoice', body: 'Your assistant creates the invoice in your workspace and returns a link to review it.' }
+      ],
+      urlLabel: 'MCP Server URL',
+      copyButtonLabel: 'Copy',
+      copiedLabel: '✓ Copied!'
+    },
+    cta: {
+      title: 'Ready to create your invoice?',
+      subtitle: 'Pick your AI assistant above, describe your invoice in plain English, and get a prefilled link in seconds.'
+    }
+  }
 };
 
 export default en;

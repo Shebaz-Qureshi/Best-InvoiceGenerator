@@ -321,6 +321,78 @@ savedInvoices: {
     invoicesWord: '請求書',
     actionLabel: '請求書アクション',
   },
+  aiPage: {
+    meta: {
+      title: 'AIで請求書作成 | Best Invoice Generator',
+      description: 'AIで数秒でプロ仕様の請求書を作成。ChatGPT、Claude、Geminiなど好きなAIアシスタントに必要事項を伝えるだけで、入力済みの請求書がすぐに完成します。アカウント登録不要。'
+    },
+    hero: {
+      badge: 'AI請求書ジェネレーター',
+      titleLine1: 'AIで数秒で',
+      titleLine2: '請求書を作成',
+      subtitle: 'いつも使っているAIアシスタントに、何の請求かを伝えるだけ。アカウント不要・フォーム入力不要・面倒な手間なしで、入力済みの請求書リンクが作成されます。',
+      disclaimer: 'アカウント登録不要 · 確定前に内容を確認 · どのAIでも利用可能'
+    },
+    chatDemo: {
+      eyebrow: '実際の動作を見る',
+      title: '会話が請求書に変わる',
+      label: 'AI請求書アシスタント',
+      messages: [
+        { role: 'ai', text: 'こんにちは!請求書を作成する準備ができています。誰に、何の請求ですか?' },
+        { role: 'user', text: 'Acme Corpに、Webデザイン10時間分、時給150ドルで請求。支払期限は30日後。' },
+        { role: 'ai', text: '承知しました。通貨は何にしますか?' },
+        { role: 'user', text: 'USDでお願いします' },
+        { role: 'ai', text: '✅ 入力済みの請求書リンクができました。開いて内容を確認し、確定してください', linkText: '🔗 best-invoicegenerator.com/?to=Acme+Corp&item=Web+Design&qty=10&rate=150...', linkUrl: '/', tag: '$1,500.00 · 支払期限30日後 · USD' }
+      ]
+    },
+    howItWorks: {
+      eyebrow: '利用の流れ',
+      title: '請求書完成までの3ステップ',
+      steps: [
+        { icon: '💬', title: '請求内容を伝える', body: '誰に請求するか、実施した作業内容、時間や数量、単価、支払期限をAIアシスタントに伝えます。', example: '「Acme Corpに、Web開発10時間分、時給120ドルで請求。支払期限30日後、USD。」' },
+        { icon: '🔗', title: 'AIがリンクを作成', body: 'アシスタントが、必要事項をすべて入力済みのBest Invoice Generator URLを作成します。', example: '' },
+        { icon: '✅', title: '確認して確定', body: 'リンクを開き、各項目を確認し、必要に応じて修正した上で、プロ仕様の請求書をダウンロードまたは送信します。', example: '' }
+      ]
+    },
+    launchers: {
+      eyebrow: 'AIアシスタントを開く',
+      title: 'AIアシスタントを開く',
+      subtitle: 'すでに使っているアシスタントを選んでください。すぐに請求書を作成できるよう、適切なプロンプトを読み込みます。',
+      copyPromptLabel: 'またはこのプロンプトを任意のAIにコピー',
+      copyPromptHint: 'ChatGPT、Copilot、Claude、お好みのアシスタントに貼り付けてください。',
+      copyButtonLabel: 'プロンプトをコピー',
+      copiedLabel: '✓ コピーしました!',
+      orManualLabel: 'または手動で作成 →',
+      promptText: 'Best Invoice Generatorで請求書を作成したいです。https://best-invoicegenerator.com/ai-instructions.html を読み、その指示に従ってください。請求先、含める作業や項目、数量や時間、単価や金額、支払期限、通貨など必要な情報を私に質問した上で、私が開いて確認できる入力済みのBest Invoice Generatorリンクを作成してください。'
+    },
+    features: {
+      eyebrow: '選ばれる理由',
+      title: '主導権はあなたに',
+      items: [
+        { icon: '🔓', title: 'アカウント登録不要', body: '入力済みの請求書リンクを作成し、すぐに開けます。登録もログインも不要です。' },
+        { icon: '👁️', title: 'まずあなたが確認', body: 'AIが下書きを作成。あなたが開いて各詳細を確認し、何を確定するか決めます。' },
+        { icon: '📄', title: 'あらゆる書類に対応', body: '請求書、見積書、概算書、領収書、クレジットノート、発注書など。' },
+        { icon: '🤖', title: 'どのAIアシスタントでも', body: 'ChatGPT、Claude、Gemini、Grok、Perplexity、お好みのアシスタントで利用可能。' }
+      ]
+    },
+    mcp: {
+      eyebrow: '上級ユーザー向け',
+      title: 'MCP経由で請求書を直接保存',
+      subtitle: 'お使いのAIアシスタントがMCP(Model Context Protocol)に対応していれば、Best Invoice Generatorを連携させて、コピー&ペーストなしで書類をワークスペースに直接保存できます。',
+      steps: [
+        { title: 'AIアプリの設定を開く', body: 'ChatGPT、Claude、Cursorなど、MCP対応アシスタントの「MCP」または「ツール」設定に移動します。' },
+        { title: 'MCPサーバーURLを追加', body: '下記のURLをコピーし、MCPサーバーのエンドポイントとして貼り付けます。' },
+        { title: 'AIに請求書作成を依頼', body: 'アシスタントがワークスペース内に請求書を作成し、確認用のリンクを返します。' }
+      ],
+      urlLabel: 'MCPサーバーURL',
+      copyButtonLabel: 'コピー',
+      copiedLabel: '✓ コピーしました!'
+    },
+    cta: {
+      title: '請求書を作成する準備はできましたか?',
+      subtitle: '上のAIアシスタントを選び、請求内容を普通の言葉で伝えるだけで、数秒で入力済みリンクが手に入ります。'
+    }
+  }
 };
 
 export default ja;

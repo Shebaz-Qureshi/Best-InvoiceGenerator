@@ -323,6 +323,78 @@ savedInvoices: {
     invoicesWord: 'Rechnungen',
     actionLabel: 'Rechnungsaktionen',
   },
+  aiPage: {
+    meta: {
+      title: 'Rechnung mit KI | Best Invoice Generator',
+      description: 'Erstellen Sie professionelle Rechnungen in Sekunden mit KI. Sagen Sie ChatGPT, Claude, Gemini oder einem beliebigen KI-Assistenten, was Sie brauchen, und erhalten Sie sofort eine vorausgefüllte Rechnung. Kein Konto erforderlich.'
+    },
+    hero: {
+      badge: 'KI-Rechnungsgenerator',
+      titleLine1: 'Rechnungen in',
+      titleLine2: 'Sekunden mit KI erstellen',
+      subtitle: 'Sagen Sie einfach Ihrem KI-Assistenten, was Sie abrechnen möchten. Er erstellt einen vorausgefüllten Rechnungslink — ohne Konto, ohne Formulare, ohne Reibungsverluste.',
+      disclaimer: 'Kein Konto erforderlich · Vor dem Abschluss prüfen · Funktioniert mit jeder KI'
+    },
+    chatDemo: {
+      eyebrow: 'In Aktion sehen',
+      title: 'Ein Gespräch wird zur Rechnung',
+      label: 'KI-Rechnungsassistent',
+      messages: [
+        { role: 'ai', text: 'Hallo! Ich bin bereit, Ihre Rechnung zu erstellen. Wem stellen Sie wofür eine Rechnung?' },
+        { role: 'user', text: 'Rechnung an Acme Corp für 10 Stunden Webdesign zu 150 $/Std. Fällig in 30 Tagen.' },
+        { role: 'ai', text: 'Verstanden. Welche Währung soll ich verwenden?' },
+        { role: 'user', text: 'USD bitte' },
+        { role: 'ai', text: '✅ Hier ist Ihr vorausgefüllter Rechnungslink — öffnen Sie ihn zur Prüfung und zum Abschluss', linkText: '🔗 best-invoicegenerator.com/?to=Acme+Corp&item=Web+Design&qty=10&rate=150...', linkUrl: '/', tag: '1.500,00 $ · Fällig in 30 Tagen · USD' }
+      ]
+    },
+    howItWorks: {
+      eyebrow: 'So funktioniert\'s',
+      title: 'Drei Schritte zu einer fertigen Rechnung',
+      steps: [
+        { icon: '💬', title: 'Rechnung beschreiben', body: 'Teilen Sie Ihrem KI-Assistenten mit, wem Sie eine Rechnung stellen, welche Arbeit erledigt wurde, Stunden oder Mengen, Ihren Stundensatz und das Fälligkeitsdatum.', example: '„Rechnung an Acme Corp für 10 Stunden Webentwicklung zu 120 $/Std., fällig in 30 Tagen, USD."' },
+        { icon: '🔗', title: 'KI erstellt den Link', body: 'Ihr Assistent erstellt eine vorausgefüllte Best Invoice Generator-URL mit allen bereits eingetragenen Details.', example: '' },
+        { icon: '✅', title: 'Prüfen & abschließen', body: 'Öffnen Sie den Link, prüfen Sie jedes Feld, nehmen Sie Änderungen vor und laden Sie Ihre professionelle Rechnung herunter oder versenden Sie sie.', example: '' }
+      ]
+    },
+    launchers: {
+      eyebrow: 'KI-Assistenten öffnen',
+      title: 'KI-Assistenten öffnen',
+      subtitle: 'Wählen Sie den Assistenten, den Sie bereits verwenden. Wir laden ihn mit der passenden Eingabeaufforderung, damit er sofort weiß, wie er Ihre Rechnung erstellt.',
+      copyPromptLabel: 'Oder diesen Prompt in eine beliebige KI kopieren',
+      copyPromptHint: 'Fügen Sie ihn in ChatGPT, Copilot, Claude oder einen Assistenten Ihrer Wahl ein.',
+      copyButtonLabel: 'Prompt kopieren',
+      copiedLabel: '✓ Kopiert!',
+      orManualLabel: 'Oder manuell erstellen →',
+      promptText: 'Ich möchte eine Rechnung in Best Invoice Generator erstellen. Lies https://best-invoicegenerator.com/ai-instructions.html und befolge diese Anweisungen. Frage mich nach den nötigen Angaben — wem ich eine Rechnung stelle, welche Arbeiten oder Artikel enthalten sein sollen, Mengen oder Stunden, Sätze oder Preise, Fälligkeitsdatum und Währung — und erstelle dann einen vorausgefüllten Best Invoice Generator-Link, den ich öffnen und prüfen kann.'
+    },
+    features: {
+      eyebrow: 'Warum es funktioniert',
+      title: 'Sie behalten die Kontrolle',
+      items: [
+        { icon: '🔓', title: 'Kein Konto erforderlich', body: 'Erstellen Sie einen vorausgefüllten Rechnungslink und öffnen Sie ihn sofort — ohne Anmeldung, ohne Login.' },
+        { icon: '👁️', title: 'Sie prüfen zuerst', body: 'Die KI erstellt den Entwurf. Sie öffnen ihn, prüfen jedes Detail und entscheiden, was final übernommen wird.' },
+        { icon: '📄', title: 'Alle Belegarten', body: 'Rechnungen, Angebote, Kostenvoranschläge, Quittungen, Gutschriften, Bestellungen und mehr.' },
+        { icon: '🤖', title: 'Jeder KI-Assistent', body: 'Funktioniert mit ChatGPT, Claude, Gemini, Grok, Perplexity — oder dem Assistenten Ihrer Wahl.' }
+      ]
+    },
+    mcp: {
+      eyebrow: 'Für Power-User',
+      title: 'Rechnungen direkt über MCP speichern',
+      subtitle: 'Wenn Ihr KI-Assistent MCP (Model Context Protocol) unterstützt, verbinden Sie Best Invoice Generator, um Dokumente direkt in Ihrem Arbeitsbereich zu speichern — ohne Copy & Paste.',
+      steps: [
+        { title: 'Öffnen Sie die Einstellungen Ihrer KI-App', body: 'Gehen Sie zu den MCP- oder „Tools"-Einstellungen in ChatGPT, Claude, Cursor oder einem anderen MCP-fähigen Assistenten.' },
+        { title: 'Fügen Sie die MCP-Server-URL hinzu', body: 'Kopieren Sie die untenstehende URL und fügen Sie sie als MCP-Server-Endpunkt ein.' },
+        { title: 'Bitten Sie Ihre KI, eine Rechnung zu erstellen', body: 'Ihr Assistent erstellt die Rechnung in Ihrem Arbeitsbereich und gibt Ihnen einen Link zur Prüfung zurück.' }
+      ],
+      urlLabel: 'MCP-Server-URL',
+      copyButtonLabel: 'Kopieren',
+      copiedLabel: '✓ Kopiert!'
+    },
+    cta: {
+      title: 'Bereit, Ihre Rechnung zu erstellen?',
+      subtitle: 'Wählen Sie oben Ihren KI-Assistenten, beschreiben Sie Ihre Rechnung in einfachen Worten und erhalten Sie in Sekunden einen vorausgefüllten Link.'
+    }
+  }
 };
 
 export default de;
